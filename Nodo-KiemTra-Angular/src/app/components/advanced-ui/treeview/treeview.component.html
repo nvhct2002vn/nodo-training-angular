@@ -1,0 +1,129 @@
+<app-page-header [title]="'Treeview'" [items]="['Advanced Ui']" [active_item]="'Treeview'"></app-page-header>
+
+<!-- row -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Basic Treeview
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in website application.</p>
+                <div class="row">
+                    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+                        <!-- This is the tree node template for leaf nodes -->
+                        <!-- There is inline padding applied to this node using styles.
+                        This padding value depends on the mat-icon-button width. -->
+                        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+                            {{node.name}}
+                        </mat-tree-node>
+                        <!-- This is the tree node template for expandable nodes -->
+                        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+                            <div class="mat-tree-node">
+                            <button mat-icon-button matTreeNodeToggle
+                                    [attr.aria-label]="'Toggle ' + node.name">
+                                <mat-icon class="material-icons mat-icon-rtl-mirror">
+                                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                                </mat-icon>
+                            </button>
+                            {{node.name}}
+                            </div>
+                            <!-- There is inline padding applied to this div using styles.
+                                This padding value depends on the mat-icon-button width.  -->
+                            <div [class.example-tree-invisible]="!treeControl.isExpanded(node)"
+                                role="group">
+                            <ng-container matTreeNodeOutlet></ng-container>
+                        </div>
+                        </mat-nested-tree-node>
+                    </mat-tree>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Tree View Styles
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in website application.</p>
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                         <mat-tree [dataSource]="dataSourceStatic1" [treeControl]="treeControlStatic1" class="example-tree">
+                        <!-- This is the tree node template for leaf nodes -->
+                        <!-- There is inline padding applied to this node using styles.
+                        This padding value depends on the mat-icon-button width. -->
+                        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+                            {{node.name}}
+                        </mat-tree-node>
+                        <!-- This is the tree node template for expandable nodes -->
+                        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChildStatic1">
+                            <div class="mat-tree-node">
+                            <button mat-icon-button matTreeNodeToggle
+                                    [attr.aria-label]="'Toggle ' + node.name">
+                                <mat-icon class="mat-icon-rtl-mirror">
+                                {{treeControlStatic1.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                                </mat-icon>
+                            </button>
+                            {{node.name}}
+                            </div>
+                            <!-- There is inline padding applied to this div using styles.
+                                This padding value depends on the mat-icon-button width.  -->
+                            <div [class.example-tree-invisible]="!treeControlStatic1.isExpanded(node)"
+                                role="group">
+                            <ng-container matTreeNodeOutlet></ng-container>
+                        </div>
+                        </mat-nested-tree-node>
+                    </mat-tree>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <mat-tree [dataSource]="dataSource1" [treeControl]="treeControl1">
+                            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                              <button mat-icon-button disabled></button>
+                              {{node.item}}
+                            </mat-tree-node>
+                            <mat-tree-node *matTreeNodeDef="let node; when: hasChild1" matTreeNodePadding>
+                              <button mat-icon-button
+                                      [attr.aria-label]="'Toggle ' + node.item" matTreeNodeToggle>
+                                <mat-icon class="mat-icon-rtl-mirror">
+                                  {{treeControl1.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                                </mat-icon>
+                              </button>
+                              {{node.item}}
+                              <mat-progress-bar *ngIf="node.isLoading"
+                                                mode="indeterminate"
+                                                class="example-tree-progress-bar"></mat-progress-bar>
+                            </mat-tree-node>
+                          </mat-tree>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <mat-tree [dataSource]="dataSource2" [treeControl]="treeControl2">
+                            <!-- Leaf node -->
+                            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                              <button mat-icon-button disabled></button>
+                              {{node.item}}
+                            </mat-tree-node>
+                          
+                            <!-- expandable node -->
+                            <mat-tree-node *matTreeNodeDef="let node; when: hasChild2" matTreeNodePadding>
+                              <button mat-icon-button
+                                      [attr.aria-label]="'Toggle ' + node.item"
+                                      (click)="loadChildren(node)"
+                                      matTreeNodeToggle>
+                                <mat-icon class="mat-icon-rtl-mirror">
+                                  {{treeControl2.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                                </mat-icon>
+                              </button>
+                              {{node.item}}
+                            </mat-tree-node>
+                          
+                            <mat-tree-node *matTreeNodeDef="let node; when: isLoadMore">
+                              <button mat-button (click)="loadMore(node.loadMoreParentItem)">
+                                <h6>Load more...</h6>
+                              </button>
+                            </mat-tree-node>
+                          </mat-tree>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

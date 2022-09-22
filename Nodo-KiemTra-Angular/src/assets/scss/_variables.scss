@@ -1,0 +1,83 @@
+$background: #f1f2f7;
+$color:#53545e;
+$border:#e8e8f7;
+
+
+/*Color variables*/
+$primary-005:var(--primary005);
+$primary-01:var(--primary01);
+$primary-02:var(--primary02);
+$primary-03:var(--primary03);
+$primary-05:var(--primary05);
+$primary-07:var(--primary07);
+$primary-08:var(--primary08);
+$primary:var(--primary-bg-color);
+$primary-hover:var(--primary-bg-hover);
+$primary-border:var(--primary-bg-border);
+$primary-transparent:var(--primary-transparentcolor);
+$darkprimary-transparent:var(--darkprimary-transparentcolor);
+$transparentprimary-transparent:var(--transparentprimary-transparentcolor);
+$secondary:#f1388b;
+$success:#19b159;
+$warning:#ff9b21;
+$danger:#fd6074;
+$info:#01b8ff;
+$dark:#3b4863;
+$white:#ffffff;
+$black:#000000;
+
+/*gray variables*/
+$gray-100:#eaeafb;
+$gray-200:#d0d0ec;
+$gray-300:#babade;
+$gray-400:#8f8fb7;
+$gray-500:#717196;
+$gray-600:#4f4f71;
+$gray-700:#3c3c5d;
+$gray-800:#262644;
+$gray-900:#1b1b33;
+
+/*white variables*/
+$white-1:rgba(255, 255, 255, 0.1);
+$white-2:rgba(255, 255, 255, 0.2);
+$white-3:rgba(255, 255, 255, 0.3);
+$white-4 :rgba(255, 255, 255, 0.4);
+$white-5 :rgba(255, 255, 255, 0.5);
+$white-6 :rgba(255, 255, 255, 0.6);
+$white-7 :rgba(255, 255, 255, 0.7);
+$white-8 :rgba(255, 255, 255, 0.8);
+$white-9 :rgba(255, 255, 255, 0.9);
+$white-05:rgba(255, 255, 255, 0.05);
+$white-08:rgba(255, 255, 255, 0.08);
+$white-75:rgba(255, 255, 255, 0.075);
+
+/*black variables*/
+$black-1:rgba(0, 0, 0, 0.1);
+$black-2:rgba(0, 0, 0, 0.2);
+$black-3:rgba(0, 0, 0, 0.3);
+$black-4:rgba(0, 0, 0, 0.4);
+$black-5:rgba(0, 0, 0, 0.5);
+$black-6:rgba(0, 0, 0, 0.6);
+$black-7:rgba(0, 0, 0, 0.7);
+$black-8:rgba(0, 0, 0, 0.8);
+$black-9:rgba(0, 0, 0, 0.9);
+$black-05:rgba(0, 0, 0, 0.05);
+
+
+
+/*Dark variables*/
+$dark-theme:#282d3e;
+$dark-body:#3c3f4e;
+$dark-border:$white-1;
+$dark-white:#c9ccdc;
+
+
+/*Transparent variables*/
+$transparent-primary:#4d65d9;
+$transparent-theme:rgba(0,0,0,0.2);
+$transparent-body:var(--transparent-body);
+$transparent-border:$white-1;
+
+
+	
+

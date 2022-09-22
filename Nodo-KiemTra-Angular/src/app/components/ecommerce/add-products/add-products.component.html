@@ -1,0 +1,61 @@
+<app-page-header [title]="'Add products'" [items]="['Ecommerce']" [active_item]="'Add products'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="tx-medium">Product Name</label>
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label class="tx-medium">Category</label>
+                    <ng-select class="select2-no-search">
+                        <ng-option value="Party Wear">
+                            Party Wear
+                        </ng-option>
+                        <ng-option value="Casual Wear">
+                            Casual Wear
+                        </ng-option>
+                        <ng-option value="Wedding">
+                            Wedding
+                        </ng-option>
+                        <ng-option value="Festive">
+                            Festive
+                        </ng-option>
+                    </ng-select>
+                </div>
+                <div class="form-group">
+                    <label class="tx-medium">Price</label>
+                    <input type="text" class="form-control" placeholder="Price">
+                </div>
+                <div class="ql-wrapper ql-wrapper-demo mb-3">
+                    <label class="tx-medium">Product Description</label>
+                    <div id="quillEditor">
+                    </div>
+                </div>
+                <label class="tx-medium">Upload Product</label>
+                <div class="p-4 border rounded-6 mb-0 form-group">
+                    <div>
+                        <ngx-dropzone (change)="onPreviewFileSelect($event)">
+                            <ngx-dropzone-label>
+                              <div>
+                                <h2>preview file</h2>
+                              </div>
+                            </ngx-dropzone-label>
+                            <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of filesPreview" [file]="f"
+                              [removable]="true" (removed)="onPreviewFileRemove(f)">
+                              <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                            </ngx-dropzone-image-preview>
+                          </ngx-dropzone>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer mb-1">
+                <a href="javascript:void(0)" class="btn btn-primary me-2">Add Product</a>
+                <a href="javascript:void(0)" class="btn btn-danger">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

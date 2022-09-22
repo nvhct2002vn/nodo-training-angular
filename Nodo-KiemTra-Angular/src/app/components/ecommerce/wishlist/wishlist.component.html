@@ -1,0 +1,47 @@
+<app-page-header [title]="'Wishlist'" [items]="['Ecommerce']" [active_item]="'Wishlist'"></app-page-header>
+
+<!--Row-->
+<div class="row row-sm">
+    <div class="col-md-12 col-lg-12 col-xl-12">
+        <div class="row row-sm">
+            <div class="col-md-6 col-lg-6 col-xl-3 col-sm-6 alert mb-0" *ngFor="let wish of wishlistList">
+                <div class="card custom-card">
+                    <div class="p-0">
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a routerLink="/eCommerce/product-details" class="image">
+                                    <img class="pic-1" alt="product-image-1" src="{{wish.img}}">
+                                </a>
+                                <a class="wishlist-icon" href="javascript:;" ><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="product-content">
+                                <div class="d-flex">
+                                    <div>
+                                        <h3 class="title"><a href="javascript:;">{{wish.title}}</a></h3>
+                                    </div>
+                                    <div class="price text-end ms-auto">
+                                        <span class="old-price">{{wish.oldValue}}</span>
+                                        <span class="fs-18">{{wish.newValue}}</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ngb-rating class="text-warning" [(rate)]='wish.rating' [readonly]="true" [max]="5"></ngb-rating>
+                                    <a href="javascript:void(0);" class="me-4 text-muted"> ({{wish.ratingValue}})</a>
+                                </div>
+                                <div class="mt-3">
+                                    <a routerLink="/eCommerce/cart" class="btn btn-block btn-primary"><i class="fe fe-shopping-cart me-2"></i>Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="d-flex justify-content-end">
+                <ngb-pagination [collectionSize]="50" [page]="1" aria-label="Default pagination"></ngb-pagination>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- row closed  -->

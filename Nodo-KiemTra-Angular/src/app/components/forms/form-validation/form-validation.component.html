@@ -1,0 +1,277 @@
+<app-page-header [title]="'Form-validation'" [items]="['Forms']" [active_item]="'Form-validation'"></app-page-header>
+
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Input Validation</h6>
+                    <p class="text-muted card-sub-title">This is a demo of a required field that must not leave empty.
+                    </p>
+                </div>
+                <form [formGroup]="inputForm" (ngSubmit)="Submit()" novalidate>
+                    <div class="">
+                        <h6 class="main-content-label mb-1 fs-12">Form validation without limitations
+                        </h6>
+                        <div class="row row-sm">
+                            <div class="col-lg-6 form-group">
+                                <label class="form-label">Text validation: <span class="tx-danger">*</span>
+                                    <input class="form-control" formControlName="text" placeholder="Enter text"
+                                        [ngClass]="{'has-success': inputFormControl['text'].valid}">
+                                </label>
+                                <div *ngIf="(inputFormControl['text'].touched || submitted) && (inputFormControl['text'].errors?.['required'])"
+                                    class="tx-danger">
+                                    <small>Text is required</small>
+                                </div>
+                                <div *ngIf="inputFormControl['text'].errors?.['pattern']" class="tx-danger">
+                                    <small>Enter only characters</small>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <label class="form-label">Number validation: <span class="tx-danger">*</span>
+                                    <input class="form-control" formControlName="number" placeholder="Enter Number"
+                                        [ngClass]="{'has-success': inputFormControl['number'].valid}">
+                                </label>
+                                <div *ngIf="(inputFormControl['number'].touched || submitted) && (inputFormControl['number'].errors?.['required'])"
+                                    class="tx-danger">
+                                    <small>Number is required</small>
+                                </div>
+                                <div *ngIf="inputFormControl['number'].errors?.['pattern']" class="tx-danger">
+                                    <small>Enter only numbers</small>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn ripple btn-primary btn-block"
+                            [disabled]="inputForm.pristine || inputForm.invalid">Validate Form</button>
+                    </div>
+                </form>
+                <form [formGroup]="inputFormLimit" (ngSubmit)="limitSubmit()" novalidate>
+                    <div class="">
+                        <h6 class="main-content-label mb-1 mt-5 fs-12">Form validation with limitations
+                        </h6>
+                        <div class="row row-sm">
+                            <div class="col-lg-6 form-group">
+                                <label class="form-label">Text validation: <span class="tx-danger">*</span>
+                                    <input class="form-control" formControlName="text" placeholder="Enter Text"
+                                        [ngClass]="{'has-success': inputFormLimitControl['text'].valid}">
+                                </label>
+                                <div *ngIf="(inputFormLimitControl['text'].touched || submitted1) && (inputFormLimitControl['text'].errors?.['required'])"
+                                    class="tx-danger">
+                                    <small>Name is required</small>
+                                </div>
+                                <div *ngIf="inputFormLimitControl['text'].errors?.['pattern']" class="tx-danger">
+                                    <small>Enter only 3 - 25 characters</small>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <label class="form-label">Number validation: <span class="tx-danger">*</span>
+                                    <input class="form-control" formControlName="number" placeholder="Enter Number"
+                                        [ngClass]="{'has-success': inputFormLimitControl['number'].valid}" maxlength="10">
+                                </label>
+                                <div *ngIf="(inputFormLimitControl['number'].touched || submitted1) && (inputFormLimitControl['number'].errors?.['required'])"
+                                    class="tx-danger">
+                                    <small>Number is required</small>
+                                </div>
+                                <div *ngIf="inputFormLimitControl['number'].errors?.['pattern']" class="tx-danger">
+                                    <small>Enter only 10 digits</small>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn ripple btn-primary btn-block">Validate Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Custom Style Invalid Messages</h6>
+                    <p class="text-muted card-sub-title">A demo for using custom styled messages for error container.
+                    </p>
+                </div>
+                <form [formGroup]="basicForm" novalidate (ngSubmit)="formSubmit()">
+                    <div class="">
+                        <div class="d-md-flex mg-b-20">
+                            <div class="">
+                                <label>Full Name: <span class="tx-danger">*</span></label>
+                                <input class="form-control wd-xl-250" formControlName="fullName"
+                                    placeholder="Enter Full name"
+                                    [ngClass]="{'has-success': basicFormControl['fullName'].valid}">
+                                <div *ngIf="(basicFormControl['fullName'].touched || submitted) && (basicFormControl['fullName'].errors?.['required'])"
+                                    class="tx-danger">
+                                    <small>Name is required</small>
+                                </div>
+                                <div *ngIf="basicFormControl['fullName'].errors?.['pattern']" class="tx-danger">
+                                    <small>Enter only characters</small>
+                                </div>
+                            </div>
+                            <div class="mg-md-l-20 mg-t-20 mg-md-t-0">
+                                <label>Contact: <span class="tx-danger">*</span></label>
+                                <input class="form-control wd-xl-250" formControlName="contact"
+                                    placeholder="Enter Contact"
+                                    [ngClass]="{'has-success': basicFormControl['contact'].valid}">
+                                <div *ngIf="(basicFormControl['contact'].touched || submitted) && (basicFormControl['contact'].errors?.['required'])"
+                                    class="tx-danger">
+                                    <small>Contact is required</small>
+                                </div>
+                                <div *ngIf="basicFormControl['contact'].errors?.['pattern']" class="tx-danger">
+                                    <small>Enter only numbers</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-2">What is your favorite browser? <span class="tx-danger">*</span></p>
+                    <div class="wd-250 mg-b-0 form-group" formGroupName="myCheckboxGroup">
+                        <label class="ckbox mg-b-5-f">
+                            <input type="checkbox" formControlName="checkBox1" id="checkBox1"><span>Firefox</span>
+                        </label>
+                        <label class="ckbox mg-b-5-f">
+                            <input type="checkbox" formControlName="checkBox2" id="checkBox2"><span>Chrome</span>
+                        </label>
+                        <label class="ckbox mg-b-5-f">
+                            <input type="checkbox" formControlName="checkBox3" id="checkBox3"><span>Safari</span>
+                        </label>
+                        <label class="ckbox">
+                            <input type="checkbox" formControlName="checkBox4" id="checkBox4"><span>Edge</span>
+                        </label>
+                    </div><!-- parsley-checkbox -->
+  
+                    <div class="mg-t-30">
+                        <ng-select placeholder="Choose one">
+                            <ng-option value="Firefox">Firefox</ng-option>
+                            <ng-option value="Chrome">Chrome</ng-option>
+                            <ng-option value="Safari">Safari</ng-option>
+                            <ng-option value="Opera">Opera</ng-option>
+                            <ng-option value="Internet Explorer">Internet Explorer</ng-option>
+                        </ng-select>
+  
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn ripple btn-primary pd-x-20 btn-block" type="submit">Validate Form</button>
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+  
+  </div>
+  <!-- End Row -->
+  
+  <!-- Row -->
+  <div class="row row-sm">
+    <div class="col-xl-6 col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Custom Checkbox Validation</h6>
+                    <p class="text-muted card-sub-title">A demo of checkboxes that must be selected at least two fom any
+                        given list.</p>
+                </div>
+                <form [formGroup]="checkboxForm" (ngSubmit)="checkboxSubmit()" novalidate>
+                    <p class="mg-b-10">What is your favorite browser? <span class="tx-danger">*</span></p>
+                    <div class="row" id="cbWrapper form-group" formGroupName="myCheckboxGroup">
+                        <div class="col-xl-3">
+                            <label class="ckbox mg-b-5-f">
+                                <input type="checkbox" formControlName="checkBox1" id="checkBox1"><span>Firefox</span>
+                            </label>
+  
+                        </div>
+                        <div class="col-xl-3">
+                            <label class="ckbox mg-b-5-f">
+                                <input type="checkbox" formControlName="checkBox2" id="checkBox2"><span>Chrome</span>
+                            </label>
+                        </div>
+                        <div class="col-xl-3">
+                            <label class="ckbox mg-b-5-f">
+                                <input type="checkbox" formControlName="checkBox3" id="checkBox3"><span>Safari</span>
+                            </label>
+                        </div>
+                        <div class="col-xl-3">
+                            <label class="ckbox">
+                                <input type="checkbox" formControlName="checkBox4" id="checkBox4"><span>Edge</span>
+                            </label>
+                        </div>
+                    </div>
+  
+                    <div class="tx-danger" *ngIf="(checkboxForm.controls['myCheckboxGroup'].errors) && 
+                               checkboxForm.controls['myCheckboxGroup'].errors?.['requireOneCheckboxToBeChecked']">
+                        <small>At least two checkbox is required to check</small>
+                    </div>
+                    <div class="mg-t-20">
+                        <button class="btn ripple btn-primary pd-x-20" type="submit" value="Submit">Validate
+                            Form</button>
+                    </div>
+  
+                </form>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xl-6 col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">ng-Select Validation</h6>
+                    <p class="text-muted card-sub-title">A demo of select boxes that must be selected at least one fom
+                        any given option.</p>
+                </div>
+                <form [formGroup]="selectForm" novalidate (ngSubmit)="selectSubmit()">
+                    <div class="d-sm-flex">
+                        <div class="wd-sm-250" id="slWrapper">
+                            <ng-select placeholder="Choose one" formControlName="selectform">
+                                <ng-option value="Firefox">Firefox</ng-option>
+                                <ng-option value="Chrome">Chrome</ng-option>
+                                <ng-option value="Safari">Safari</ng-option>
+                                <ng-option value="Opera">Opera</ng-option>
+                                <ng-option value="Internet Explorer">Internet Explorer</ng-option>
+                            </ng-select>
+  
+                            <div *ngIf="(selectForm.controls['selectform'].touched || submitted) && (selectForm.controls['selectform'].errors?.['required'])"
+                                class="tx-danger">
+                                <small>Select is required</small>
+                            </div>
+                        </div>
+                        <div class="mg-sm-l-10 mg-t-10 mg-sm-t-0">
+                            <button class="btn ripple btn-primary pd-x-20" type="submit" value="5">Validate
+                                Form</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Email Validation</h6>
+                    <p class="text-muted card-sub-title">A demo of an email field that is required and must also be a
+                        valid email address. It automatically validate an email when the field is in type="email".</p>
+                </div>
+                <form [formGroup]="emailForm" novalidate (ngSubmit)="emailSubmit()">
+                    <div class="d-sm-flex align-items-center">
+                        <div class="form-group mg-b-0">
+                            <label class="form-label">Email: <span class="tx-danger">*</span>
+                                <input class="form-control wd-sm-250" formControlName="email"
+                                    placeholder="Enter Email Id" [ngClass]="{'has-success': emailFormControl['email'].valid}">
+                            </label>
+                            <div *ngIf="(emailFormControl['email'].touched || submitted1) && (emailFormControl['email'].errors?.['required'])"
+                                class="tx-danger">
+                                <small>Email Id is required</small>
+                            </div>
+                            <div *ngIf="emailFormControl['email'].errors?.['pattern']" class="tx-danger">
+                                <small>Enter a valid mail id</small>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button class="btn ripple btn-primary pd-x-20 mt-md-4 ms-1" type="submit">Validate Email</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- End Row-->

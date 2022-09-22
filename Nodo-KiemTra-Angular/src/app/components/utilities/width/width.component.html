@@ -1,0 +1,158 @@
+<app-page-header [title]="'Width'" [items]="['Tables']" [active_item]="'Width'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-12 col-lg-12">
+        <div class="card custom-card" id="set">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Set Width</h6>
+                    <p class="text-muted  card-sub-title">You can set a width to an element instantly by using the following utilities classes for width.</p>
+                </div>
+                <div class="d-flex">
+                    <div class="d-flex align-items-center justify-content-center wd-80 ht-80 bg-light">
+                        .wd-80
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center wd-150 ht-80 bg-light mg-l-20">
+                        .wd-150
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center wd-100 ht-80 bg-light mg-l-20">
+                        .wd-100
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="table-responsive">
+                    <table class="table main-table-reference mt-0">
+                        <thead>
+                            <tr>
+                                <th class="wd-30p">Smaller Width</th>
+                                <th class="wd-70p">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.wd-[value]</code></td>
+                                <td>1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table class="table main-table-reference mt-0">
+                        <thead>
+                            <tr>
+                                <th class="wd-30p">Regular Width</th>
+                                <th class="wd-70p">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.wd-[value]</code></td>
+                                <td>15 | 20 | 25 | 30 | ... | 100 &nbsp; (step of 5)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table class="table main-table-reference mt-0 mb-0">
+                        <thead>
+                            <tr>
+                                <th class="wd-30p">Bigger Width</th>
+                                <th class="wd-70p">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.wd-[value]</code></td>
+                                <td>150 | 200 | 250 | 300 | ... | 1000 &nbsp; (step of 50)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="percentage">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Percentage Width</h6>
+                    <p class="text-muted  card-sub-title">You can set a width through percentage using the following utilities classes.</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="table main-table-reference mt-0 mb-0">
+                        <thead>
+                            <tr>
+                                <th class="wd-30p">Class</th>
+                                <th class="wd-70p">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.wd-[value]p</code></td>
+                                <td>10 | 20 | 30 | 40 | ... | 100 &nbsp; (step of 10)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="media">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Media Query Width</h6>
+                    <p class="text-muted  card-sub-title">You can also set a width to a different media query using the following utilities classes.</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="table main-table-reference mt-0 mb-0">
+                        <thead>
+                            <tr>
+                                <th class="wd-30p">Class</th>
+                                <th class="wd-70p">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.wd-[size]-[value]</code></td>
+                                <td rowspan="2">
+                                    <p class="mg-b-5">size: xs | sm | md | lg | xl</p>
+                                    <p class="mg-b-0">value: the width value (refer to code above)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>.wd-[size]-[value]p</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="extra">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Extra Width Classes</h6>
+                    <p class="text-muted  card-sub-title">You can also set a width using the extra utilities classes below.</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="table main-table-reference mt-0 mb-0">
+                        <thead>
+                            <tr>
+                                <th class="wd-30p">Class</th>
+                                <th class="wd-70p">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.wd-100v</code></td>
+                                <td>Set a width to an element based on viewport width.</td>
+                            </tr>
+                            <tr>
+                                <td><code>.wd-auto</code></td>
+                                <td>Set an auto width to an element.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

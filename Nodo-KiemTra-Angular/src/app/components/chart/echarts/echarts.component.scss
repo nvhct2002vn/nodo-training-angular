@@ -1,0 +1,11 @@
+::ng-deep{
+    .echart-height div {
+        z-index: 1 !important;
+    }
+    .dark-theme{
+        .echart-height > div{
+            background-color: rgb(14, 14, 35) !important;
+            border-color: rgb(35, 36, 61) !important;
+        }
+    }
+}

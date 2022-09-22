@@ -1,0 +1,13 @@
+.switch_section input{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 15%;
+    outline: none;
+    border: none;
+    border: 1px solid #4d65d9;
+}
+
+.demo_changer .form_holder {
+    min-height: max-content !important;
+    height: auto !important;
+}

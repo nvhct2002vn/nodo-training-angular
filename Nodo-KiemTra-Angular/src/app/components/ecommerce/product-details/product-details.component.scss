@@ -1,0 +1,11 @@
+@media screen and (max-width:767.9px) {
+    .carousel-slider .panel-tabs.nav{
+        flex-wrap: nowrap !important;
+    }
+}
+@media screen and (min-width: 992px){
+    .carousel-slider .nav-item {
+        min-height: 150px;
+        min-width: 116px;
+    }
+}

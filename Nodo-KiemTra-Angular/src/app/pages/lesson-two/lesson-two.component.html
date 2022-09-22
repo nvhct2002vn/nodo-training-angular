@@ -1,0 +1,17 @@
+<label *ngIf="model=='red' else ref" class="m-2">
+    <span>Name:</span>
+    <input type="text" class="form-control" [value]="name"/>
+    <span>Current val: {{name}}</span>
+</label>
+<ng-template #ref>
+    <span *ngFor="let item of array; index as index">
+        <span *ngIf="index < 2">{{item}}</span>
+    </span>
+</ng-template>
+<label class="m-2">
+    <span>Name:</span>
+    <input type="text" class="form-control" [(ngModel)]="model" (ngModelChange)="onChange($event)"
+           [ngStyle]="{'background': model =='red' ? 'red': ''}"/>
+    <span>Current val: {{model}}</span>
+    <button class="btn btn-secondary" (click)="model = 'red'">Change</button>
+</label>

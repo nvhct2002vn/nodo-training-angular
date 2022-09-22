@@ -1,0 +1,288 @@
+<app-page-header [title]="'Dashboard'" [items]="['Crypto currencies']" [active_item]="'Dashboard'"></app-page-header>
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-xl-8 col-xxl-8 col-lg-12 col-md-12">
+    <div class="card card-bitcoin custom-card">
+      <div class="card-header border-bottom">
+        <h3 class="card-title tx-18"><label class="main-content-label tx-15">BTC / USD CRYPTO CHART</label></h3>
+      </div>
+      <div class="media ps-4 pe-4 mt-4">
+        <div class="media-body ms-2">
+          <div class="row row-sm">
+            <div class="col my-auto">
+              <p>BTC / ETH</p>
+            </div>
+            <div class="col-3">
+              <label class="mb-0 text-muted tx-11">Price Benchmark</label>
+              <p>150.00%</p>
+            </div>
+            <div class="col">
+              <label class="mb-0 text-muted tx-11">Price (USD)</label>
+              <p>$3,764.34</p>
+            </div>
+            <div class="col">
+              <label class="mb-0 text-muted tx-11">Daily Change </label>
+              <p>-0.21%</p>
+            </div>
+            <div class="col">
+              <label class="mb-0 text-muted tx-11">Market Cap</label>
+              <p>$256.63</p>
+            </div>
+          </div>
+          <!---row end-->
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="btchart" class="ht-auto">
+          <apx-chart
+          [series]="crypto.series"
+          [chart]="crypto.chart"
+          [xaxis]="crypto.xaxis"
+          [yaxis]="crypto.yaxis"
+          [title]="crypto.title"
+          [plotOptions]="crypto.plotOptions"
+        ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-xxl-4 col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-header border-bottom">
+        <h3 class="card-title tx-18"><label class="main-content-label tx-15">TRADE HISTORY</label></h3>
+      </div>
+      <div class="px-3 py-2">
+        <div class="table-responsive h-420">
+          <table class="table card-table text-nowrap mb-1">
+            <thead>
+              <tr>
+                <th class="border-bottom-0 ps-4">Coin</th>
+                <th class="border-bottom-0 ps-3">Price</th>
+                <th class="border-bottom-0">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src="./assets/img/svgs/crypto-currencies/btc.svg" class="w-6 h-6 me-2" alt="">Bitcoin
+                </td>
+                <td>$0.11923<i class="fa fa-arrow-up text-success ms-1"></i></td>
+                <td>0.0215</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/img/svgs/crypto-currencies/xmr.svg" class="w-6 h-6 me-2" alt="">Dash
+                </td>
+                <td>$0.07324<i class="fa fa-arrow-down text-danger ms-1"></i></td>
+                <td>0.0112</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/img/svgs/crypto-currencies/eos.svg" class="w-6 h-6 me-2" alt="">EOS
+                </td>
+                <td>$0.12645<i class="fa fa-arrow-up text-success ms-1"></i></td>
+                <td>0.0214</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/img/svgs/crypto-currencies/eth.svg" class="w-6 h-6 me-2" alt="">Ethereum
+                </td>
+                <td>$0.01153<i class="fa fa-arrow-down text-danger ms-1"></i></td>
+                <td>0.0012</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/img/svgs/crypto-currencies/maid.svg" class="w-6 h-6 me-2" alt="">Ripple
+                </td>
+                <td>$0.08923<i class="fa fa-arrow-down text-success ms-1"></i></td>
+                <td>0.0015</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/img/svgs/crypto-currencies/bcn.svg" class="w-6 h-6 me-2" alt="">Bcn
+                </td>
+                <td>$0.14915<i class="fa fa-arrow-up text-success ms-1"></i></td>
+                <td>0.0312</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/img/svgs/crypto-currencies/iost.svg" class="w-6 h-6 me-2" alt="">IOTA
+                </td>
+                <td>$0.08923<i class="fa fa-arrow-down text-danger ms-1"></i></td>
+                <td>0.0015</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/img/svgs/crypto-currencies/xrp.svg" class="w-6 h-6 me-2" alt="">Bitcoin
+                </td>
+                <td>$0.11923<i class="fa fa-arrow-up text-success ms-1"></i></td>
+                <td>0.0215</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-12 col-xl-7">
+    <div class="card custom-card h-500">
+      <div class="card-header border-bottom">
+        <h3 class="card-title tx-18 mb-0"><label class="main-content-label tx-15">SELL ORDER</label></h3>
+        <span class="text-muted mx-2">Total BTC available:</span>
+        <span class="text-dark fs-18">5278.279429</span>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered mb-0">
+            <thead>
+              <tr>
+                <th class="border-bottom-0">Date</th>
+                <th class="border-bottom-0">BTC Amount</th>
+                <th class="border-bottom-0">Total($)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>07/4/21</td>
+                <td><img src="./assets/img/svgs/crypto-currencies/btc.svg" class="wd-15 hd-15 pb-1" alt="">
+                  <span class=""> 0.45000000</span></td>
+                <td>$4762.53</td>
+              </tr>
+              <tr>
+                <td>08/4/21</td>
+                <td><img src="./assets/img/svgs/crypto-currencies/btc.svg" class="wd-15 hd-15 pb-1" alt=""> 0.04000000
+                </td>
+                <td>$423.34</td>
+              </tr>
+              <tr>
+                <td>09/4/21</td>
+                <td><img src="./assets/img/svgs/crypto-currencies/btc.svg" class="wd-15 hd-15 pb-1" alt=""> 0.25100000
+                </td>
+                <td>$2656.51</td>
+              </tr>
+              <tr>
+                <td>10583.8</td>
+                <td><img src="./assets/img/svgs/crypto-currencies/btc.svg" class="wd-15 hd-15 pb-1" alt=""> 0.35000000
+                </td>
+                <td>$3704.33</td>
+              </tr>
+              <tr>
+                <td>10/4/21</td>
+                <td><img src="./assets/img/svgs/crypto-currencies/btc.svg" class="wd-15 hd-15 pb-1" alt=""> 0.30000000
+                </td>
+                <td>$3178.71</td>
+              </tr>
+              <tr>
+                <td>11/4/21</td>
+                <td><img src="./assets/img/svgs/crypto-currencies/btc.svg" class="wd-15 hd-15 pb-1" alt=""> 0.02000000
+                </td>
+                <td>$211.99</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-xl-5">
+    <div class="card custom-card bg-primary">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <h5 class="card-title tx-18"><label class="main-content-label tx-15 text-white">Account Status</label></h5>
+            <div>
+              <!-- <span id="accstatus">4,4,7,5,9,10,6,4,4,7,5,9,10,8,7,5,9,10,6,9,4,7,5</span> -->
+              <apx-chart class="chart-dropshadow-info" [chart]="Sparkline.chart" [stroke]="Sparkline.stroke" [series]="Sparkline.series" [yaxis]="Sparkline.yaxis" [colors]="Sparkline.colors">
+              </apx-chart>
+            </div>
+          </div>
+          <div class="col-6 text-end">
+            <h5 class="card-title tx-15 text-white">AVAILABLE BALANCE</h5>
+            <h3 class="text-white tx-normal">$ 22,222</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer bd-white-3">
+        <button class="btn btn-warning">Top Up</button>
+        <button class="btn btn-success float-end">Withdraw</button>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-body h-100">
+        <div class="row">
+          <div class="col-xl-7 col-lg-7 col-md-7 col-12">
+            <h3 class="card-title mb-1 tx-15">CRYPTO NEWS</h3>
+            <span class="mb-1 text-dark">Decreasing High Points</span>
+            <p class="text-muted fs-13"><span> Crypto News is a useful application for crypto enthusiasts. Crypto News
+                is a useful application for crypto.</span></p>
+            <a href="javascript:;" class="btn btn-pill btn-outline-info">More Details </a>
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-5 col-12 my-auto mt-auto">
+            <img alt="avatar" src="./assets/img/media/bitcoin.jpg" class="wd-200 hd-200 rounded-10 mt-3 mt-md-0">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-xl-12 col-xxl-12 col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-header border-bottom">
+        <h3 class="card-title tx-18 mb-0"><label class="main-content-label tx-15">TRANSACTION HISTORY</label></h3>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <select class="form-select" style="width: auto" [(ngModel)]="pageSize"
+            (ngModelChange)="refreshCryptoDahboard()">
+            <option [ngValue]="10">10 items per page</option>
+            <option [ngValue]="25">25 items per page</option>
+            <option [ngValue]="50">50 items per page</option>
+            <option [ngValue]="100">100 items per page</option>
+          </select>
+          <table class="table table-bordered text-nowrap border-bottom mb-0 my-2" id="transactionhistory">
+            <thead>
+              <tr>
+                <th scope="col">Crypto Trade</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody class="">
+              <tr *ngFor="let list of CryptoDahboardList">
+                <td>
+                  <img src={{list.img}} class="w-5 h-5 me-3" alt="">{{list.name}}
+                </td>
+                <td class="text-muted">{{list.date}}</td>
+                <td>{{list.time}}</td>
+                <td class="text-{{list.amountStatus}}">{{list.amount}}</td>
+                <td class="">
+                  <span
+                    class="badge rounded-pill text-{{list.status}} bg-{{list.status}}-transparent py-1 px-2">{{list.statusText}}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-end">
+            <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+              (pageChange)="refreshCryptoDahboard()">
+            </ngb-pagination>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->

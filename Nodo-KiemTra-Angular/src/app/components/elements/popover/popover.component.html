@@ -1,0 +1,139 @@
+<app-page-header [title]="'Popover'" [items]="['Elements']" [active_item]="'Popover'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-12 col-lg-12">
+        <div class="card custom-card" id="static">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Static Example</h6>
+                    <p class="text-muted card-sub-title">Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.</p>
+                </div>
+                <div class="popover-static-demo">
+                    <div class="row row-sm">
+                        <div class="col-md-6">
+                            <div class="popover bs-popover-top">
+                                <div class="popover-arrow"></div>
+                                <h3 class="popover-header">Popover top</h3>
+                                <div class="popover-body">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mg-t-30 mg-md-t-0">
+                            <div class="popover bs-popover-bottom">
+                                <div class="popover-arrow"></div>
+                                <h3 class="popover-header">Popover bottom</h3>
+                                <div class="popover-body">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mg-t-30">
+                            <div class="popover bs-popover-start">
+                                <div class="popover-arrow"></div>
+                                <h3 class="popover-header">Popover Left</h3>
+                                <div class="popover-body">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mg-t-30">
+                            <div class="popover bs-popover-end">
+                                <div class="popover-arrow"></div>
+                                <h3 class="popover-header">Popover Right</h3>
+                                <div class="popover-body">
+                                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card custom-card" id="default">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Default Popover</h6>
+                    <p class="text-muted card-sub-title">Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example bg-light">
+                        <div class="row row-sm tx-center">
+                            <div class="col-sm-6 col-lg-2">
+                                <button class="btn ripple btn-primary" container="button" ngbPopover="Vivamus sagittis lacus vel." placement="start" popoverClass="popover-default" popoverTitle="Popover left" type="button">Popover Left</button>
+                            </div>
+                            <div class="col-sm-6 col-lg-2 mg-t-30 mg-sm-t-0">
+                                <button class="btn ripple btn-primary" container="button" ngbPopover="Vivamus sagittis lacus vel." placement="bottom" popoverClass="popover-default" popoverTitle="Popover bottom" type="button">Popover Bottom</button>
+                            </div>
+                            <div class="col-sm-6 col-lg-2 mg-t-30 mg-lg-t-0">
+                                <button class="btn ripple btn-primary" container="button" ngbPopover="Vivamus sagittis lacus vel." placement="top" popoverClass="popover-default" popoverTitle="Popover top" type="button">Popover Top</button>
+                            </div>
+                            <div class="col-sm-6 col-lg-2 mg-t-30 mg-lg-t-0">
+                                <button class="btn ripple btn-primary" container="button" ngbPopover="Vivamus sagittis lacus vel." placement="end" popoverClass="popover-default" popoverTitle="Popover right" type="button">Popover Right</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-sm">
+            <div class="col-lg-12">
+                <div class="card custom-card" id="color">
+                    <div class="card-body">
+                        <div>
+                            <h6 class="main-content-label mb-1">Colored Head Popover</h6>
+                            <p class="text-muted card-sub-title">A demonstration of colored title background of popover available in all four directions.</p>
+                        </div>
+                        <div class="text-wrap">
+                            <div class="example bg-light">
+                                <div class="row row-sm tx-center">
+                                    <div class="col-sm-6 col-lg-2 mg-sm-t-5">
+                                        <button class="btn ripple btn-primary" container="body" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="top" popoverClass="popover-head-primary" popoverTitle="Popover top" type="button">Header Color</button>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-2 mg-t-30 mg-sm-t-5">
+                                        <button class="btn ripple btn-secondary" container="body" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="top" popoverClass="popover-head-secondary"  popoverTitle="Popover top" type="button">Header Color</button>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-2 mg-t-30 mg-sm-t-5">
+                                        <button class="btn ripple btn-success" container="body" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="top" popoverClass="popover-head-success"  popoverTitle="Popover top" type="button">Header Color</button>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-2 mg-t-30 mg-sm-t-5">
+                                        <button class="btn ripple btn-info" container="body" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="top" popoverClass="popover-head-info"  popoverTitle="Popover top" type="button">Header Color</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="card custom-card" id="full">
+                    <div class="card-body">
+                        <div>
+                            <h6 class="main-content-label mb-1">Full Colored Popover</h6>
+                            <p class="text-muted card-sub-title">A demonstration of colored body background of popover available in all four directions.</p>
+                        </div>
+                        <div class="text-wrap">
+                            <div class="example bg-light">
+                                <div class="row row-sm tx-center">
+                                    <div class="col-sm-6 col-lg-2 mg-sm-t-5">
+                                        <button class="btn ripple btn-primary" container="body" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="top" popoverClass="popover-primary"  popoverTitle="Popover top" type="button">Full Color</button>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-2 mg-t-30 mg-sm-t-5">
+                                        <button class="btn ripple btn-secondary" container="body" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="top" popoverClass="popover-secondary"  popoverTitle="Popover top" type="button">Full Color</button>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-2 mg-t-30 mg-sm-t-5">
+                                        <button class="btn ripple btn-info" container="body" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="top" popoverClass="popover-info"  popoverTitle="Popover top" type="button">Full Color</button>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-2 mg-t-30 mg-sm-t-5">
+                                        <button class="btn ripple btn-success" container="body" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." placement="top" popoverClass="popover-success"  popoverTitle="Popover top" type="button">Full Color</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

@@ -1,0 +1,10 @@
+::ng-deep {
+    app-loader > div {
+      height: 100vh;
+      position: sticky;
+      z-index: 9;
+      > div {
+        z-index: 8 !important;
+      }
+    }
+  }

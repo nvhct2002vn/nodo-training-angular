@@ -1,0 +1,176 @@
+<app-page-header [title]="'Progress'" [items]="['Elements']" [active_item]="'Progress'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-md-12 col-lg-6">
+        <div class="card custom-card" id="basic">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Basic Progress</h6>
+                    <p class="text-muted card-sub-title">A basic progress in template colors.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar class="mg-b-20" type="default" [value]="25"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" type="default" [value]="35"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" type="default" [value]="50"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" type="default" [value]="65"></ngb-progressbar>
+                        <ngb-progressbar type="default" [value]="75"></ngb-progressbar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Contextual Progress</h6>
+                    <p class="text-muted card-sub-title">A basic progress in all different colors.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar class="mg-b-20" type="default" [value]="25"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" type="secondary" [value]="35"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" type="info" [value]="50"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" type="danger" [value]="65"></ngb-progressbar>
+                        <ngb-progressbar type="success" [value]="75"></ngb-progressbar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+        <div class="card custom-card" id="striped">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Striped Progress</h6>
+                    <p class="text-muted card-sub-title">A basic progress in all different colors.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar class="mg-b-20" [striped]="true" type="default" [value]="25"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" [striped]="true" type="secondary" [value]="35"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" [striped]="true" type="info" [value]="50"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" [striped]="true" type="danger" [value]="65"></ngb-progressbar>
+                        <ngb-progressbar [striped]="true" type="success" [value]="75"></ngb-progressbar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+        <div class="card custom-card" id="animate">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Animated Bars</h6>
+                    <p class="text-muted card-sub-title">The striped gradient can also be animated. Add <code>.progress-bar-animated</code> to <code>.progress-bar</code> to animate the stripes right to left via CSS3 animations.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar class="mg-b-20" [animated]="true" [striped]="true" type="default" [value]="25"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" [animated]="true" [striped]="true" type="secondary" [value]="35"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" [animated]="true" [striped]="true" type="info" [value]="50"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-20" [animated]="true" [striped]="true" type="danger" [value]="65"></ngb-progressbar>
+                        <ngb-progressbar [animated]="true" [striped]="true" type="success" [value]="75"></ngb-progressbar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+        <div class="card custom-card" id="label">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Progress Label</h6>
+                    <p class="text-muted card-sub-title">A basic progress in different sizes.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar class="mg-b-10" type="default" textType="white" [value]="50" [showValue]="true"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-10" type="secondary" textType="white" [value]="60" [showValue]="true"></ngb-progressbar>
+                        <ngb-progressbar class="mg-b-10" type="info" textType="white" [value]="95" [showValue]="true"></ngb-progressbar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+        <div class="card custom-card" id="multiple">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Multiple Bars</h6>
+                    <p class="text-muted card-sub-title">Include multiple progress bars in a progress component if you need.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="progress mg-b-10">
+                            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress mg-b-10">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-teal" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-dark" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12">
+        <div class="card custom-card" id="sizes">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Progress Sizes</h6>
+                    <p class="text-muted card-sub-title">A basic progress in different sizes.</p>
+                </div>
+                <span class="tx-uppercase tx-11 d-block mg-b-5 tx-semibold">Size Super Extra Small</span>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar type="primary" class="ht-2 mg-b-10" [value]="25"></ngb-progressbar>
+                        <ngb-progressbar type="secondary" class="ht-2 mg-b-10" [value]="35"></ngb-progressbar>
+                        <ngb-progressbar type="info" class="ht-2" [value]="50"></ngb-progressbar>
+                    </div>
+                </div>
+                <span class="tx-uppercase tx-11 d-block mg-t-20 mg-b-5 tx-semibold">Size Extra Small</span>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar type="primary" class="ht-5 mg-b-10" [value]="25"></ngb-progressbar>
+                        <ngb-progressbar type="secondary" class="ht-5 mg-b-10" [value]="35"></ngb-progressbar>
+                        <ngb-progressbar type="info" class="ht-5" [value]="50"></ngb-progressbar>
+                    </div>
+                </div>
+                <span class="tx-uppercase tx-11 d-block mg-t-20 mg-b-5 tx-semibold">Size Small</span>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar type="primary" class="ht-7 mg-b-10" [value]="25"></ngb-progressbar>
+                        <ngb-progressbar type="secondary" class="ht-7 mg-b-10" [value]="35"></ngb-progressbar>
+                        <ngb-progressbar type="info" class="ht-7" [value]="50"></ngb-progressbar>
+                    </div>
+                </div>
+                <span class="tx-uppercase tx-11 d-block mg-t-20 mg-b-5 tx-semibold">Size Normal</span>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar type="primary" class="ht-9 mg-b-10" [value]="25"></ngb-progressbar>
+                        <ngb-progressbar type="secondary" class="ht-9 mg-b-10" [value]="35"></ngb-progressbar>
+                        <ngb-progressbar type="info" class="ht-9" [value]="50"></ngb-progressbar>
+                    </div>
+                </div>
+                <span class="tx-uppercase tx-11 d-block mg-t-20 mg-b-5 tx-semibold">Size Large</span>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ngb-progressbar type="primary" class="mg-b-10" [value]="25"></ngb-progressbar>
+                        <ngb-progressbar type="secondary" class="mg-b-10" [value]="35"></ngb-progressbar>
+                        <ngb-progressbar type="info" class="mg-b-10" [value]="50"></ngb-progressbar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

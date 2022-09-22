@@ -1,0 +1,7 @@
+::ng-deep{
+    body:not(.rtl) app-chat{
+        .dropdown-menu-end{ 
+            inset: 0px 0px auto auto !important;
+        }
+    }
+}

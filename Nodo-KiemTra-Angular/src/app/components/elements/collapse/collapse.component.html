@@ -1,0 +1,58 @@
+<app-page-header [title]="'Collpase'" [items]="['Elements']" [active_item]="'Collpase'"></app-page-header>
+	<!-- Row -->
+    <div class="sidemenu-height">
+        <div class="row row-sm">
+            <div class="col-lg-12 col-md-12">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <div>
+                            <h6 class="main-content-label mb-1">Basic Example</h6>
+                            <p class="text-muted card-sub-title">Click the buttons below to show and hide another element via class changes</p>
+                        </div>
+                        <div>
+                            <a href="javascript:;" class="btn ripple btn-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" >Toggle Content</a>
+                            <div class="collapse mg-t-5" id="collapseExample" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+                                <div class="border rounded-6 p-4">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <div>
+                            <h6 class="main-content-label mb-1">Multiple Targets</h6>
+                            <p class="text-muted card-sub-title">A button or link can show and hide multiple elements by referencing them with a jquery selector in its href or data-bs-target attribute.</p>
+                        </div>
+                        <div>
+                            <div class="btn btn-list">
+                                <a href="javascript:;" class="btn ripple btn-secondary" (click)="first()">Toggle First Content</a>
+                                <a href="javascript:;" class="btn ripple btn-success" (click)="second()">Toggle Second Content</a>
+                                <a href="javascript:;" class="btn ripple btn-info" (click)="both()">Toggle Both Contents</a>
+                            </div>
+                            <div class="row row-sm">
+                                <div class="col">
+                                    <div class="multi-collapse mt-2" id="multiCollapseExample1"  *ngIf="isFirstCollapsed">
+                                        <div class="border rounded-6 p-4">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="multi-collapse mt-2" id="multiCollapseExample2" *ngIf="isSecondCollapsed">
+                                        <div class="border rounded-6 p-4">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Row -->

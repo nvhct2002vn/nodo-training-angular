@@ -1,0 +1,496 @@
+<app-page-header [title]="'form-layouts'" [items]="['Forms']" [active_item]="'form-layouts'"></app-page-header>
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-6 col-md-12">
+        <div class="card custom-card">
+            <div class="card-header">
+                <div>
+                    <h6 class="main-content-label">Vertical Form</h6>
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="form-label tx-semibold">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="form-label tx-semibold">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                            <span class="custom-control-label">Check me Out</span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary mb-0">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <div class="card custom-card">
+            <div class="card-header">
+                <div>
+                    <h6 class="main-content-label">Horizonatal Form</h6>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="">
+                    <div class="row row-xs align-items-center mg-b-20">
+                        <div class="col-md-3">
+                            <label class="mg-b-0 tx-semibold">Firstname</label>
+                        </div>
+                        <div class="col-md-9 mg-t-5 mg-md-t-0">
+                            <input class="form-control" placeholder="Enter your firstname" type="text">
+                        </div>
+                    </div>
+                    <div class="row row-xs align-items-center mg-b-20">
+                        <div class="col-md-3">
+                            <label class="mg-b-0 tx-semibold">Lastname</label>
+                        </div>
+                        <div class="col-md-9 mg-t-5 mg-md-t-0">
+                            <input class="form-control" placeholder="Enter your lastname" type="text">
+                        </div>
+                    </div>
+                    <div class="row row-xs align-items-center mg-b-20">
+                        <div class="col-md-3">
+                            <label class="mg-b-0 tx-semibold">Email</label>
+                        </div>
+                        <div class="col-md-9 mg-t-5 mg-md-t-0">
+                            <input class="form-control" placeholder="Enter your email" type="email">
+                        </div>
+                    </div>
+                    <div class="form-group row justify-content-end">
+                        <div class="col-md-9 ps-md-2">
+                            <div class="form-group mb-0">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                    <span class="custom-control-label">Check me Out</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row justify-content-end mb-0">
+                        <div class="col-md-9">
+                            <button class="btn ripple btn-primary me-2">Register</button>
+                            <button class="btn ripple btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-header">
+                <div>
+                    <h6 class="main-content-label">Grid Form</h6>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row row-sm">
+                    <div class="col-md-12 col-lg-12 col-xl-12">
+                        <div class="">
+                            <div class="form-group">
+                                <label class="tx-semibold">Name</label>
+                                <input class="form-control" required="" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label class="tx-semibold">Email</label>
+                                <div class="pos-relative">
+                                    <input class="form-control pd-r-80" required="" type="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row row-sm">
+                                    <div class="col-sm-4">
+                                        <label class="tx-semibold">Date</label>
+                                        <ng-select placeholder="Select option">
+                                            <ng-option value="1">1</ng-option>
+                                            <ng-option value="2">2</ng-option>
+                                            <ng-option value="3">3</ng-option>
+                                            <ng-option value="4">4</ng-option>
+                                            <ng-option value="5">5</ng-option>
+                                            <ng-option value="6">6</ng-option>
+                                            <ng-option value="7">7</ng-option>
+                                            <ng-option value="8">8</ng-option>
+                                            <ng-option value="9">9</ng-option>
+                                            <ng-option value="10">10</ng-option>
+                                            <ng-option value="11">11</ng-option>
+                                            <ng-option value="12">12</ng-option>
+                                            <ng-option value="13">13</ng-option>
+                                            <ng-option value="14">14</ng-option>
+                                            <ng-option value="15">15</ng-option>
+                                            <ng-option value="16">16</ng-option>
+                                            <ng-option value="17">17</ng-option>
+                                            <ng-option value="18">18</ng-option>
+                                            <ng-option value="19">19</ng-option>
+                                            <ng-option value="20">20</ng-option>
+                                            <ng-option value="21">21</ng-option>
+                                            <ng-option value="22">22</ng-option>
+                                            <ng-option value="23">23</ng-option>
+                                            <ng-option value="24">24</ng-option>
+                                            <ng-option value="25">25</ng-option>
+                                            <ng-option value="26">26</ng-option>
+                                            <ng-option value="27">27</ng-option>
+                                            <ng-option value="28">28</ng-option>
+                                            <ng-option value="29">29</ng-option>
+                                            <ng-option value="30">30</ng-option>
+                                            <ng-option value="31">31</ng-option>
+                                        </ng-select>
+                                    </div>
+                                    <div class="col-sm-4 mg-t-20 mg-sm-t-0">
+                                        <label class="tx-semibold">Month</label>
+                                        <ng-select placeholder="Select option">
+                                            <ng-option value="January">January</ng-option>
+                                            <ng-option value="February">February</ng-option>
+                                            <ng-option value="March">March</ng-option>
+                                            <ng-option value="April">April</ng-option>
+                                            <ng-option value="May">May</ng-option>
+                                            <ng-option value="June">June</ng-option>
+                                            <ng-option value="July">July</ng-option>
+                                            <ng-option value="August">August</ng-option>
+                                            <ng-option value="September">September</ng-option>
+                                            <ng-option value="October">October</ng-option>
+                                            <ng-option value="November">November</ng-option>
+                                            <ng-option value="December">December</ng-option>
+                                        </ng-select>
+                                    </div>
+                                    <div class="col-sm-4 mg-t-20 mg-sm-t-0">
+                                        <label class="tx-semibold">Year</label>
+                                        <ng-select placeholder="Select option" >
+                                            <ng-option value="2020">2020</ng-option>
+                                            <ng-option value="2018">2018</ng-option>
+                                            <ng-option value="2017">2017</ng-option>
+                                            <ng-option value="2016">2016</ng-option>
+                                            <ng-option value="2015">2015</ng-option>
+                                            <ng-option value="2014">2014</ng-option>
+                                            <ng-option value="2013">2013</ng-option>
+                                            <ng-option value="2012">2012</ng-option>
+                                            <ng-option value="2011">2011</ng-option>
+                                            <ng-option value="2010">2010</ng-option>
+                                            <ng-option value="2009">2009</ng-option>
+                                            <ng-option value="2008">2008</ng-option>
+                                            <ng-option value="2007">2007</ng-option>
+                                            <ng-option value="2006">2006</ng-option>
+                                            <ng-option value="2005">2005</ng-option>
+                                            <ng-option value="2004">2004</ng-option>
+                                            <ng-option value="2003">2003</ng-option>
+                                            <ng-option value="2002">2002</ng-option>
+                                            <ng-option value="2001">2001</ng-option>
+                                            <ng-option value="1999">1999</ng-option>
+                                            <ng-option value="1998">1998</ng-option>
+                                        </ng-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mg-b-20">
+                                <label class="ckbox">
+                                    <input checked type="checkbox"><span class="tx-13">I agree terms and conditions</span>
+                                </label>
+                            </div>
+                            <button class="btn ripple btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row">
+    <div class="col-md-12 col-lg-6">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h6 class="main-content-label">Shipping Details</h6>
+            </div>
+            <div class="card-body">
+                <div class="form-row">
+                    <div class="form-group col-md-6 mb-0">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name1" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 mb-0">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name2" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <input type="email" class="form-control" id="inputEmail5" placeholder="Email Address">
+                </div>
+                <div class="form-group ">
+                    <input type="text" class="form-control" placeholder="AddressLine1">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6 mb-0">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Country">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 mb-0">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="region" placeholder="Country/Region">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6 mb-0">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="city" placeholder="City">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 mb-0">
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="postal" placeholder="Zip/Postal">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-footer mt-2">
+                    <a href="javascript:;" class="btn btn-primary">Confirm  Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+        <div class="card custom-card">
+            <div class="card-header d-flex">
+                <h6 class="main-content-label">CheckOut</h6>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label class="form-label tx-semibold">Card Holder Name</label>
+                            <input type="text" class="form-control" id="name11" placeholder="First Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-9 mb-0">
+                        <div class="form-group">
+                            <label class="form-label tx-semibold">Credit card Number</label>
+                            <input type="number" class="form-control" id="number" placeholder="number">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3 mb-0">
+                        <div class="form-group">
+                            <label class="form-label tx-semibold">CVV Number</label>
+                            <input type="number" class="form-control" id="region1" placeholder="675">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group m-0">
+                    <label class="form-label tx-semibold">Expiration Date</label>
+                    <div class="row ">
+                        <div class="col-6">
+                            <ng-select name="user[month]" placeholder="Select Month">
+                                <ng-option value="1">January</ng-option>
+                                <ng-option value="2">February</ng-option>
+                                <ng-option value="3">March</ng-option>
+                                <ng-option value="4">April</ng-option>
+                                <ng-option value="5">May</ng-option>
+                                <ng-option value="6">June</ng-option>
+                                <ng-option value="7">July</ng-option>
+                                <ng-option value="8">August</ng-option>
+                                <ng-option value="9">September</ng-option>
+                                <ng-option value="10">October</ng-option>
+                                <ng-option value="11">November</ng-option>
+                                <ng-option value="12">December</ng-option>
+                            </ng-select>
+                        </div>
+                        <div class="col-6">
+                            <ng-select name="user[year]" placeholder="Select Year">
+                                <ng-option value="2014">2040</ng-option>
+                                <ng-option value="2014">2039</ng-option>
+                                <ng-option value="2014">2037</ng-option>
+                                <ng-option value="2014">2036</ng-option>
+                                <ng-option value="2014">2035</ng-option>
+                                <ng-option value="2014">2034</ng-option>
+                                <ng-option value="2014">2033</ng-option>
+                                <ng-option value="2014">2032</ng-option>
+                                <ng-option value="2014">2031</ng-option>
+                                <ng-option value="2014">2030</ng-option>
+                                <ng-option value="2014">2030</ng-option>
+                                <ng-option value="2013">2029</ng-option>
+                                <ng-option value="2012">2028</ng-option>
+                                <ng-option value="2011">2027</ng-option>
+                                <ng-option value="2010">2026</ng-option>
+                                <ng-option value="2009">2025</ng-option>
+                                <ng-option value="2008">2024</ng-option>
+                                <ng-option value="2007">2023</ng-option>
+                                <ng-option value="2006">2022</ng-option>
+                                <ng-option value="2005">2021</ng-option>
+                                <ng-option value="2004">2020</ng-option>
+                                <ng-option value="2003">2019</ng-option>
+                                <ng-option value="2002">2018</ng-option>
+                            </ng-select>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 mb-0 text-dark">
+                    Your Credit  card information is encrypted
+                </div>
+                <div class="form-footer mt-2">
+                    <a href="javascript:;" class="btn btn-primary">Make Payment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row">
+    <div class="col-md-12 col-lg-12 col-xl-5 col-xxl-6">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h6 class="main-content-label">Billing Information</h6>
+            </div>
+            <div class="card-body">
+                <form class="needs-validation" novalidate="">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="tx-semibold">First name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                            <div class="invalid-feedback">Valid first name is required.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="tx-semibold">Last name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                            <div class="invalid-feedback">Valid last name is required.</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="tx-semibold">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                        <div class="invalid-feedback">Please enter your shipping address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address2" class="tx-semibold">Address 2 <span class="text-muted">(Optional)</span>
+                        </label>
+                        <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mobile" class="tx-semibold">Mobile Number</label>
+                        <input type="text" class="form-control" id="mobile">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="country" class="tx-semibold">Country</label>
+                            <ng-select class="d-block w-100" id="country" required="">
+                                <ng-option value="">Choose...</ng-option>
+                                <ng-option>United States</ng-option>
+                            </ng-select>
+                            <div class="invalid-feedback">Please select a valid country.</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state" class="tx-semibold">State</label>
+                            <ng-select class="d-block w-100" id="state" required="">
+                                <ng-option value="">Choose...</ng-option>
+                                <ng-option>California</ng-option>
+                            </ng-select>
+                            <div class="invalid-feedback">Please provide a valid state.</div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="zip" class="tx-semibold">Zipcode</label>
+                            <input type="text" class="form-control" id="zip" placeholder="" required="">
+                            <div class="invalid-feedback">Zip code required.</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-7 col-xxl-6">
+        <div class="card custom-card">
+            <div class="card-header d-flex">
+                <h6 class="main-content-label">Payment Information</h6>
+            </div>
+            <div class="card-body">
+                <div class="card-pay">
+                    <ul ngbNav #nav="ngbNav" [activeId]="1" class="tabs-menu mb-0">
+                        <li [ngbNavItem]="1">
+                          <a ngbNavLink><i class="fa fa-credit-card"></i> Credit Card</a>
+                          <ng-template ngbNavContent>
+                            <div class="form-group mt-4">
+                                <label class="form-label tx-semibold">CardHolder Name</label>
+                                <input type="text" class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label tx-semibold">Card number</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search for...">
+                                    <span class="input-group-btn btn btn-secondary box-shadow-0">
+                                        <i class="fab fa-cc-visa"></i> &nbsp;
+                                        <i class="fab fa-cc-amex"></i> &nbsp;
+                                        <i class="fab fa-cc-mastercard"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <label class="form-label tx-semibold">Expiration</label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control border-end-0" placeholder="MM" name="Month">
+                                            <input type="number" class="form-control" placeholder="YY" name="Year">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label class="form-label">CVV <i class="fa fa-question-circle" data-bs-placement="top" data-bs-toggle="tooltip" title="CVV is the last 3 digits on the back of your Credit Card."></i></label>
+                                        <input type="number" class="form-control" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:;" class="btn btn-primary">Confirm</a>
+                          </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                          <a ngbNavLink><i class="fab fa-paypal"></i>  Paypal</a>
+                          <ng-template ngbNavContent>
+                            <p class="mt-4">Paypal is easiest way to pay online</p>
+                            <p><a href="javascript:;" class="btn btn-primary rounded-6"><i class="fab fa-paypal"></i> Log in my Paypal</a></p>
+                            <p class="mb-0"><strong>Note:</strong> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+                          </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3">
+                          <a ngbNavLink><i class="fa fa-university"></i>  Bank Transfer</a>
+                          <ng-template ngbNavContent>
+                            <p class="mt-4">Bank account details</p>
+                            <dl class="card-text">
+                                <dt>BANK: </dt>
+                                <dd> THE UNION BANK 0456</dd>
+                            </dl>
+                            <dl class="card-text">
+                                <dt>Account number: </dt>
+                                <dd> 67542897653214</dd>
+                            </dl>
+                            <dl class="card-text">
+                                <dt>IBAN: </dt>
+                                <dd>543218769</dd>
+                            </dl>
+                            <p class="mb-0"><strong>Note:</strong> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+                          </ng-template>
+                        </li>
+                      </ul>
+                    <div [ngbNavOutlet]="nav"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

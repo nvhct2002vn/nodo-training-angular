@@ -1,0 +1,7 @@
+<app-page-header [title]="'Gallery'" [items]="['Pages']" [active_item]="'Gallery'"></app-page-header>
+
+<!-- Row -->
+<p class="masonry row row-sm" gallerize>
+    <img class="js-img-viewer my-2 col-xl-3 col-lg-4 col-sm-6 radius-20" *ngFor="let img of imageData" [src]="img.srcUrl" previewFullscreen="true">
+  </p>
+<!-- End Row -->

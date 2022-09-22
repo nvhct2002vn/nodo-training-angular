@@ -1,0 +1,408 @@
+<app-page-header [title]="'mail inbox'" [items]="['apps','mail']" [active_item]="'mail inbox'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-xl-3 col-lg-4">
+        <div class="card custom-card mail-container task-container overflow-hidden">
+            <div class="">
+                <div class="p-4 border-bottom">
+                    <a class="btn btn-primary btn-block btn-compose" routerLink="/apps/mail/mail-compose">Compose</a>
+                </div>
+                <div class="card-body tab-list-items">
+                    <div class="main-content-left main-content-left-mail">
+                        <div class="main-mail-menu">
+                            <label class="main-content-label main-content-label-sm">Primary</label>
+                            <nav class="nav main-nav-column mg-b-20">
+                                <a class="nav-link active" href="javascript:;">
+                                    <i class="fe fe-mail"></i> Inbox <span class="bg-primary text-white">20</span>
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-star"></i> Starred <span class="bg-secondary text-white">3</span>
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-bookmark"></i> Important <span class="bg-info text-white">10</span>
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-send"></i> Sent Mail
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-edit"></i> Drafts
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-disc"></i> Spam <span class="bg-dark text-white">128</span>
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-trash"></i> Trash <span class="bg-danger text-white">6</span>
+                                </a>
+                            </nav>
+                            <label class="main-content-label main-content-label-sm">Label</label>
+                            <nav class="nav main-nav-column mg-b-20">
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-folder"></i> Social
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-folder"></i> Work <span class="bg-warning text-white">22</span>
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-folder"></i> Personal
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-folder"></i> Promotions <span class="bg-success text-white">22</span>
+                                </a>
+                                <a class="nav-link" href="javascript:;">
+                                    <i class="fe fe-folder-plus"></i> Updates <span class="bg-dark text-white">17</span>
+                                </a>
+                            </nav>
+                        </div><!-- main-mail-menu -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-9 col-lg-8  main-content-body-mail1">
+        <div class="card custom-card mail-container task-container overflow-hidden">
+            <div class="inbox-body p-4">
+                <div class="input-group main-mail-search">
+                    <input class="form-control" placeholder="Search Email..." type="text">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">
+                            <span class="input-group-btn">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="mail-option mt-4">
+                    <div class="chk-all border-0">
+                        <div class="btn-group" ngbDropdown>
+                            <a ngbDropdownToggle href="javascript:;" class="btn mini all" aria-expanded="false">
+                                All
+                                <i class="fe fe-chevron-down"></i>
+                            </a>
+                            <ul ngbDropdownMenu>
+                                <li><a href="javascript:;"> None</a></li>
+                                <li><a href="javascript:;"> Read</a></li>
+                                <li><a href="javascript:;"> Unread</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-group mx-2">
+                        <a href="javascript:;" ngbTooltip="refresh" class="btn mini tooltips">
+                            <i class="fe fe-refresh-cw"></i>
+                        </a>
+                    </div>
+                    <div class="btn-group hidden-phone" ngbDropdown>
+                        <a ngbDropdownToggle href="javascript:;" class="btn mini blue" aria-expanded="false">
+                            More
+                            <i class="fe fe-chevron-down"></i>
+                        </a>
+                        <ul ngbDropdownMenu>
+                            <li><a href="javascript:;"><i class="fe fe-edit me-2"></i> Mark as Read</a></li>
+                            <li><a href="javascript:;"><i class="fe fe fe-slash me-2"></i> Spam</a></li>
+                            <li class="divider"></li>
+                            <li><a href="javascript:;"><i class="fe fe-trash me-2"></i> Delete</a></li>
+                        </ul>
+                    </div>
+                    <ul class="unstyled inbox-pagination">
+                        <li><span>1-50 of 234</span></li>
+
+                        <li>
+                            <a class="btn np-btn" href="javascript:;"><i class="fe fe-chevron-right pagination-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-inbox text-md-nowrap table-hover text-nowrap">
+                        <tbody>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star text-warning"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Tim Reid, S P N</td>
+                                <td class="view-message tx-light">Boost Your Website Traffic</td>
+                                <td class="view-message text-end tx-semibold">April 01</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Freelancer.com </td>
+                                <td class="view-message tx-light">Stop wasting your visitors </td>
+                                <td class="view-message text-end tx-semibold">May 23</td>
+                            </tr>
+                            <tr class="unread">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark text-danger"></i></td>
+                                <td class="view-message dont-show tx-semibold">PHPClass</td>
+                                <td class="view-message tx-light">Added a new class: Login Class Fast Site</td>
+                                <td class="view-message text-end tx-semibold">9:27 AM</td>
+                            </tr>
+
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Facebook</td>
+                                <td class="view-message tx-light">Somebody requested a new password </td>
+                                <td class="view-message text-end tx-semibold">June 13</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star text-warning"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Skype</td>
+                                <td class="view-message tx-light">Password successfully changed</td>
+                                <td class="view-message text-end tx-semibold">March 24</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Google+</td>
+                                <td class="view-message tx-light">alireza, do you know</td>
+                                <td class="view-message text-end tx-semibold">March 09</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">WOW Slider </td>
+                                <td class="view-message tx-light">New WOW Slider v7.8 - 67% off</td>
+                                <td class="view-message text-end tx-semibold">March 14</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star inbox-started text-warning"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">LinkedIn Pulse</td>
+                                <td class="view-message tx-light">The One Sign Your Co-Worker Will Stab</td>
+                                <td class="view-message text-end tx-semibold">Feb 19</td>
+                            </tr>
+                            <tr class="unread">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Google Webmaster </td>
+                                <td class="view-message tx-light">Improve the search presence of WebSite</td>
+                                <td class="view-message text-end tx-semibold">March 15</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">JW Player</td>
+                                <td class="view-message tx-light">Last Chance: Upgrade to Pro for </td>
+                                <td class="view-message text-end tx-semibold">March 15</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Drupal Community</td>
+                                <td class="view-message tx-light">Welcome to the Drupal Community</td>
+                                <td class="view-message text-end tx-semibold">March 04</td>
+                            </tr>
+
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star inbox-started text-warning"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="dont-show tx-semibold">Zoosk </td>
+                                <td class="view-message tx-light">7 new singles we think you'll like</td>
+                                <td class="view-message text-end tx-semibold">May 14</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark text-danger"></i></td>
+                                <td class="view-message dont-show tx-semibold">LinkedIn </td>
+                                <td class="view-message tx-light">Alireza: Nokia Networks, System Group and </td>
+                                <td class="view-message text-end tx-semibold">February 25</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="dont-show tx-semibold">Facebook</td>
+                                <td class="view-message tx-light">Your account was recently logged into</td>
+                                <td class="view-message text-end tx-semibold">March 14</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Twitter</td>
+                                <td class="view-message tx-light">Your Twitter password has been changed</td>
+                                <td class="view-message text-end tx-semibold">April 07</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">InternetSeer</td>
+                                <td class="view-message tx-light">Performance Report</td>
+                                <td class="view-message text-end tx-semibold">July 14</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark text-danger"></i></td>
+                                <td class="view-message dont-show tx-semibold">Bertina </td>
+                                <td class="view-message tx-light">IMPORTANT: Don't lose your domains!</td>
+                                <td class="view-message text-end tx-semibold">June 16</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark text-danger"></i></td>
+                                <td class="view-message dont-show tx-semibold">Laura Gaffin, S P N </td>
+                                <td class="view-message tx-light">Your Website On Google (Higher Rankings Are Better)</td>
+                                <td class="view-message text-end tx-semibold">August 10</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Facebook</td>
+                                <td class="view-message tx-light">Alireza Zare Login faild</td>
+                                <td class="view-message text-end tx-semibold">feb 14</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">AddMe.com</td>
+                                <td class="view-message tx-light">Submit Your Website to the AddMe Business Directory</td>
+                                <td class="view-message text-end tx-semibold">August 10</td>
+                            </tr>
+                            <tr class="">
+                                <td class="inbox-small-cells">
+                                    <label class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+                                        <span class="custom-control-label"></span>
+                                    </label>
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="inbox-small-cells"><i class="fa fa-bookmark"></i></td>
+                                <td class="view-message dont-show tx-semibold">Terri Rexer, S P N</td>
+                                <td class="view-message tx-light">Forget Google AdWords: Un-Limited Clicks fo</td>
+                                <td class="view-message text-end tx-semibold">April 14</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- mail-content -->
+        </div>
+        <div class="text-center ms-3 mb-4">
+            <div class="row row-sm">
+                <nav>
+                    <ul class="d-flex justify-content-end">
+                        <ngb-pagination [collectionSize]="30" [page]="1" aria-label="Default pagination"></ngb-pagination>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

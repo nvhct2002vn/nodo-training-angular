@@ -1,0 +1,47 @@
+<app-page-header [title]="'Leaflet'" [items]="['maps']" [active_item]="'Leaflet'"></app-page-header>
+
+
+<!-- row -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="card custom-card">
+			<div class="card-body">
+				<div class="main-content-label mg-b-5">
+					Basic
+				</div>
+				<p class="mg-b-20">A default map style by Leaflet Maps.</p>
+				<div class="ht-300" id="leaflet1" leaflet [leafletOptions]="options1"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-12">
+		<div class="card custom-card">
+			<div class="card-body">
+				<div class="main-content-label mg-b-5">
+					With Popup
+				</div>
+				<p class="mg-b-20">Popups are usually used when you want to attach some information to a map.</p>
+				<div class="ht-300" id="leaflet2" leaflet [leafletOptions]="options2"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /row -->
+
+<!-- row -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="card custom-card">
+			<div class="card-body">
+				<div class="main-content-label mg-b-5">
+					Map with circle
+				</div>
+				<p class="mg-b-20">Adding a circle is the same (except for specifying the radius in meters as a second
+					argument), but lets you control how it looks by passing options as the last argument when creating
+					the object.</p>
+				<div class="ht-300 mb-0" id="leaflet3" leaflet [leafletOptions]="options3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /row -->

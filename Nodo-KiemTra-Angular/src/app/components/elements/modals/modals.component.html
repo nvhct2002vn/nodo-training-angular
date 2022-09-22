@@ -1,0 +1,407 @@
+<app-page-header [title]="'Modals'" [items]="['Elements']" [active_item]="'Modals'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Basic Example of Modal View</h6>
+          <p class="text-muted card-sub-title">Below is the static example of the basic modal.</p>
+        </div>
+        <div class="pd-20 bg-light">
+          <div class="modal d-block pos-static">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                  <h6 class="modal-title">Modal Header</h6><button aria-label="Close" class="btn-close"
+                    data-bs-dismiss="modal" type="button"></button>
+                </div>
+                  <div class="modal-body">
+                    <h6>Modal Body</h6>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                      magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn ripple btn-success" type="button">Save changes</button>
+                    <button class="btn ripple btn-danger" type="button">Close</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-sm-4 col-md-4">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Basic Modal</h6>
+        </div>
+        <a class="btn ripple btn-primary" (click)="BasicOpen(basicmodal)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Small Modal</h6>
+        </div>
+        <a class="btn ripple btn-secondary" (click)="SmallOpen(smallmodal)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Large Modal</h6>
+        </div>
+        <a class="btn ripple btn-info" (click)="LargeOpen(largemodal)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Grid Modal</h6>
+        </div>
+        <a class="btn ripple btn-warning" (click)="GridOpen(gridmodal)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Modal Success Alert Messages</h6>
+        </div>
+        <a class="btn ripple btn-success" (click)="SuccessOpen(successmodal)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Modal Danger Alert Messages</h6>
+        </div>
+        <a class="btn ripple btn-danger" (click)="WarningOpen(warningmodal)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Tooltips and popovers</h6>
+        </div>
+        <a class="btn ripple btn-success" (click)="popoverModal(popover)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Multi Modals</h6>
+        </div>
+        <a class="btn ripple btn-primary" (click)="open()" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Scrolling Modal</h6>
+        </div>
+        <a class="btn ripple btn-primary" (click)="openScrollableContent(scrolling)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Vertically centered</h6>
+        </div>
+        <a class="btn ripple btn-secondary" (click)="openVerticallyCentered(content)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-6 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Select2 Inside Modals</h6>
+        </div>
+        <a class="btn ripple btn-info" (click)="Select2Open(select2modal)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-6 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-3">Modal-datepicker</h6>
+        </div>
+        <a class="btn ripple btn-primary" (click)="DatePickerOpen(datepickermodal)" href="javascript:;">View Demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
+
+
+
+
+<!-- Modals -->
+<ng-template #basicmodal let-modal>
+  <!-- BASIC MODAL -->
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">Basic Modal</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <h6>Modal Body</h6>
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+      dolores eos qui ratione voluptatem sequi nesciunt.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn ripple btn-primary" type="button">Save changes</button>
+    <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<ng-template #smallmodal let-modal>
+  <!-- SMALL MODAL -->
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">Small Modal</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <h6>Modal Body</h6>
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+      dolores eos qui ratione voluptatem sequi nesciunt.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn ripple btn-primary" type="button">Save changes</button>
+    <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<ng-template #largemodal let-modal>
+  <!-- LARGE MODAL -->
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">Large Modal</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <h6>Modal Body</h6>
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+      dolores eos qui ratione voluptatem sequi nesciunt.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn ripple btn-primary" type="button">Save changes</button>
+    <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<ng-template #gridmodal let-modal>
+  <!-- GRID MODAL -->
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">Grid Modal</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row row-sm">
+      <div class="col-md-6">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+          totam
+          rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+          explicabo.</p>
+      </div>
+      <div class="col-md-6">
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+          born
+          and I will give you a complete account of the who loves toil and pain can procureor sit aspernatur
+          system.</p>
+      </div>
+    </div>
+    <div class="row row-sm">
+      <div class="col-md-6">
+        <p>expound the actual teachings of the great explorer of the truth, the master-builder of human
+          happiness.
+          No one rejects, dislikes, or avoids pleasure itself, because it is pleasure desires to obtain pain.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia
+          non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat aut odit
+          voluptatem.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn ripple btn-primary" type="button">Save changes</button>
+    <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<ng-template #successmodal let-modal>
+  <!-- Congratulations MODAL -->
+  <div class="modal-body text-center p-4">
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+    <i class="icon ion-ios-checkmark-circle-outline tx-100 tx-success lh-1 mg-t-20 d-inline-block"></i>
+    <h4 class="tx-success tx-semibold mg-b-20">Congratulations!</h4>
+    <p class="mg-b-20 mg-x-20">There are many variations of passages of Lorem Ipsum available, but the majority have
+      suffered alteration.</p>
+    <button type="button" class="btn btn-success pd-x-25 me-0" (click)="modal.close('Close click')">Continue</button>
+  </div>
+</ng-template>
+
+<ng-template #warningmodal let-modal>
+  <!-- Warning MODAL -->
+  <div class="modal-body text-center p-4">
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+    <i class="icon icon ion-ios-close-circle-outline tx-100 tx-danger lh-1 mg-t-20 d-inline-block"></i>
+    <h4 class="tx-danger mg-b-20">Error: Cannot process your entry!</h4>
+    <p class="mg-b-20 mg-x-20">There are many variations of passages of Lorem Ipsum available, but the majority have
+      suffered alteration.</p>
+    <button type="button" class="btn btn-danger pd-x-25 me-0" (click)="modal.close('Close click')">Continue</button>
+  </div>
+</ng-template>
+
+<ng-template #scrolling let-modal>
+  <!-- scrolling modal -->
+  <div class="modal-header">
+    <h6 class="modal-title">Scrolling With Content Modal</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+      eos qui ratione voluptatem sequi nesciunt.</p>
+    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will
+      give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,
+      the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is
+      pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are
+      extremely painful. </p>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+      corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+      qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+      distinctio.</p>
+    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by
+      the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are
+      bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the
+      same as saying through shrinking from toil and pain.</p>
+    <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is
+      untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed
+      and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of
+      business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man
+      therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other
+      greater pleasures, or else he endures pains to avoid worse pains.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn ripple btn-primary" type="button">Save changes</button>
+    <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<ng-template #select2modal let-modal>
+  <!-- Select2 modal -->
+  <div class="modal-header">
+    <h6 class="modal-title">Select2 Modal</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <h6>Modal Body</h6>
+    <!-- Select2 -->
+    <ng-select class="form-control p-0" placeholder="Select Option">
+      <ng-option value="Firefox">Firefox</ng-option>
+      <ng-option value="Chrome">Chrome</ng-option>
+      <ng-option value="Safari">Safari</ng-option>
+      <ng-option value="Opera">Opera</ng-option>
+      <ng-option value="Internet Explorer">Internet Explorer</ng-option>
+    </ng-select>
+    <!-- Select2 -->
+    <p class="mt-3">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+      consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn ripple btn-primary" type="button">Save changes</button>
+    <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+
+</ng-template>
+<ng-template #datepickermodal let-modal>
+  <!-- Select2 modal -->
+  <div class="modal-header">
+    <h6 class="modal-title">Select DatePicker Modal</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <h6>Modal Body</h6>
+    <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+      (click)="d.toggle()" #d="ngbDatepicker" autocomplete="off">
+  </div>
+  <div class="modal-footer">
+    <button class="btn ripple btn-primary" type="button">Save changes</button>
+    <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+
+</ng-template>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+<ng-template #popover let-modal>
+  <div class="modal-header">
+    <h6 class="modal-title">Popover Modal</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <h5>Popover in a modal</h5>
+    <p>This <button type="button" class="btn btn-secondary" placement="right" popoverClass="default2"
+        popoverTitle="Popover right" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover
+        right</button> triggers a popover on click.</p>
+
+    <hr>
+    <h5>Tooltips in a modal</h5>
+    <p> <button class="btn btn-secondary me-1" placement="top" ngbTooltip="Tooltip on top" type="button">This
+        link</button>and <button class="btn btn-secondary" placement="top" ngbTooltip="Tooltip on top"
+        type="button">that link</button> have tooltips on hover.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn ripple btn-primary" (click)="modal.close('Close click')">Save changes</button>
+    <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

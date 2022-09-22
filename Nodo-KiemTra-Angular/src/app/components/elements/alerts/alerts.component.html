@@ -1,0 +1,293 @@
+<app-page-header [title]="'Alerts'" [items]="['Elements']" [active_item]="'Alerts'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-xl-12 col-lg-12">
+    <div class="card custom-card" id="basic-alert">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Basic Alerts</h6>
+          <p class="text-muted card-sub-title">Use one of the four required contextual classes.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <p *ngFor="let alert of alerts">
+              <ngb-alert [type]="alert.type" [dismissible]="true"> <strong>{{alert.title}}</strong> {{alert.message}}
+              </ngb-alert>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <table class="table main-table-reference mt-0 mb-0">
+          <thead>
+            <tr>
+              <th class="wd-40p">Class Reference</th>
+              <th class="wd-60p">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="pd-0 bg-transparent">class="alert alert-[value]"</code></td>
+              <td>success | info | warning | danger</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card custom-card" id="outline-alert">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Outline Alerts</h6>
+          <p class="text-muted card-sub-title">Use one of the four required contextual classes.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <p *ngFor="let alert of alertsOutline">
+              <ngb-alert [type]="alert.type" [dismissible]="true"> <strong>{{alert.title}}</strong> {{alert.message}}
+              </ngb-alert>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <table class="table main-table-reference mt-0 mb-0">
+          <thead>
+            <tr>
+              <th class="wd-40p">Class Reference</th>
+              <th class="wd-60p">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="pd-0 bg-transparent">class="alert alert-outline-[value]"</code></td>
+              <td>success | info | warning | danger</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card custom-card" id="solid-alert">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Solid Colored Alerts</h6>
+          <p class="text-muted card-sub-title">Use one of the four required contextual classes.</p>
+        </div>
+        <div class="text-wrap">
+          <p *ngFor="let alert of alertsSolid">
+            <ngb-alert [type]="alert.type" [dismissible]="true"> <strong>{{alert.title}}</strong> {{alert.message}}
+            </ngb-alert>
+          </p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <table class="table main-table-reference mt-0 mb-0">
+          <thead>
+            <tr>
+              <th class="wd-40p">Class Reference</th>
+              <th class="wd-60p">Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="pd-0 bg-transparent">class="alert alert-solid-[value]"</code></td>
+              <td>success | info | warning | danger</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card custom-card" id="link-alerts">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Links in Alerts</h6>
+          <p class="text-muted card-sub-title">Use the <code class="highlighter-rouge">.alert-link</code> utility class
+            to quickly provide matching colored links within any alert.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-alert type="primary" [dismissible]="true">
+              This is a primary alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+              a click if you like.
+            </ngb-alert>
+            <ngb-alert type="secondary" [dismissible]="true">
+              This is a secondary alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give
+              it a click if you like.
+            </ngb-alert>
+            <ngb-alert type="success" [dismissible]="true">
+              This is a success alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+              a click if you like.
+            </ngb-alert>
+            <ngb-alert type="danger" [dismissible]="true">
+              This is a danger alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+              a click if you like.
+            </ngb-alert>
+            <ngb-alert type="warning" [dismissible]="true">
+              This is a warning alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it
+              a click if you like.
+            </ngb-alert>
+            <ngb-alert type="info" [dismissible]="true">
+              This is a info alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it a
+              click if you like.
+            </ngb-alert>
+            <ngb-alert type="light" [dismissible]="true">
+              This is a light alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it a
+              click if you like.
+            </ngb-alert>
+            <ngb-alert type="dark" [dismissible]="true">
+              This is a dark alert with <a href="javascript:void(0);" class="alert-link">an example link</a>. Give it a
+              click if you like.
+            </ngb-alert>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="additional-alerts">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Additional Content Alert</h6>
+          <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+            paragraphs and dividers.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-alert type="success" class="mb-2" [dismissible]="false">
+              <h4 class="alert-heading"><i class="fe fe-check-circle me-2 tx-20"></i>Well done!</h4>
+              <p>Aww yeah, you successfully read this alert message. This example text is going to run a bit longer so
+                that you can see how spacing within an alert works with this kind of content.</p>
+              <hr>
+              <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </ngb-alert>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card custom-card" id="icon-alerts">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Alert With Icon</h6>
+          <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+            paragraphs and dividers.</p>
+        </div>
+        <div class="text-wrap">
+          <p *ngFor="let alert of alertsIcons">
+            <ngb-alert [type]="alert.type" [dismissible]="false">
+              <span class="alert-inner--icon mx-2"><i class="fe fe-{{alert.icon}}"></i></span>
+              <span class="alert-inner--text">
+                <strong>{{alert.title}}</strong> {{alert.message}}
+              </span>
+            </ngb-alert>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card" id="icon-dismissalerts">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Alert With Icon Dismissing</h6>
+          <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+            paragraphs and dividers.</p>
+        </div>
+        <div class="text-wrap">
+          <p *ngFor="let alert of alertsIcons">
+            <ngb-alert [type]="alert.type" [dismissible]="true">
+              <span class="alert-inner--icon mx-2"><i class="fe fe-{{alert.icon}}"></i></span>
+              <span class="alert-inner--text">
+                <strong>{{alert.title}}</strong> {{alert.message}}
+              </span>
+            </ngb-alert>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Alert Style 1</h6>
+          <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+            paragraphs and dividers.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <div class="row">
+              <div class="col-sm-6 col-md-6">
+                <ngb-alert type="success" class="mb-2" [dismissible]="true">
+                  <strong>Success Message</strong>
+                  <hr>
+                  <p>You successfully read this important alert message.</p>
+                </ngb-alert>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <ngb-alert type="info" class="mb-2" [dismissible]="true">
+                  <strong>Info Message</strong>
+                  <hr>
+                  <p>This alert needs your attention, but not super important.</p>
+                </ngb-alert>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <ngb-alert type="warning" class="mb-2" [dismissible]="true">
+                  <strong>Warning Message</strong>
+                  <hr>
+                  <p>Best check yo self, you're not looking too good.</p>
+                </ngb-alert>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <ngb-alert type="danger" class="mb-2" [dismissible]="true">
+                  <strong>Danger Message</strong>
+                  <hr>
+                  <p>Change a few things up and try submitting again.</p>
+                </ngb-alert>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Alert Style 2</h6>
+          <p class="text-muted card-sub-title">Alerts can also contain additional HTML elements like headings,
+            paragraphs and dividers.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <div class="row">
+              <div class="col-xl-4 col-sm-6 col-md-6">
+                <ngb-alert type="primary" [dismissible]="true" class="alert-bdleft-primary">
+                  <strong>A simple alert style</strong>
+                </ngb-alert>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-md-6">
+                <ngb-alert type="info" [dismissible]="true" class="alert-bdleft-info">
+                  <strong>A simple alert style</strong>
+                </ngb-alert>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-md-6">
+                <ngb-alert type="danger" [dismissible]="true" class="alert-bdleft-danger">
+                  <strong>A simple alert style</strong>
+                </ngb-alert>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-md-6">
+                <ngb-alert type="warning" [dismissible]="true" class="mb-xl-0 alert-bdleft-warning">
+                  <strong>A simple alert style</strong>
+                </ngb-alert>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-md-6">
+                <ngb-alert type="secondary" [dismissible]="true" class="mb-xl-0 alert-bdleft-secondary">
+                  <strong>A simple alert style</strong>
+                </ngb-alert>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-md-6">
+                <ngb-alert type="success" [dismissible]="true" class="mb-xl-0 alert-bdleft-success">
+                  <strong>A simple alert style</strong>
+                </ngb-alert>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->

@@ -1,0 +1,188 @@
+<app-page-header [title]="'Ratings'" [items]="['Advanced Ui']" [active_item]="'Ratings'"></app-page-header>
+
+<div class="row">
+  <div class="col-sm-6 col-lg-6 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="card-title mb-1">Bootstrap Star Ratings</h6>
+        </div>
+
+        <ng-template #basicstar let-fill="fill">
+          <span class="star" [class.full]="fill === 100">
+            <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+          </span>
+        </ng-template>
+
+
+        <ngb-rating [(rate)]="currentRate" [starTemplate]="basicstar" [max]="5" class="ng-rating">
+        </ngb-rating>
+
+        <hr>
+        <p class="mb-0">Rate: <b>{{currentRate}}</b></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-6 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="card-title mb-1">Custom Decimal Rating</h6>
+        </div>
+        <div>
+          <ng-template #t let-fill="fill">
+            <span class="star" [class.full]="fill === 100">
+              <span class="heartHalf" [style.width.%]="fill">&hearts;</span>&hearts;
+            </span>
+          </ng-template>
+
+          <ngb-rating [(rate)]="heartRate" [starTemplate]="t" [max]="5" class="ng-rating"></ngb-rating>
+
+          <p>Rate: <b>{{heartRate}}</b></p>
+          <button class="btn btn-sm btn-outline-primary me-2" (click)="heartRate = 1.35">1.35</button>
+          <button class="btn btn-sm btn-outline-primary me-2" (click)="heartRate = 4.72">4.72</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /row -->
+
+<div class="row">
+  <div class="col-sm-6 col-lg-12 col-xl-6 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="card-title mb-1">Events and readonly ratings</h6>
+        </div>
+
+        <ng-template #eventstar let-fill="fill">
+          <span class="star" [class.full]="fill === 100">
+            <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+          </span>
+        </ng-template>
+
+        <ngb-rating [(rate)]="selected" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="readonly"
+          [starTemplate]="eventstar" [max]="5" class="ng-rating"></ngb-rating>
+
+        <hr>
+        <p>
+          Selected: <b>{{selected}}</b>
+          Hovered: <b>{{hovered}}</b>
+        </p>
+        <button class="btn btn-sm btn-outline-{{readonly ? 'danger' : 'success'}}" (click)="readonly = !readonly">
+          {{ readonly ? "readonly" : "editable"}}
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-12 col-xl-6 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="card-title mb-1">Form Integration</h6>
+        </div>
+
+        <div class="form-group">
+          <ng-template #formstar let-fill="fill">
+            <span class="star" [class.full]="fill === 100">
+              <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+            </span>
+          </ng-template>
+          <ngb-rating [starTemplate]="formstar" [formControl]="ctrl" class="rating-size"></ngb-rating>
+          <div class="form-text small">
+            <div *ngIf="ctrl.valid" class="text-success">Thanks!</div>
+            <div *ngIf="ctrl.invalid" class="text-danger">Please rate us</div>
+          </div>
+        </div>
+
+        <p>Ratings: <b>{{ ctrl.value }}</b></p>
+        <button class="btn btn-sm btn-outline-{{ ctrl.disabled ? 'danger' : 'success'}} me-2" (click)="toggle()">
+          {{ ctrl.disabled ? "control disabled" : " control enabled" }}
+        </button>
+        <button class="btn btn-sm btn-outline-primary me-2" (click)="ctrl.setValue(null)">Clear</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-lg-12 col-xl-6 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="card-title mb-1">Custom Star Template</h6>
+        </div>
+
+        <ngb-rating [(rate)]="customCurrentRate" class="ng-rating">
+          <ng-template let-fill="fill" let-index="index">
+            <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+          </ng-template>
+        </ngb-rating>
+        <hr>
+        <p>Rate: <b>{{customCurrentRate}}</b></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-lg-12 col-xl-6 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="card-title mb-1">Custom Star Template with InputBox</h6>
+        </div>
+
+        <input [(ngModel)]="customCurrentRateInput">
+        <ngb-rating [(rate)]="customCurrentRateInput" class="ng-rating">
+          <ng-template let-fill="fill" let-index="index">
+            <span class="star" [class.filled]="fill === 100">&#9733;</span>
+          </ng-template>
+        </ngb-rating>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
+<div class="row mb-4">
+  <div class="col-md-6 col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Ngx-Star-rating</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="form">
+          <div class="cont d-flex flex-column">
+            <ngx-star-rating formControlName="rating1" [id]="'rating1'"></ngx-star-rating>
+            <div>
+              <div>Rating: {{form.value.rating1}}</div>
+              <p>form is valid: {{ form.valid ? 'true' : 'false' }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Ngx-stars</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <ngx-stars [size]="4" [maxStars]="5" (ratingOutput)="NgxonRatingSet($event)"></ngx-stars>
+            <span style="font-weight: bold; font-size: 20px">Rating is {{ NgxStarratingDisplay }} out of 5</span>
+          </div>
+          <hr>
+          <div class="col-12">
+            <ngx-stars [readonly]="true" [size]="4" [initialStars]="2.5" (ratingOutput)="NgxonRatingSet($event)">
+            </ngx-stars>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

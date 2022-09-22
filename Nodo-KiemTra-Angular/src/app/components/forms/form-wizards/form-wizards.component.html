@@ -1,0 +1,491 @@
+<app-page-header [title]="'Advanced-forms'" [items]="['Forms']" [active_item]="'Advanced-forms'"></app-page-header>
+
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Basic Content Wizard</h6>
+                    <p class="text-muted card-sub-title">Below is an example of a basic horizontal form wizard.</p>
+                </div>
+                <div id="wizard1">
+                    <aw-wizard #wizard>
+                        <aw-wizard-step [stepTitle]="'Step 1'">
+                            <form #firstStep="ngForm" novalidate>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="firstname">First Name</label>
+                                    <input class="form-control" ngModel #firstname="ngModel" required id="firstname"
+                                        name="firstname" type="text" placeholder="Johan">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!firstname.valid && (firstname.dirty || firstname.touched)">This field is
+                                        required!</small>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="lastname">Last Name</label>
+                                    <input class="form-control input-md" ngModel #lastname="ngModel" required
+                                        id="lastname" name="lastname" type="text" placeholder="Deo">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!lastname.valid && (lastname.dirty || lastname.touched)">This field is
+                                        required!</small>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="contact">Contact</label>
+                                    <input class="form-control input-md" ngModel #contact="ngModel" required contact
+                                        id="contact" name="contact" type="number" placeholder="123456789">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!contact.valid && (contact.dirty || contact.touched)">This field is
+                                        required!</small>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary pull-end" [disabled]="!firstStep.valid"
+                                        awNextStep>
+                                        Next
+                                    </button>
+                                </div>
+
+                            </form>
+                        </aw-wizard-step>
+                        <aw-wizard-step [stepTitle]="'Step 2'">
+                            <form #secondStep="ngForm" novalidate>
+
+                                <div class="form-group m-t-15">
+                                    <label class="form-control-label" for="email">Email</label>
+                                    <input class="form-control input-md" ngModel #email="ngModel" required email
+                                        id="email" name="email" type="email">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!email.valid && (email.dirty || email.touched)">Please enter a valid
+                                        email!</small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-control-label" for="password">Password</label>
+                                    <input class="form-control" ngModel #password="ngModel" required id="password"
+                                        name="password" type="password">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!password.valid && (password.dirty || password.touched)">This field is
+                                        required!</small>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary pull-right"
+                                        [disabled]="!secondStep.valid" awNextStep>
+                                        Next
+                                    </button>
+                                    <button type="button" class="btn btn-secondary me-1 pull-end" awPreviousStep>
+                                        Previous
+                                    </button>
+                                </div>
+                            </form>
+                        </aw-wizard-step>
+                        <aw-wizard-step [stepTitle]="'Step 3'">
+                            <form #thirdStep="ngForm" novalidate>
+                                <div class="form-group custom-datepicker-dropdown custom-datepicker">
+                                    <label for="birthdate">Birthday</label>
+                                    <input type="text" name="birthdate" id="birthdate" ngModel #birthdate="ngModel"
+                                        class="form-control digits" ngbDatepicker #dob="ngbDatepicker"
+                                        [maxDate]="maxDate" (click)="dob.toggle()">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!birthdate.valid && (birthdate.dirty || birthdate.touched)">This field is
+                                        required!</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Age</label>
+                                    <input class="form-control digits" placeholder="Age" type="number" name="age"
+                                        id="age">
+                                </div>
+                                <div class="form-group">
+                                    <label for="passport">Have Passport</label>
+                                    <input class="form-control" ngModel #passport="ngModel" placeholder="Yes/No"
+                                        required type="text" name="passport" id="passport">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!passport.valid && (passport.dirty || passport.touched)">This field is
+                                        required!</small>
+
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary pull-right" [disabled]="!thirdStep.valid"
+                                        awNextStep>
+                                        Next
+                                    </button>
+                                    <button type="button" class="btn btn-secondary me-1 pull-end" awPreviousStep>
+                                        Previous</button>
+                                </div>
+
+                            </form>
+
+                        </aw-wizard-step>
+                        <aw-wizard-completion-step stepTitle="Step 4" awEnableBackLinks>
+                            <form #fourthStep="ngForm" novalidate>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <input class="form-control mt-1" type="text" placeholder="Country" name="country"
+                                        id="country" required ngModel #country="ngModel">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!country.valid && (country.dirty || country.touched)">This field is
+                                        required!</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input class="form-control mt-1" type="text" placeholder="State" required id="state"
+                                        name="state" ngModel #state="ngModel">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!state.valid && (state.dirty || state.touched)">This field is
+                                        required!</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input class="form-control mt-1" type="text" placeholder="City" required id="city"
+                                        name="city" ngModel #city="ngModel">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!city.valid && (city.dirty || city.touched)">This field is
+                                        required!</small>
+                                </div>
+                                <button class="btn btn-success pull-right" type="button" (click)="finish()"
+                                    [disabled]="!fourthStep.valid">Finish</button>
+                                <button class="btn btn-secondary pull-end me-1" type="button"
+                                    awPreviousStep>Previous</button>
+                            </form>
+                        </aw-wizard-completion-step>
+                    </aw-wizard>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row-->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Vertical Form Wizard</h6>
+                    <p class="text-muted card-sub-title">A basic content wizard with vertical orientation.</p>
+                </div>
+                <div id="wizard3">
+                    <aw-wizard [navBarLayout]="'large-empty-symbols'">
+                        <aw-wizard-step stepTitle="Step 1" [navigationSymbol]="{ symbol: '1' }">
+                            <form [formGroup]="firstArcFormGroup">
+                                <div class="form-group">
+                                    <label for="name">First Name</label>
+                                    <input class="form-control" type="text" placeholder="Johan"
+                                        formControlName="firstName" onlyAlphabets>
+                                    <ng-container class="invalid"
+                                        *ngIf="firstArcFormGroup.get('firstName')?.hasError('required') && firstArcFormGroup.get('firstName')?.touched">
+                                        <small class="tx-danger">First Name is required</small>
+                                    </ng-container>
+                                </div>
+                                <div *ngIf=""></div>
+                                <div class="form-group">
+                                    <label for="lname">Last Name</label>
+                                    <input class="form-control" id="lname" type="text" placeholder="Deo"
+                                        formControlName="lastName" onlyAlphabets>
+                                    <ng-container class="invalid"
+                                        *ngIf="firstArcFormGroup.get('lastName')?.hasError('required') && firstArcFormGroup.get('lastName')?.touched">
+                                        <small class="tx-danger">Last Name is required</small>
+                                    </ng-container>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact">Contact No.</label>
+                                    <input class="form-control digits" id="contact" type="number"
+                                        placeholder="123456789" formControlName="contactNumber" onlyNumbers>
+                                    <ng-container class="invalid"
+                                        *ngIf="firstArcFormGroup.get('contactNumber')?.hasError('required') && firstArcFormGroup.get('contactNumber')?.touched">
+                                        <small class="tx-danger">Contact is required</small>
+                                    </ng-container>
+                                </div>
+                                <button class="btn btn-primary pull-end" type="submit" awNextStep
+                                    [disabled]="!firstArcFormGroup.valid">Next</button>
+                            </form>
+                        </aw-wizard-step>
+                        <aw-wizard-step stepTitle="Step 2" [navigationSymbol]="{ symbol: '2' }">
+                            <form [formGroup]="secondArcFormGroup">
+                                <div class="form-group m-t-15">
+                                    <label for="exampleFormControlInput1">Email address</label>
+                                    <input class="form-control" id="exampleFormControlInput1" type="email"
+                                        placeholder="name@example.com" formControlName="email">
+                                    <ng-container class="invalid"
+                                        *ngIf="secondArcFormGroup.get('email')?.hasError('required') && secondArcFormGroup.get('email')?.touched">
+                                        <small class="tx-danger">Email is required</small>
+                                    </ng-container>
+                                    <ng-container class="invalid"
+                                        *ngIf="secondArcFormGroup.get('email')?.hasError('email') && secondArcFormGroup.get('email')?.touched">
+                                        <small class="tx-danger">Email is not valid</small>
+                                    </ng-container>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input class="form-control" id="exampleInputPassword1" type="password"
+                                        placeholder="Password" formControlName="password">
+                                    <ng-container class="invalid"
+                                        *ngIf="secondArcFormGroup.get('password')?.hasError('required') && secondArcFormGroup.get('password')?.touched">
+                                        <small class="tx-danger">Password is required</small>
+                                    </ng-container>
+                                </div>
+                                <div class="form-group" *ngIf="secondArcFormGroup.get('password')?.valid">
+                                    <label for="exampleInputPassword1">Confirm Password</label>
+                                    <input class="form-control" id="exampleInputcPassword1" type="password"
+                                        placeholder="Enter again" formControlName="cnfPassword">
+                                    <ng-container class="invalid"
+                                        *ngIf="secondArcFormGroup.get('cnfPassword')?.hasError('required') && secondArcFormGroup.get('cnfPassword')?.touched">
+                                        <small class="tx-danger">Confirm Password is required</small>
+                                    </ng-container>
+                                    <ng-container class="invalid"
+                                        *ngIf="secondArcFormGroup.get('cnfPassword')?.hasError('mustMatch') && secondArcFormGroup.get('cnfPassword')?.touched">
+                                        <small class="tx-danger">Password Doesn't match</small>
+                                    </ng-container>
+                                </div>
+                                <button class="btn btn-primary pull-right" type="button" awNextStep
+                                    [disabled]="!secondArcFormGroup.valid">Next</button>
+                                <button class="btn btn-secondary pull-end me-1" type="button"
+                                    awPreviousStep>Previous</button>
+                            </form>
+                        </aw-wizard-step>
+                        <aw-wizard-step stepTitle="Step 3" [navigationSymbol]="{ symbol: '3' }">
+                            <form [formGroup]="thirdArcFormGroup">
+                                <div class="form-group custom-datepicker-dropdown custom-datepicker">
+                                    <label for="exampleFormControlInput1">Birthday:</label>
+                                    <input class="form-control digits" type="text" formControlName="birthdate"
+                                        ngbDatepicker #db="ngbDatepicker" [maxDate]="maxDate" (click)="db.toggle()">
+                                    <ng-container class="invalid"
+                                        *ngIf="thirdArcFormGroup.get('birthdate')?.hasError('required') && thirdArcFormGroup.get('birthdate')?.touched">
+                                        <small class="tx-danger">Birth Date is required</small>
+                                    </ng-container>
+                                </div>
+                                <div class="form-group">
+                                    <label>Age</label>
+                                    <input class="form-control digits" placeholder="Age" type="text"
+                                        formControlName="age">
+                                </div>
+                                <div class="form-group">
+                                    <label>Have Passport</label>
+                                    <input class="form-control digits" placeholder="Yes/No" type="text"
+                                        formControlName="hasPassport">
+                                    <ng-container class="invalid"
+                                        *ngIf="thirdArcFormGroup.get('hasPassport')?.hasError('required') && thirdArcFormGroup.get('hasPassport')?.touched">
+                                        <small class="tx-danger">Passport field is required</small>
+                                    </ng-container>
+                                </div>
+                                <button class="btn btn-primary pull-right" type="button" awNextStep
+                                    [disabled]="!thirdArcFormGroup.valid">Next</button>
+                                <button class="btn btn-secondary pull-end me-1" type="button"
+                                    awPreviousStep>Previous</button>
+                            </form>
+                        </aw-wizard-step>
+                        <aw-wizard-completion-step stepTitle="Step 4" [navigationSymbol]="{ symbol: '4' }"
+                            awEnableBackLinks>
+                            <form [formGroup]="fourthArcFormGroup">
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <input class="form-control mt-1" type="text" placeholder="Country"
+                                        required="required" formControlName="country">
+                                    <ng-container class="invalid"
+                                        *ngIf="fourthArcFormGroup.get('country')?.hasError('required') && fourthArcFormGroup.get('country')?.touched">
+                                        <small class="tx-danger">Country is required</small>
+                                    </ng-container>
+                                </div>
+                                <div class="form-group">
+                                    <label>State</label>
+                                    <input class="form-control mt-1" type="text" placeholder="State" required="required"
+                                        formControlName="state">
+                                    <ng-container class="invalid"
+                                        *ngIf="fourthArcFormGroup.get('state')?.hasError('required') && fourthArcFormGroup.get('state')?.touched">
+                                        <small class="tx-danger">State is required</small>
+                                    </ng-container>
+                                </div>
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input class="form-control mt-1" type="text" placeholder="City" required="required"
+                                        formControlName="city">
+                                    <ng-container class="invalid"
+                                        *ngIf="fourthArcFormGroup.get('city')?.hasError('required') && fourthArcFormGroup.get('city')?.touched">
+                                        <small class="tx-danger">City is required</small>
+                                    </ng-container>
+                                </div>
+                                <button class="btn btn-success pull-right" type="button" (click)="finish()"
+                                    [disabled]="!fourthArcFormGroup.valid">Finish</button>
+                                <button class="btn btn-secondary pull-end me-1" type="button"
+                                    awPreviousStep>Previous</button>
+                            </form>
+                        </aw-wizard-completion-step>
+                    </aw-wizard>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row-->
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h6 class="main-content-label mb-1">Stepper responsive</h6>
+                <p class="text-muted card-sub-title">Make your screen smaller to see a vertical stepper.</p>
+            </div>
+            <div class="card-body">
+                <ng-container [ngSwitch]="stepperOrientation | async">
+                    <div class="mb-3" *ngSwitchCase="'horizontal'">Make your screen smaller to see a vertical stepper</div>
+                    <div class="mb-3" *ngSwitchCase="'vertical'">Make your screen larger to see a horizontal stepper</div>
+                  </ng-container>
+                  
+                  <mat-stepper
+                    class="example-stepper"
+                    [orientation]="(stepperOrientation | async)!">
+                    <mat-step [stepControl]="firstFormGroup" label="Login">
+                      <form [formGroup]="firstFormGroup">
+                            <label class="main-content-label tx-11 tx-gray-600">Email Address</label>
+                            <input class="form-control" required="" type="email">
+                            <label class="main-content-label tx-11 tx-gray-600">Password</label>
+                            <input class="form-control" required="" type="password">
+                        <label class="ckbox my-2">
+                            <input type="checkbox"><span class="tx-13">Check me out</span>
+                        </label>
+                        <div>
+                          <button class="btn btn-primary" matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup" label="New User">
+                      <form [formGroup]="secondFormGroup">
+                            <div class="form-group">
+                                <label class="main-content-label tx-11 tx-gray-600">User Name</label>
+                                <input class="form-control" required="" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label class="main-content-label tx-11 tx-gray-600">Email Address</label>
+                                <input class="form-control" required="" type="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="main-content-label tx-11 tx-gray-600">Password</label>
+                                <input class="form-control" required="" type="password">
+                            </div>
+                            <label class="ckbox my-2">
+                                <input type="checkbox"><span class="tx-13">Check me out</span>
+                            </label>
+                        <div>
+                          <button class="btn btn-danger me-2 mb-1" matStepperPrevious>Back</button>
+                          <button class="btn btn-primary me-2 mb-1" matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>End</ng-template>
+                      <label class="ckbox my-2">
+                        <input type="checkbox"><span class="tx-13">I agree terms & Conditions</span>
+                    </label>
+                      <div>
+                        <button class="btn btn-danger" matStepperPrevious>Back</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h6 class="main-content-label mb-1">Stepper vertical</h6>
+            </div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+                    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+                  </button>
+                  <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+                    <mat-step [stepControl]="firstLinerFormGroup">
+                      <form [formGroup]="firstLinerFormGroup">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Name</mat-label>
+                          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                        <div>
+                          <button class="btn btn-primary" matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondLinerFormGroup">
+                      <form [formGroup]="secondLinerFormGroup">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <div>
+                          <button class="btn btn-danger me-2 mb-1" matStepperPrevious>Back</button>
+                          <button class="btn btn-primary me-2 mb-1" matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <p>You are now done.</p>
+                      <div>
+                        <button class="btn btn-primary me-2 mb-1" matStepperPrevious>Back</button>
+                        <button class="btn btn-danger me-2 mb-1" (click)="stepper.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card custom-card ">
+            <div class="card-header">
+                <h6 class="main-content-label mb-1">Stepper vertical</h6>
+            </div>
+            <div class="card-body">
+                <button class="btn btn-primary mb-3" mat-raised-button (click)="isEditable = !isEditable">
+                    {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+                  </button>
+                  
+                  <mat-stepper linear #stepper>
+                    <mat-step [stepControl]="firstEditFormGroup" [editable]="isEditable">
+                      <form [formGroup]="firstEditFormGroup">
+                        <ng-template matStepLabel>Fill out your name</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Name</mat-label>
+                          <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+                        </mat-form-field>
+                        <div>
+                          <button class="btn btn-primary" matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondEditFormGroup" [editable]="isEditable">
+                      <form [formGroup]="secondEditFormGroup">
+                        <ng-template matStepLabel>Fill out your address</ng-template>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Address</mat-label>
+                          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                 required>
+                        </mat-form-field>
+                        <div>
+                          <button class="btn btn-danger me-2 mb-1" matStepperPrevious>Back</button>
+                          <button class="btn btn-primary me-2 mb-1" matStepperNext>Next</button>
+                        </div>
+                      </form>
+                    </mat-step>
+                    <mat-step>
+                      <ng-template matStepLabel>Done</ng-template>
+                      <p>You are now done.</p>
+                      <div>
+                        <button class="btn btn-primary me-2 mb-1" matStepperPrevious>Back</button>
+                        <button class="btn btn-danger me-2 mb-1" (click)="stepper.reset()">Reset</button>
+                      </div>
+                    </mat-step>
+                  </mat-stepper>
+            </div>
+        </div>
+    </div>
+</div>

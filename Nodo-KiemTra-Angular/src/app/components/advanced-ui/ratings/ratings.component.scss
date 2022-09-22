@@ -1,0 +1,107 @@
+
+
+::ng-deep {
+    .fa.fa-heart,
+    .fa.fa-star {
+        letter-spacing: 5px;
+    }
+
+    .ng-rating:focus,
+    .rating-size:focus {
+        outline: 0;
+    }
+    .star {
+        position: relative;
+        display: inline-block;
+        font-size: 3rem;
+        color: #f0f0f2;
+    }
+    .full {
+        color:#ff9b21;
+    }
+    .half {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        color:#ff9b21;
+    }
+    .heartHalf {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        color: #f16d75;
+    }
+    .filled {
+        color:#ff9b21;
+    }
+    .bad {
+        color: #deb0b0;
+    }
+    .filled.bad {
+        color: #f16d75;
+    }
+
+    @media (max-width:768px) {
+        .star{
+            font-size: 1.7rem;
+        }
+    }
+    .dark-theme {
+        .star {
+            color: #23233c;
+            &.filled {
+                color: #ff9b21;
+                &.bad {
+                    color: #f16d75;
+                }
+            }
+        }
+    }
+    label.star:before {
+        content: "\f006";
+        font-family: FontAwesome;
+    }
+    label.star{
+        float: left !important;
+    }
+    .rtl{
+        label.star{
+            float: right !important;
+        }
+    }
+    app-ratings{
+        .form input:checked+label:after, form input:checked+label:after{
+            content: none !important;
+        }
+        form input:checked+label:before, .form input:checked+label:before {
+            position: inherit !important;
+            top: inherit !important;
+            right: inherit !important;
+            font-size: inherit !important;
+        }
+
+        @media screen and (min-width: 567.9px) {
+            ngx-stars{
+                .star{
+                    width: 3rem !important;
+                    height: 3rem !important;
+                }
+            }
+        }
+    }
+    @media  (max-width: 568px) {
+        label.star{
+            font-size: 1.5rem !important;
+        }
+        ngx-stars{
+            .star{
+                width: 1.5rem !important;
+                height: 1.5rem !important;
+            }
+        }
+    }
+}
+
+.ng-untouched.ng-pristine.ng-valid {
+    display: none;
+}

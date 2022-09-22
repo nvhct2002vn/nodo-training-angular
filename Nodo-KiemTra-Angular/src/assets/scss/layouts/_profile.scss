@@ -1,0 +1,67 @@
+/* ###### Main-profile  ###### */
+
+.main-profile-menu {
+  position: relative;
+  padding: 0.6rem 0;
+  margin: 0 7px;
+
+  > .main-img-user {
+    outline: none;
+    width: 32px;
+    height: 32px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .dropdown-menu {
+    padding-top: 0px;
+    position: absolute;
+    top: 53px;
+    left: auto;
+    right: -10px;
+    bottom: auto;
+    width: 230px;
+    border: 0;
+    border-width: 1px;
+    box-shadow: 0 2px 4px rgba(16, 35, 59, 0.15);
+  }
+
+  .dropdown-item {
+    position: relative;
+    padding: 10px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #3c4858;
+
+    i {
+      font-size: 16px;
+      margin-right: 10px;
+      width: 24px;
+      text-align: center;
+      line-height: .9;
+    }
+
+    &:hover, &:focus {
+      background-color: $primary-transparent;
+    }
+
+    + .dropdown-item {
+      border-top: 1px solid $border;
+    }
+  }
+
+  &.show {
+    .main-img-user::before, .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.main-profile-menu .border-top {
+  border-top: 1px solid $border !important;
+}
+/* ###### Main-profile  ###### */
