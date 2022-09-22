@@ -41,7 +41,7 @@ export class TacGiaService {
     deleteTacGia(id: number) {
         return this.apiService.deleteTacGia(id).subscribe(_ => {
             this.toastrService.success('Xoá thành công!');
-            this.getAllTacGia();
+            this.isCloseDialog.next(true);
         }, error => {
             console.log(error);
             this.toastrService.error('Xoá thất bại!');

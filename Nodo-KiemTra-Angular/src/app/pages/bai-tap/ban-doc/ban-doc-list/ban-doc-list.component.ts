@@ -69,6 +69,12 @@ export class BanDocListComponent implements OnInit {
         dialogRef.afterClosed().subscribe(rs => {
             if (rs == Constants.RESULT_CLOSE_DIALOG.CONFIRM) {
                 this.banDocService.deleteBanDoc(id);
+                this.banDocService.isCloseDialog.subscribe(data => {
+                    if (data) {
+                        this.banDocService.isCloseDialog.next(false);
+                        this.getAll();
+                    }
+                })
             }
         });
     }
@@ -84,7 +90,7 @@ export class BanDocListComponent implements OnInit {
         });
         dialogRef.afterClosed().subscribe({
             next: (rs => {
-                if (type == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
+                if (rs == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
                     this.getAll();
                 }
             })

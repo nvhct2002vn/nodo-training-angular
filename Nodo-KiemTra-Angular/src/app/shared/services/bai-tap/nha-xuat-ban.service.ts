@@ -45,6 +45,7 @@ export class NhaXuatBanService {
     deleteNhaXuatBan(id: number) {
         return this.apiService.deleteNhaXuatBan(id).subscribe(_ => {
             this.toastrService.success('Xoá thành công!');
+            this.isCloseDialog.next(true);
             this.getAllNhaXuatBan();
         }, error => {
             console.log(error);

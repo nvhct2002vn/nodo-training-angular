@@ -73,6 +73,12 @@ export class TacGiaListComponent implements OnInit {
             if (rs === Constants.RESULT_CLOSE_DIALOG.CONFIRM) {
                 console.log(id);
                 this.authorService.deleteTacGia(id);
+                this.authorService.isCloseDialog.subscribe(data => {
+                    if (data) {
+                        this.authorService.isCloseDialog.next(false);
+                        this.getAll();
+                    }
+                })
             }
         })
     }
@@ -86,8 +92,8 @@ export class TacGiaListComponent implements OnInit {
                 type, row
             }
         })
-        dialogRef.afterClosed().subscribe(_ => {
-                if (type == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
+        dialogRef.afterClosed().subscribe(rs => {
+                if (rs == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
                     this.getAll();
                 }
             }

@@ -52,7 +52,7 @@ export class BanDocService {
         return this.apiService.deleteBanDoc(id).subscribe({
             next: (_ => {
                 this.toastrService.success('Xoá thành công');
-                this.getAllBanDoc();
+                this.isCloseDialog.next(true);
             }), error: err => {
                 console.log(err)
                 this.toastrService.error('Xoá thất bại');

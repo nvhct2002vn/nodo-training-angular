@@ -72,9 +72,14 @@ export class NhaXuatBanListComponent implements OnInit {
         dialogRef.afterClosed().subscribe(rs => {
             console.log(rs)
             if (rs === Constants.RESULT_CLOSE_DIALOG.CONFIRM) {
-                console.log(id);
                 this.nhaXuatBanService.deleteNhaXuatBan(id);
             }
+            this.nhaXuatBanService.isCloseDialog.subscribe(data => {
+                if (data) {
+                    this.nhaXuatBanService.isCloseDialog.next(false);
+                    this.getAll();
+                }
+            })
         })
     }
 
@@ -87,10 +92,10 @@ export class NhaXuatBanListComponent implements OnInit {
                 type, row
             }
         })
-        dialogRef.afterClosed().subscribe(_ => {
-            if (type == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
-                this.getAll();
-            }
+        dialogRef.afterClosed().subscribe(rs => {
+                if (rs == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
+                    this.getAll();
+                }
             }
         )
     }

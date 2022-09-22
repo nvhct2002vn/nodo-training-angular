@@ -28,13 +28,14 @@ export class MuonSachService {
                     this.isCloseDialog.next(true);
                 }), error: err => {
                     console.log(err);
-                    this.toastrService.error('Thêm thất bại!');
                     if (err.error.code == 'Max') {
                         this.toastrService.warning(err.error.message);
                         return;
                     } else if (err.error.code == 'BeforeDate') {
                         this.toastrService.warning(err.error.message);
+                        return;
                     }
+                    this.toastrService.error('Thêm thất bại!');
                 }
             }
         );
@@ -64,7 +65,7 @@ export class MuonSachService {
         return this.apiService.deleteMuonSach(id).subscribe({
             next: (_ => {
                 this.toastrService.success('Xoá thành công');
-                this.getAllMuonSach();
+                this.isCloseDialog.next(true);
             }), error: err => {
                 console.log(err)
                 this.toastrService.error('Xoá thất bại');

@@ -70,6 +70,12 @@ export class MuonSachListComponent implements OnInit {
             next: (rs => {
                 if (rs == Constants.RESULT_CLOSE_DIALOG.CONFIRM) {
                     this.muonSachService.deleteMuonSach(id);
+                    this.muonSachService.isCloseDialog.subscribe(data => {
+                        if (data) {
+                            this.muonSachService.isCloseDialog.next(false);
+                            this.getAll();
+                        }
+                    })
                 }
             })
         })
@@ -84,8 +90,9 @@ export class MuonSachListComponent implements OnInit {
                 type, row
             }
         });
-        dialogRef.afterClosed().subscribe(_ => {
-            if (type == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
+        dialogRef.afterClosed().subscribe(rs => {
+            console.log(rs);
+            if (rs == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
                 this.getAll();
             }
         })

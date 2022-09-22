@@ -45,7 +45,7 @@ export class SachService {
     deleteSach(id: number) {
         return this.apiService.deleteSach(id).subscribe(_ => {
             this.toastrService.success('Xoá thành công!');
-            this.getAllSach();
+            this.isCloseDialog.next(true);
         }, error => {
             console.log(error);
             this.toastrService.error('Xoá thất bại!');

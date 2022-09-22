@@ -72,6 +72,12 @@ export class SachListComponent implements OnInit {
             if (rs === Constants.RESULT_CLOSE_DIALOG.CONFIRM) {
                 console.log(id);
                 this.sachService.deleteSach(id);
+                this.sachService.isCloseDialog.subscribe(data => {
+                    if (data) {
+                        this.sachService.isCloseDialog.next(false);
+                        this.getAll();
+                    }
+                })
             }
         })
     }
@@ -85,10 +91,10 @@ export class SachListComponent implements OnInit {
                 type, row
             }
         })
-        dialogRef.afterClosed().subscribe(_ => {
-            if (type == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
-                this.getAll();
-            }
+        dialogRef.afterClosed().subscribe(rs => {
+                if (rs == Constants.RESULT_CLOSE_DIALOG.SUCCESS) {
+                    this.getAll();
+                }
             }
         )
     }
