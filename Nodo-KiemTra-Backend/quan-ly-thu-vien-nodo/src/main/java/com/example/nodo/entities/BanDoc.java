@@ -16,30 +16,30 @@ public class BanDoc {
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name = "banDocSeq", sequenceName = "VIETHIEN_BAN_DOC_SEQ")
-    public Integer id;
+    private Integer id;
 
     @Column(name = "MA", length = 10)
-    public String ma;
+    private String ma;
 
     @Column(name = "TEN", length = 54)
-    public String ten;
+    private String ten;
 
     @Column(name = "SDT", length = 15)
-    public String sdt;
+    private String sdt;
 
     @Column(name = "DIA_CHI", length = 255)
-    public String diaChi;
+    private String diaChi;
 
     @Column(name = "NGAY_SINH")
-    public LocalDateTime ngaySinh;
+    private LocalDateTime ngaySinh;
 
     @Column(name = "NGAY_TAO_TAI_KHOAN")
-    public LocalDateTime ngayTaoTaiKhoan;
+    private LocalDateTime ngayTaoTaiKhoan;
 
     @Column(name = "HANG")
-    public Integer hang;
+    private Integer hang;
 
     @OneToMany(mappedBy = "banDoc",cascade = CascadeType.ALL)
     @JsonIgnore
-    public List<MuonSach> muonSachList;
+    private List<MuonSach> muonSachList;
 }

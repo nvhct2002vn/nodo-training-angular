@@ -5,6 +5,7 @@ import com.example.nodo.entities.MuonSach;
 import com.example.nodo.entities.NhaXuatBan;
 import com.example.nodo.entities.Sach;
 import com.example.nodo.exception.BeforeDateException;
+import com.example.nodo.exception.IsDeleteException;
 import com.example.nodo.exception.TotalBookException;
 import com.example.nodo.repository.MuonSachRepository;
 import com.example.nodo.repository.NhaXuatBanRepository;
@@ -90,5 +91,6 @@ public class MuonSachServiecIplm implements MuonSachService {
     @Override
     public void delete(Integer id) {
         this.muonSachRepository.deleteById(id);
+//        throw new IsDeleteException("Xoá thành công!");
     }
 }

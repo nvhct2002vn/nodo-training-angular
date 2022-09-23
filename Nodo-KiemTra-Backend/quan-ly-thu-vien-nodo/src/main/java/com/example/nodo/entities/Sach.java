@@ -18,41 +18,41 @@ public class Sach {
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name = "sachSeq", sequenceName = "VIETHIEN_SACH_SEQ")
-    public Integer id;
+    private Integer id;
 
     @Column(name = "MA", length = 10)
-    public String ma;
+    private String ma;
 
     @Column(name = "TEN", length = 54)
-    public String ten;
+    private String ten;
 
     @ManyToOne()
     @JoinColumn(name = "ID_NXB")
-    public NhaXuatBan nhaXuatBan;
+    private NhaXuatBan nhaXuatBan;
 
     @ManyToOne()
     @JoinColumn(name = "ID_TACGIA")
-    public TacGia tacGia;
+    private TacGia tacGia;
 
     @Column(name = "CHU_DE", length = 30)
-    public String chuDe;
+    private String chuDe;
 
     @Column(name = "NAM_SAN_XUAT")
-    public LocalDateTime namSanXuat;
+    private LocalDateTime namSanXuat;
 
     @Column(name = "MOTA", length = 255)
-    public String moTa;
+    private String moTa;
 
     @Column(name = "SO_LUONG_CON_LAI")
-    public Integer soLuongConLai;
+    private Integer soLuongConLai;
 
     @Column(name = "SO_LUONG_DANG_MUON")
-    public Integer soLuongDangMuon;
+    private Integer soLuongDangMuon;
 
     @Column(name = "TONG_SO_SACH")
-    public Integer tongSoSach;
+    private Integer tongSoSach;
 
     @OneToMany(mappedBy = "sach",cascade = CascadeType.ALL)
     @JsonIgnore
-    public List<MuonSach> muonSachList;
+    private List<MuonSach> muonSachList;
 }

@@ -15,24 +15,24 @@ public class TacGia {
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name = "tacGiaSeq", sequenceName = "VIETHIEN_TAC_GIA_SEQ")
-    public Integer id;
+    private Integer id;
 
     @Column(name = "MA", length = 10)
-    public String ma;
+    private String ma;
 
     @Column(name = "TEN", length = 54)
-    public String ten;
+    private String ten;
 
     @Column(name = "SDT", length = 15)
-    public String sdt;
+    private String sdt;
 
     @Column(name = "DIA_CHI", length = 255)
-    public String diaChi;
+    private String diaChi;
 
     @Column(name = "MO_TA", length = 255)
-    public String moTa;
+    private String moTa;
 
     @OneToMany(mappedBy = "tacGia",cascade = CascadeType.ALL)
     @JsonIgnore
-    public List<Sach> sachList;
+    private List<Sach> sachList;
 }

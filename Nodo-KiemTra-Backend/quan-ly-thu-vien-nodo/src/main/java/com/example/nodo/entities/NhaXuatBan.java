@@ -19,25 +19,25 @@ public class NhaXuatBan {
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name = "nxbSeq", sequenceName = "VIETHIEN_NHA_XUAT_BAN_SEQ")
-    public Integer id;
+    private Integer id;
 
     @Column(name = "MA", length = 10)
-    public String ma;
+    private String ma;
 
     @Column(name = "TEN", length = 54)
-    public String ten;
+    private String ten;
 
     @Column(name = "TRANG_THAI")
-    public Integer trangThai;
+    private Integer trangThai;
 
     @Column(name = "DIACHI", length = 255)
-    public String diaChi;
+    private String diaChi;
 
     @Column(name = "MOTA", length = 255)
-    public String moTa;
+    private String moTa;
 
     @OneToMany(mappedBy = "nhaXuatBan",cascade = CascadeType.ALL)
     @JsonIgnore
-    public List<Sach> sachList;
+    private List<Sach> sachList;
 
 }

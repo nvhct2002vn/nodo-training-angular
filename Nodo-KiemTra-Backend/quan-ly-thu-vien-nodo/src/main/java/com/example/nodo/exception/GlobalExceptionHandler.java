@@ -29,4 +29,10 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
     }
 
+//    @ExceptionHandler(IsDeleteException.class)
+//    public ResponseEntity<?> deleteException(IsDeleteException exception) {
+//        ErrorMessage errorMessage = new ErrorMessage("deleteSuccess", exception.getMessage(), new Date());
+//        return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
+//    }
+
 }

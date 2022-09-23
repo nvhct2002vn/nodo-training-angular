@@ -15,28 +15,28 @@ public class MuonSach {
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name = "muonSachSeq", sequenceName = "VIETHIEN_MUON_SACH_SEQ")
-    public Integer id;
+    private Integer id;
 
     @ManyToOne()
     @JoinColumn(name = "ID_BAN_DOC")
-    public BanDoc banDoc;
+    private BanDoc banDoc;
 
     @ManyToOne()
     @JoinColumn(name = "ID_SACH")
-    public Sach sach;
+    private Sach sach;
 
     @Column(name = "SO_LUONG")
-    public Integer soLuong;
+    private Integer soLuong;
 
     @Column(name = "NGAY_GIO_MUON")
-    public LocalDateTime ngayGioMuon;
+    private LocalDateTime ngayGioMuon;
 
     @Column(name = "NGAY_GIO_TRA")
-    public LocalDateTime ngayGioTra;
+    private LocalDateTime ngayGioTra;
 
     @Column(name = "TRANG_THAI")
-    public Integer trangThai;
+    private Integer trangThai;
 
     @Column(name = "GHI_CHU", length = 255)
-    public String ghiChu;
+    private String ghiChu;
 }
