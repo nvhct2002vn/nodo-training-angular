@@ -1,0 +1,12 @@
+::ng-deep{
+    dropzone>.dropzone.dz-wrapper .dz-message{
+        min-height: 240px !important;
+    }
+    .dropzone .dz-preview{
+        max-height: 100%;
+    }
+    dropzone > .dropzone.dz-wrapper{
+        max-height: 240px !important;
+    }   
+
+}

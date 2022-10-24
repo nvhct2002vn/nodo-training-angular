@@ -1,0 +1,223 @@
+
+/* ###### Badge ###### */
+
+.badge {
+  padding: 5px 6px 4px 6px;
+  display: inline-block;
+  font-size: 75%;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.rounded-pill {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    transition: none;
+  }
+}
+
+a.badge {
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.badge:empty {
+  display: none;
+}
+
+.btn .badge, .sp-container button .badge {
+  position: relative;
+  top: -1px;
+}
+
+.bg-secondary {
+  color: $white !important;
+  background-color: $secondary;
+}
+
+a.bg-secondary {
+  &:hover {
+    color: $white !important;
+    background-color: #de287a;
+  }
+
+  &:focus {
+    color: $white !important;
+    background-color: #de287a;
+    outline: 0;
+  }
+
+  &.focus {
+    outline: 0;
+  }
+}
+
+.bg-success {
+  color: $white !important;
+  background-color: $success;
+}
+
+a.bg-success {
+  &:hover {
+    color: $white !important;
+    background-color: #16a552;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #16a552;
+    outline: 0;
+  }
+
+  &.focus {
+    outline: 0;
+  }
+}
+
+.bg-info {
+  color: $white !important;
+  background-color: $info;
+}
+
+a.bg-info {
+  &:hover {
+    color: $white !important;
+    background-color: #06aff1;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #06aff1;
+    outline: 0;
+  }
+
+  &.focus {
+    outline: 0;
+  }
+}
+
+.bg-warning {
+  color: $white !important;
+  background-color: #ecb529;
+}
+
+a.bg-warning {
+  &:hover {
+    background-color: #f1911d;
+  }
+
+  &:focus {
+    background-color: #f1911d;
+    outline: 0;
+  }
+
+  &.focus {
+    outline: 0;
+  }
+}
+
+.bg-danger {
+  color: $white !important;
+  background-color: $danger;
+}
+
+a.bg-danger {
+  &:hover {
+    color: $white !important;
+    background-color: #ec4157;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #ec4157;
+    outline: 0;
+  }
+
+  &.focus {
+    outline: 0;
+  }
+}
+
+.bg-pink {
+  color: $white !important;
+  background-color: #ff75ad;
+}
+
+a.bg-pink {
+  &:hover, &:focus {
+    color: $white !important;
+    background-color: #ff75ad;
+  }
+}
+
+
+.bg-dark {
+  color: $white;
+  background-color: #8f9cc0;
+}
+
+a.bg-dark {
+  &:hover {
+    color: $white !important;
+    background-color: #131212;
+  }
+
+  &:focus {
+    color: $white !important;
+    background-color: #131212;
+    outline: 0;
+  }
+
+  &.focus {
+    outline: 0;
+  }
+}
+.bg-success-light{
+    color: $success !important;
+    background: rgba(25, 177 ,89 , 0.2) !important;
+}
+.bg-info-light{
+    background: rgba(1, 184, 255 , 0.2) !important;
+    color: $info;
+}
+.btn-outline-primary:hover .badge {
+  background-color: #f0f2f8 !important;
+  color: #55556b !important;
+}
+.btn-outline-secondary:hover .badge {
+  background-color: #f0f2f8 !important;
+  color: #55556b !important;
+}
+.btn-outline-success:hover .badge {
+  background-color: #f0f2f8 !important;
+  color: #55556b !important;
+}
+.btn-outline-danger:hover .badge {
+  background-color: #f0f2f8 !important;
+  color: #55556b !important;
+}
+.btn-outline-warning:hover .badge {
+  background-color: #f0f2f8 !important;
+  color: #55556b !important;
+}
+.btn-outline-info:hover .badge {
+  background-color: #f0f2f8 !important;
+  color: #55556b !important;
+}
+
+/* ###### Badge ###### */

@@ -1,0 +1,175 @@
+/* ###### Tabs ###### */
+
+.nav-tabs {
+  border-bottom: 1px solid $border;
+    border-bottom-width: 0;
+  
+  .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: $white-3;
+    border-width: 0;
+    border-radius: 0;
+   padding: 10px 15px;
+   line-height: 1.428;
+   color: #3c4858;
+   
+    + .nav-link {
+        margin-left: 3px;
+    }
+     
+    &:hover, &:focus {
+      border-color: $background $background $background;
+    }
+
+    &.disabled {
+      color: #a8afc7;
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &.active {
+      color: #3c4858;
+      background-color: $primary;
+      color: $white;
+      font-weight: 500;
+      letter-spacing: -.1px;
+    }
+  }
+
+  .nav-item.show .nav-link {
+    color: #3c4858;
+    background-color: $white;
+    border-color: $background $background $white;
+  }
+
+  .dropdown-menu {
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.main-nav-tabs {
+  padding: 15px 15px 0;
+  background-color: $background;
+
+  .lSSlideOuter {
+    position: relative;
+    padding-left: 32px;
+    padding-right: 35px;
+  }
+
+  .lSSlideWrapper {
+    overflow: visible;
+  }
+
+  .lSAction > a {
+    display: block;
+    height: 40px;
+    top: 16px;
+    opacity: 1;
+    background-color: $primary;
+    color: $white;
+    background-image: none;
+    z-index: 0;
+
+    &:hover, &:focus {
+      background-color: #f0f2f8;
+      color: $primary;
+      border: 1px solid;
+      border-color: $primary;
+    }
+
+    &::before {
+      font-family: 'Ionicons';
+      font-size: 14px;
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.lSPrev {
+      left: -32px;
+
+      &::before {
+        content: '\f3cf';
+      }
+    }
+
+    &.lSNext {
+      right: -35px;
+
+      &::before {
+        content: '\f3d1';
+      }
+    }
+
+    &.disabled {
+      background-color: $background;
+      color: $white;
+    }
+  }
+
+  .lightSlider {
+    display: flex;
+  }
+
+  .tab-item {
+    flex-shrink: 0;
+    display: block;
+    float: none;
+    min-width: 150px;
+  }
+
+  .tab-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    line-height: 1.428;
+    color: #3c4858;
+    white-space: nowrap;
+    background-color: $background;
+
+    &:hover, &:focus {
+      background-color: #f1f2f9;
+    }
+
+    &.active {
+      background-color: $white;
+      color: #4b4b63;
+      font-weight: 500;
+    }
+  }
+}
+
+.main-tab-pane {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.tab-content > {
+  .tab-pane {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+}
+
+.tab-menu-heading {
+  font-weight: 600;
+}
+
+/* ###### Tags  ###### */

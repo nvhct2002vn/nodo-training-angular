@@ -1,0 +1,8 @@
+.ng-select.err {
+    border: 1px solid #fd6074 !important;
+    border-radius: 6px !important;
+}
+
+::ng-deep .ng-select.err .ng-select-container {
+    border: none !important;
+}

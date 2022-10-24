@@ -1,0 +1,50 @@
+<div class="card">
+
+    <div class="card-header">
+        <h3>Chọn quyền</h3>
+    </div>
+
+    <div class="card-body p-0">
+        <div class="px-4 fs-6 mb-2 mt-3">
+            <span style="color: #239fc4">DANH SÁCH QUYỀN</span>
+            <div style="border-bottom: #0b5ed7 0.5px solid; width: 100px"></div>
+        </div>
+        <table mat-table [dataSource]="dataSource" class="table-striped table-hover w-100">
+
+            Checkbox Column
+            <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef>
+                    <mat-checkbox style="width: 16px;height: 16px" (change)="$event ? toggleAllRows() : null"
+                                  [checked]="selection.hasValue() && isAllSelected()"
+                                  [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                  [aria-label]="checkboxLabel()">
+                    </mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-checkbox style="width: 16px;height: 16px" (click)="$event.stopPropagation()"
+                                  (change)="$event ? selection.toggle(row) : null"
+                                  [checked]="selection.isSelected(row)"
+                                  [aria-label]="checkboxLabel(row)">
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="danhSachQuyen">
+                <th mat-header-cell *matHeaderCellDef> Danh sách quyền</th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+                (click)="selection.toggle(row)">
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="card-footer text-center">
+        <button class="btn btn-outline-success me-3" (click)="phanQuyen()">Lữu dữ liệu</button>
+        <button class="btn btn-outline-danger" (click)="closeDiaLog();">Huỷ bỏ</button>
+    </div>
+
+</div>

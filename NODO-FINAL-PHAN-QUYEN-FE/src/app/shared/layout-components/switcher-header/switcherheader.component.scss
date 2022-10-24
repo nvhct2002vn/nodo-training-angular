@@ -1,0 +1,78 @@
+li::marker{color: transparent;}
+
+.main-header-notification.show>a::after, .main-header-message.show>a::after, .drop-flag.show>a::after{
+    display: none;
+}
+
+// search field
+.search-result{
+    .header-list-group:hover{
+        background-color: var(--primary-bg-color);
+        color: #fff;
+    }
+}
+.list-group-item.serach-result-empty{
+    display: none;
+}
+.list-group-item.serach-result-empty.show{
+    display: block;
+}
+
+.p-absolute{
+    position: absolute;
+}
+.border-start-end-top-0{
+    border-left: 0 !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+}
+.br-0{
+    border-radius: 0 !important;
+}
+.list-group .list-group-item:last-child{    
+    border-bottom-right-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+}
+
+.serach-result-empty{
+    z-index: 99;
+}
+
+input:not(.dark-mode)::placeholder{
+    color: #333;
+}
+.search-result{
+    z-index: 9999 ;
+}
+@media (max-width: 991px)
+{.main-header-center .desktop-search {
+    display: none;
+}
+}
+
+::ng-deep{
+    
+    .transparent-theme,
+    .dark-theme{
+        .input-group input::placeholder{
+            color: #eee;
+        }
+    }
+    .light-theme .main-profile-menu .dropdown-item{
+        color: #3c4858 !important;
+    }
+
+    .dark-theme{
+        .search-result,
+        .serach-result-empty
+        {
+            background-color: var(--dark-body);
+        }
+    }
+    .transparent-theme{
+        .search-result,
+        .serach-result-empty{
+            background-color: var(--transparent-body);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+::ng-deep{
+    apx-chart > div > div{
+        left: 50%;
+        right: initial;
+        transform: translateX(-50%);
+    }
+    .rtl apx-chart > div > div {
+        right: 50%;
+        left: initial;
+        transform: translateX(50%);
+    }
+    .rtl{
+        .apexcharts-legend-marker{
+            margin-left: 0.25rem;
+        }
+    }
+    .rtl .apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom{
+        inset: auto 1px 0px -74px !important;
+                
+    }
+    
+}

@@ -1,0 +1,227 @@
+<app-page-header [title]="'NOtifications'" [items]="['Advanced Ui']" [active_item]="'NOtifications'"></app-page-header>
+
+<!-- row -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mg-b-20">
+            <div class="card-body">
+                <div class="main-content-label mg-b-5">
+                    Notification Types
+                </div>
+                <p class="mg-b-20">It is Very Easy to Customize and it uses in website application.</p>
+                <div class="example border-0 p-0">
+  
+  
+                    <div class="mt-5">
+                        <button class="mb-2 btn btn-info me-2" (click)="createToast('info')">
+                            Info
+                        </button>
+                        <button class="mb-2 btn btn-primary me-2" (click)="createToast('primary')">
+                            Primary
+                        </button>
+                        <button class="mb-2 btn btn-secondary me-2" (click)="createToast('secondary')">
+                            Secondary
+                        </button>
+                        <button class="mb-2 btn btn-warning me-2" (click)="createToast('warning')">
+                            Warning
+                        </button>
+                        <button class="mb-2 btn btn-danger me-2" (click)="createToast('danger')">
+                            Danger
+                        </button>
+                        <button class="mb-2 btn btn-success me-2" (click)="createToast('success')">
+                            Success
+                        </button>
+                        <button class="mb-2 btn btn-primary me-2" (click)="clearToasts()">
+                            Clear All Toasts
+                        </button>
+                        <button class="mb-2 btn btn-gray me-2" (click)="clearLastToast()">
+                            Clear Last Toast
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+        <div class="card mg-b-20">
+            <div class="card-header">
+                <div class="card-title">Basic Snackbar Notification</div>
+            </div>
+            <div class="card-body">
+                <mat-form-field appearance="fill">
+                    <mat-label>Snack bar duration (seconds)</mat-label>
+                    <input type="number" [(ngModel)]="durationInSeconds" matInput>
+                  </mat-form-field>
+                  
+                  <button class="btn btn-primary ms-2" mat-stroked-button (click)="openSnackBarCustom()">
+                    Nofify
+                  </button>
+            </div>
+        </div>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-12">
+      
+  <div class="card mg-b-20">
+    <div class="card-header">
+        <div class="card-title">
+            Snack-bar with custom message
+        </div>
+    </div>
+    <div class="card-body">
+        <mat-form-field appearance="fill">
+            <mat-label>Message</mat-label>
+            <input matInput value="Snackbar " #message>
+          </mat-form-field>
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Action</mat-label>
+            <input matInput value="undo" #action>
+          </mat-form-field>
+          
+          <button class="btn btn-primary ms-2" mat-stroked-button (click)="openSnackBarBasic(message.value, action.value)">Show snack-bar</button>
+    </div>
+  </div>
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col">
+    <div class="card mg-b-20">
+      <div class="card-header">
+          <div class="card-title">
+              Snack-bar with configurable position
+          </div>
+      </div>
+      <div class="card-body">
+          <mat-form-field appearance="fill">
+              <mat-label>Horizontal position</mat-label>
+              <mat-select [(value)]="horizontalPosition">
+                <mat-option value="start">Start</mat-option>
+                <mat-option value="center">Center</mat-option>
+                <mat-option value="end">End</mat-option>
+                <mat-option value="left">Left</mat-option>
+                <mat-option value="right">Right</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Vertical position</mat-label>
+              <mat-select [(value)]="verticalPosition">
+                <mat-option value="top">Top</mat-option>
+                <mat-option value="bottom">Bottom</mat-option>
+              </mat-select>
+            </mat-form-field>
+            
+            <button class="btn btn-primary ms-2" mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+              Click me
+            </button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+  <div class="row my-2 overflow-hidden">
+    <div class="col-12 notification-wrapper">
+        <div class="card"><form [formGroup]="form">
+  
+          <div class="field">
+            <label class="fe_select" for="type">
+              <span class="field-label">Type</span>
+              <div class="fe_select-container">
+                <ng-select id="type" name="type" formControlName="type">
+                  <ng-option *ngFor="let t of types" [value]="t">{{t}}</ng-option>
+                </ng-select>
+                <svg height="12" width="12" fill="#cccccc" viewBox="520 2957 10 5"><path d="M520 2957l5 5 5-5z"/></svg>
+              </div>
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="fe_text" for="title">
+              <span class="field-label">Title</span>
+              <input id="title" name="title" type="text" formControlName="title">
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="fe_text" for="content">
+              <span class="field-label">Content</span>
+              <input id="content" name="content" type="text" formControlName="content">
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="fe_text" for="timeOut">
+              <span class="field-label">Time Out</span>
+              <input id="timeOut" name="timeOut" type="number" formControlName="timeOut">
+            </label>
+          </div>
+    
+          <div class="field">
+            <label class="fe_select" for="animate">
+              <span class="field-label">Animation</span>
+              <div class="fe_select-container">
+                <ng-select id="animate" name="animate" formControlName="animate">
+                  <ng-option *ngFor="let t of animationTypes" [value]="t">{{t}}</ng-option>
+                </ng-select>
+                <svg height="12" width="12" fill="#cccccc" viewBox="520 2957 10 5"><path d="M520 2957l5 5 5-5z"/></svg>
+              </div>
+            </label>
+          </div>      
+    
+          <p class="field-label">Show progress bar?</p>
+          <div class="field">
+            <label class="fe_radio" for="showProgressBar-yes">
+              <input id="showProgressBar-yes" name="showProgressBar" type="radio" [value]="true" formControlName="showProgressBar"/>
+              <div class="control"></div>
+              <span>Yes</span>
+            </label>
+            <label class="fe_radio" for="showProgressBar-no">
+              <input id="showProgressBar-no" name="showProgressBar" type="radio" [value]="false" formControlName="showProgressBar"/>
+              <div class="control"></div>
+              <span>No</span>
+            </label>
+          </div>
+    
+          <p class="field-label">Pause on hover?</p>
+          <div class="field">
+            <label class="fe_radio" for="pauseOnHover-yes">
+              <input id="pauseOnHover-yes" name="pauseOnHover" type="radio" [value]="true" formControlName="pauseOnHover"/>
+              <div class="control"></div>
+              <span>Yes</span>
+            </label>
+            <label class="fe_radio" for="pauseOnHover-no">
+              <input id="pauseOnHover-no" name="pauseOnHover" type="radio" [value]="false" formControlName="pauseOnHover"/>
+              <div class="control"></div>
+              <span>No</span>
+            </label>
+          </div>
+    
+          <p class="field-label">Click to close?</p>
+          <div class="field">
+            <label class="fe_radio" for="clickToClose-yes">
+              <input id="clickToClose-yes" name="clickToClose" type="radio" [value]="true" formControlName="clickToClose"/>
+              <div class="control"></div>
+              <span>Yes</span>
+            </label>
+            <label class="fe_radio" for="clickToClose-no">
+              <input id="clickToClose-no" name="clickToClose" type="radio" [value]="false" formControlName="clickToClose"/>
+             <div class="control"></div>
+              <span>No</span>
+            </label>
+          </div>
+    
+          <div class="field cta-field">
+            <button type="submit" (click)="create()">Create</button>
+          </div>
+        </form></div>
+    </div>
+  </div>
+  
+  
+  <ngx-notifier [allowHTML]="true"></ngx-notifier>

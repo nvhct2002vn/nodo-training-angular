@@ -1,0 +1,104 @@
+<div class="card-custom card">
+    <div class="card-header">
+        <p class="fw-bold">
+            {{title}}
+        </p>
+    </div>
+    <div class="card-body">
+
+        <form [formGroup]="formGroup">
+            <div class="row">
+                <div class="col-md-6">
+                    <!--                    <div class="mb-3">-->
+                    <!--                        <mat-form-field class="w-100" appearance="outline">-->
+                    <!--                            <mat-label>Mã</mat-label>-->
+                    <!--                            <input formControlName="ma" type="text"-->
+                    <!--                                   id="exampleInputMa1"-->
+                    <!--                                   aria-describedby="maHelp" required maxlength="10"-->
+                    <!--                                   matInput-->
+                    <!--                            >-->
+                    <!--                            <mat-error-->
+                    <!--                                *ngIf="formGroup.get('ma')?.hasError('required')-->
+                    <!--                                 && formGroup.get('ma')?.touched">Bạn phải nhập mã-->
+                    <!--                            </mat-error>-->
+                    <!--                        </mat-form-field>-->
+                    <!--                    </div>-->
+                    <div class="mb-3">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Tên</mat-label>
+                            <input formControlName="ten" type="text"
+                                   id="exampleInputTen1" required maxlength="54"
+                                   matInput>
+                            <mat-error
+                                *ngIf="formGroup.get('ten')?.hasError('required') &&
+                                  formGroup.get('ten')?.touched">Bạn phải nhập tên
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Số điện thoại</mat-label>
+                            <input formControlName="sdt" type="text"
+                                   id="exampleInputSdt1" required maxlength="15"
+                                   matInput>
+                            <mat-error
+                                *ngIf="formGroup.get('sdt')?.hasError('required') &&
+                                  formGroup.get('sdt')?.touched">Bạn phải số điện thoại
+                            </mat-error>
+                            <mat-error
+                                *ngIf="formGroup.get('sdt')?.hasError('pattern') &&
+                                  formGroup.get('sdt')?.touched">Số điện thoại sai địng dạng
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Ngày sinh</mat-label>
+                            <input formControlName="ngaySinh" matInput [matDatepicker]="picker1">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                            <mat-error
+                                *ngIf="formGroup.get('ngaySinh')?.hasError('required') &&
+                                formGroup.get('ngaySinh')?.touched">Bạn phải chọn ngày sinh
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Hạng</mat-label>
+                            <input formControlName="hang" type="number"
+                                   id="exampleInputHang1" required min="1" max="9" maxlength="1"
+                                   matInput>
+                            <mat-error
+                                *ngIf="formGroup.get('hang')?.hasError('required') &&
+                                  formGroup.get('hang')?.touched">Bạn phải số hạng
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Địa chỉ</mat-label>
+                        <input formControlName="diaChi" type="text"
+                               id="exampleInputDiaChi1" required maxlength="255"
+                               matInput>
+                        <mat-error
+                            *ngIf="formGroup.get('diaChi')?.hasError('required') &&
+                                  formGroup.get('diaChi')?.touched">Bạn phải số địa chỉ
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button mat-raised-button color="accent" (click)="saveTacGia()">Submit</button>
+                <button mat-raised-button color="warn" (click)="close()" class="mx-5">Close</button>
+            </div>
+        </form>
+
+    </div>
+</div>

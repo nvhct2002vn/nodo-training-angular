@@ -1,0 +1,10 @@
+::ng-deep{
+    .rtl{
+        .ngb-dp-arrow.right .ngb-dp-navigation-chevron {
+            transform: rotate(226deg) !important;
+        }
+        .ngb-dp-navigation-chevron {
+            transform: rotate(45deg) !important;
+        }
+    }
+}

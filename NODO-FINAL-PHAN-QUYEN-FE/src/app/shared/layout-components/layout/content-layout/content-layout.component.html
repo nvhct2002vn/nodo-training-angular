@@ -1,0 +1,30 @@
+<div class="horizontalMenucontainer">
+    <div class="page">
+        <!-- // header -->
+        <app-header></app-header>
+        <!-- //sidebar -->
+        <app-sidebar appHoverEffectSidebar></app-sidebar>
+
+        <div class="main-content side-content pt-0">
+            <div class="main-container container-fluid" (click)="toggleSwitcherBody()">
+                <div class="inner-body">
+                    <!-- // contetnt  -->
+                    <router-outlet>
+                        <app-loader></app-loader>
+                    </router-outlet>
+                </div>
+            </div>
+        </div>
+        <app-right-sidebar></app-right-sidebar>
+        <app-footer></app-footer>
+    </div>
+</div>
+<ngx-spinner
+    [name]="ROOT_SPINNER_NAME"
+    bdColor="rgba(0, 0, 0, 0.8)"
+    size="medium"
+    color="#fff"
+    type="square-loader"
+    [fullScreen]="true"><p
+    style="color: white"> Loading... </p>
+</ngx-spinner>

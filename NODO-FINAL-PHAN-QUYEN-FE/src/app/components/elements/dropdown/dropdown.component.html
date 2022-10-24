@@ -1,0 +1,695 @@
+<app-page-header [title]="'Dropdown'" [items]="['Elements']" [active_item]="'Dropdown'"></app-page-header>
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Basic Dropdown</h6>
+          <p class="text-muted card-sub-title">Below is the Basic Dropdown.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button class="btn ripple btn-primary" ngbDropdownToggle type="button">Dropdown Menu <i
+                  class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button class="btn ripple btn-secondary" ngbDropdownToggle type="button">Dropdown Menu <i
+                  class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button class="btn ripple btn-success" ngbDropdownToggle type="button">Dropdown Menu <i
+                  class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button class="btn ripple btn-warning" ngbDropdownToggle type="button">Dropdown Menu <i
+                  class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Dropdown with Rounded</h6>
+          <p class="text-muted card-sub-title">Below is the Dropdown with Radius</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-primary btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-secondary btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-success btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-warning btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Light Dropdowns</h6>
+          <p class="text-muted card-sub-title">Below is the Light Dropdowns.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-primary-transparent" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-secondary-transparent" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-success-transparent" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-warning-transparent" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Light Dropdown with Rounded</h6>
+          <p class="text-muted card-sub-title">Below is the Light Dropdowns with Radius.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-primary-transparent btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-secondary-transparent btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-success-transparent btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-warning-transparent btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Outline Dropdowns</h6>
+          <p class="text-muted card-sub-title">Below is the Outline Dropdowns</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-outline-primary"
+                ngbDropdownToggle type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-outline-secondary" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-outline-success"
+                ngbDropdownToggle type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-outline-warning"
+                ngbDropdownToggle type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Outline Dropdown with Rounded</h6>
+          <p class="text-muted card-sub-title">Below is the Outline Dropdowns with Radius</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-outline-primary btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-outline-secondary btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-outline-success btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-outline-warning btn-rounded" ngbDropdownToggle
+                type="button">Dropdown Menu <i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Dropup</h6>
+          <p class="text-muted card-sub-title">Trigger dropdown menus above elements by adding dropup class to the
+            parent element.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown placement="top-start" class="dropup btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-primary"
+                ngbDropdownToggle type="button">Dropup Menu</button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown placement="top-start" class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-secondary"
+                ngbDropdownToggle type="button">Dropup Menu</button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown placement="top-start" class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-success"
+                ngbDropdownToggle type="button">Dropup Menu</button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown placement="top-start" class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-warning"
+                ngbDropdownToggle type="button">Dropup Menu</button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Dropright & Dropleft</h6>
+          <p class="text-muted card-sub-title">Trigger dropdown menus above elements by adding dropright & dropleft
+            class to the parent element.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="">
+            <div class="row row-xs">
+              <div class="col-sm-6 col-md-3">
+                <div  placement="bottom-start" ngbDropdown class="dropend btn-list mb-1">
+                  <button class="btn ripple btn-info"
+                    ngbDropdownToggle id="droprightMenuButton" type="button">Dropright </button>
+                  <div aria-labelledby="droprightMenuButton" ngbDropdownMenu class="tx-13">
+                    <a ngbDropdownItem href="javascript:;">Action</a>
+                    <a ngbDropdownItem href="javascript:;">Another action</a>
+                    <a ngbDropdownItem href="javascript:;">Something else here</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 mg-t-10 mg-sm-t-0">
+                <div  placement="bottom-end" ngbDropdown class="dropstart mb-1">
+                  <button class="btn ripple btn-danger"
+                    ngbDropdownToggle id="dropleftMenuButton" type="button">Dropleft</button>
+                  <div aria-labelledby="dropleftMenuButton" ngbDropdownMenu class="tx-13">
+                    <a ngbDropdownItem href="javascript:;">Action</a>
+                    <a ngbDropdownItem href="javascript:;">Another action</a>
+                    <a ngbDropdownItem href="javascript:;">Something else here</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Active Menu Item</h6>
+          <p class="text-muted card-sub-title">Add active class to items in the dropdown to style them as active.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-warning"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a class="dropdown-item active" href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-info"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a class="dropdown-item active" href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-success"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a class="dropdown-item active" href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Disabled Menu Item</h6>
+          <p class="text-muted card-sub-title">Add disabled class to items in the dropdown to style them as disabled.
+          </p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-primary"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a class="dropdown-item disabled" href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-success"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a class="dropdown-item disabled" href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-secondary"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a class="dropdown-item disabled" href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Dropdown Header</h6>
+          <p class="text-muted card-sub-title">Add a header to label sections of actions in any dropdown menu.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-secondary"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Dropdown header</h6>
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-success"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Dropdown header</h6>
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-warning"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Dropdown header</h6>
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Dropdown Divider</h6>
+          <p class="text-muted card-sub-title">Separate groups of related menu items with a divider.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-info"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Dropdown header</h6>
+                <a ngbDropdownItem href="javascript:;">Action</a> <a ngbDropdownItem
+                  href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+                <div class="dropdown-divider"></div><a ngbDropdownItem href="javascript:;">Separated link</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-secondary"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Dropdown header</h6>
+                <a ngbDropdownItem href="javascript:;">Action</a> <a ngbDropdownItem
+                  href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+                <div class="dropdown-divider"></div><a ngbDropdownItem href="javascript:;">Separated link</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-primary"
+                ngbDropdownToggle type="button">Dropdown Menu<i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Dropdown header</h6>
+                <a ngbDropdownItem href="javascript:;">Action</a> <a ngbDropdownItem
+                  href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+                <div class="dropdown-divider"></div><a ngbDropdownItem href="javascript:;">Separated link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Icon Dropdowns</h6>
+          <p class="text-muted card-sub-title">Below is the Dropdown with an Icon.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-primary"
+                ngbDropdownToggle type="button"><i class="fe fe-plus me-1"></i><i
+                  class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-secondary"
+                ngbDropdownToggle type="button"><i class="fe fe-heart me-1"></i><i
+                  class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-success"
+                ngbDropdownToggle type="button"><i class="fe fe-check me-1"></i><i
+                  class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start" class="btn ripple btn-warning"
+                ngbDropdownToggle type="button"><i class="fe fe-link me-1"></i><i
+                  class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Rounded Light Dropdown with Icon</h6>
+          <p class="text-muted card-sub-title">Below is the Icon Light Dropdown with Radius. </p>
+        </div>
+        <div class="text-wrap">
+          <div class="d-flex flex-wrap">
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-primary-transparent btn-rounded" ngbDropdownToggle
+                type="button"><i class="fe fe-plus me-1"></i><i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-secondary-transparent btn-rounded" ngbDropdownToggle
+                type="button"><i class="fe fe-heart me-1"></i><i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-success-transparent btn-rounded" ngbDropdownToggle
+                type="button"><i class="fe fe-check me-1"></i><i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+            <div ngbDropdown class="btn-list mb-1">
+              <button placement="bottom-start"
+                class="btn ripple btn-warning-transparent btn-rounded" ngbDropdownToggle
+                type="button"><i class="fe fe-link me-1"></i><i class="fas fa-caret-down ms-1"></i></button>
+              <div ngbDropdownMenu class="tx-13">
+                <a ngbDropdownItem href="javascript:;">Action</a>
+                <a ngbDropdownItem href="javascript:;">Another action</a>
+                <a ngbDropdownItem href="javascript:;">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->

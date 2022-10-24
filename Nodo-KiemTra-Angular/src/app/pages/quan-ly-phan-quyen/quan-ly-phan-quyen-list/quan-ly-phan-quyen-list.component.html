@@ -1,0 +1,73 @@
+<div class="row">
+
+    <div class="col-12 col-md-4">
+        <div class="fs-6 mb-2 mt-3">
+            <span style="color: #239fc4">DANH SÁCH NHÓM NGƯỜI DÙNG</span>
+            <div style="border-bottom: #0b5ed7 0.5px solid; width: 100px"></div>
+        </div>
+        <div>
+            <table class="table table-striped table-hover" mat-table [dataSource]="dataSource">
+
+                <ng-container matColumnDef="tenNhom">
+                    <th mat-header-cell *matHeaderCellDef class="text-center"> Tên nhóm</th>
+                    <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="getNhomQuyenMenu(row)"
+                    style="cursor: pointer"></tr>
+
+            </table>
+            <mat-paginator #paginator="matPaginator" [pageSizeOptions]="[5, 10, 20]"
+                           showFirstLastButtons
+                           aria-label="Select page of periodic elements">
+            </mat-paginator>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-8">
+        <div class="fs-6 mb-2 mt-3">
+            <span style="color: #239fc4" (click)="test()">TÊN NHÓM: </span>{{tenNhom}}
+            <div style="border-bottom: #0b5ed7 0.5px solid; width: 100px"></div>
+        </div>
+        <table class="table table-striped table-hover" mat-table [dataSource]="dataSource2">
+
+            <ng-container matColumnDef="tenChucNang">
+                <th mat-header-cell *matHeaderCellDef> Tên chức năng</th>
+                <td mat-cell *matCellDef="let row2"> {{row2.menuItem.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="danhMucMenu">
+                <th mat-header-cell *matHeaderCellDef> Danh mục menu</th>
+                <td mat-cell *matCellDef="let row2"> {{row2.menuItem.menu.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="thaoTac">
+                <th mat-header-cell *matHeaderCellDef> Thao tác</th>
+                <td mat-cell *matCellDef="let row2">
+                    <button (click)="openPhanQuyen(row2)" mat-raised-button color="primary" [disabled]="checkButton">
+                        Thêm
+                    </button>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="quyen">
+                <th mat-header-cell *matHeaderCellDef> Quyền</th>
+                <td mat-cell *matCellDef="let row2">
+                    <div *ngFor="let i of rightItems">
+                        <li *ngIf="isCheckQuyen(row2.id,i.id)">{{i.name}}</li>
+                    </div>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+
+        </table>
+        <mat-paginator #paginator2="matPaginator" [pageSizeOptions]="[10, 20]"
+                       showFirstLastButtons
+                       aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+
+</div>

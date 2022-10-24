@@ -1,0 +1,123 @@
+<app-page-header [title]="'Pagination'" [items]="['Elements']" [active_item]="'Pagination'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card overflow-hidden" id="basic">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Basic Pagination</h6>
+          <p class="text-muted card-sub-title">Below are basic pagination navigation.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-pagination [collectionSize]="40" [page]="1" aria-label="Custom pagination">
+                <ng-template ngbPaginationPrevious>Prev</ng-template>
+                <ng-template ngbPaginationNext>Next</ng-template>
+                <ng-template ngbPaginationNumber let-p>{{ getPageSymbol(p) }}</ng-template>
+              </ngb-pagination>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card overflow-hidden" id="icon">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Pagination with Icons</h6>
+          <p class="text-muted card-sub-title">Looking to use an icon or symbol in place of text for some pagination
+            links? Be sure to provide proper screen reader support with aria attributes.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-pagination [collectionSize]="40" [page]="1" [boundaryLinks]="true"></ngb-pagination>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card overflow-hidden" id="disactive">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Disabled and active Pagination</h6>
+          <p class="text-muted card-sub-title">Pagination links are customizable for different circumstances.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-pagination [collectionSize]="40" [(page)]="page" [disabled]='isDisabled'></ngb-pagination>
+            <button class="btn btn-sm btn-outline-primary" (click)="toggleDisabled()">
+              Toggle disabled
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <div class="card custom-card overflow-hidden" id="circled">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Circled Pagination</h6>
+          <p class="text-muted card-sub-title">Below are basic pagination navigation in circle.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <ngb-pagination [collectionSize]="40" [page]="1" class="pagination pagination-circled mb-0"></ngb-pagination>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-12">
+    <div class="card custom-card overflow-hidden" id="sizes">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Pagination Sizes</h6>
+          <p class="text-muted card-sub-title">Fancy larger or smaller pagination Add <code>.pagination-lg</code> or
+            <code>.pagination-sm</code> for additional sizes..</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <div class="row row-sm">
+              <div class="col-sm-12">
+                <ngb-pagination [collectionSize]="50" [page]="1" size="lg"></ngb-pagination>
+              </div>
+              <div class="col-sm-12 mg-t-10">
+                <ngb-pagination [collectionSize]="50" [page]="1"></ngb-pagination>
+              </div>
+              <div class="col-sm-12 mg-t-10">
+                <ngb-pagination [collectionSize]="50" [page]="1" size="sm"></ngb-pagination>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-12">
+    <div class="card custom-card overflow-hidden" id="align">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Alignment Pagination</h6>
+          <p class="text-muted card-sub-title">Change the alignment of pagination components.</p>
+        </div>
+        <div class="text-wrap">
+          <div class="example">
+            <nav aria-label="Page navigation example">
+              <ngb-pagination class="d-flex justify-content-start" [collectionSize]="40" [page]="1"></ngb-pagination>
+            </nav>
+            <nav aria-label="Page navigation example">
+              <ngb-pagination class="d-flex justify-content-center" [collectionSize]="40" [page]="1"></ngb-pagination>
+            </nav>
+            <nav aria-label="Page navigation example">
+              <ngb-pagination class="d-flex justify-content-end" [collectionSize]="40" [page]="1"></ngb-pagination>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->

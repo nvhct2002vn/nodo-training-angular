@@ -1,0 +1,875 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
+
+// leaflet
+@import '~leaflet/dist/leaflet.css';
+// ngx-dropzone-wrapper
+@import '~dropzone/dist/dropzone.css';
+// ng-select
+@import "~@ng-select/ng-select/themes/default.theme.css";
+// perfect scrollbar 
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+// chartlist
+@import '~chartist/dist/chartist.css';
+
+// ngx-toastr
+@import '~ngx-toastr/toastr.css';
+
+// Full calendar
+@import "~angular-calendar/scss/angular-calendar.scss";
+@import "~flatpickr/dist/flatpickr.css";
+
+
+// angular-archwizard
+@import '~angular-archwizard/styles/archwizard.css';
+
+// ngx data table
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/themes/bootstrap.scss';
+@import '~@swimlane/ngx-datatable/themes/dark.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+
+// quill
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+
+
+@import "~ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css";
+@import "~ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+// importing custom-css files
+// icons //
+@import "./assets/web-fonts/icons.css";
+@import "./assets/web-fonts/font-awesome/font-awesome.min.css";
+@import "./assets/web-fonts/plugin.css";
+@import "./assets/css/icon-list.css";
+// main styles //
+@import "./assets/css/style.css";
+@import "./assets/css/transparent-style.css";
+@import "./assets/css/dark-style.css";
+@import "./assets/css/skin-modes.css";
+@import "./assets/css/colors/color.css";
+// switcher //
+@import "./assets/switcher/css/switcher.css";
+@import "./assets/switcher/demo.css";
+
+
+.ng-select-container {
+  background-color: transparent !important;
+  border-color: #e8e8f7 !important;
+}
+
+.timepicker-dial__control {
+  outline: none;
+}
+
+.dark-theme {
+  .ng-select-container {
+    border-color: var(--dark-border) !important;
+    color: #fff !important;
+
+    input {
+      &::placeholder {
+        color: #eee !important;
+      }
+
+      color: #eee !important;
+    }
+  }
+
+  .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+    color: #fff !important;
+    background-color: var(--dark-primary) !important;
+  }
+
+  .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon {
+    border-color: var(--dark-border) !important;
+  }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked {
+    color: #fff;
+    background-color: var(--dark-body);
+  }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    background-color: var(--dark-body);
+    color: #fff;
+  }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+    background-color: var(--dark-body) !important;
+    color: #fff;
+  }
+
+  .ng-dropdown-panel {
+    background-color: var(--dark-body);
+    border: 1px solid var(--dark-border);
+  }
+
+  .ng-value-container {
+    input {
+      color: #fff !important;
+    }
+  }
+
+  .ng-optgroup {
+    color: #eee !important;
+    background-color: var(--dark-body) !important;
+  }
+
+  .demo_changer .dropdown-menu>li>a:hover,
+  .dropdown-menu>li>a:focus {
+    background: var(--dark-body) !important;
+  }
+
+  .swal2-popup {
+    background: var(--dark-theme) !important;
+    color: #fff !important;
+  }
+
+  // range slider
+  .ngx-slider .ngx-slider-bar {
+    background: #a8b2e5 !important;
+  }
+
+  .ngx-slider .ngx-slider-pointer {
+    background-color: #4d65d9;
+  }
+
+  .ngx-slider-span {
+    outline: none;
+  }
+
+  //ANGULAR MATERIAL CALENDAR
+  mat-label {
+    color: #fff;
+  }
+
+  .mat-button-wrapper mat-icon {
+    color: #fff;
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-underline::-ms-ticks-before {
+    background-color: rgba(255, 255, 255, .42);
+  }
+
+  .mat-calendar-arrow {
+    fill: rgba(255, 255, 255, 0.54)
+  }
+
+  .mat-form-field-ripple {
+    background-color: rgba(255, 255, 255, .87);
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-underline::before {
+    background-color: rgba(255, 255, 255, .42);
+  }
+
+  .mat-datepicker-toggle,
+  .mat-datepicker-content .mat-calendar-next-button,
+  .mat-datepicker-content .mat-calendar-previous-button {
+    color: rgba(255, 255, 255, .54);
+  }
+
+  .mat-datepicker-content {
+    background-color: var(--dark-body);
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .mat-calendar-table-header,
+  .mat-calendar-body-label {
+    color: rgb(255 255 255 / 80%);
+  }
+
+  .mat-calendar-body-cell-content,
+  .mat-date-range-input-separator {
+    color: rgb(255 255 255 / 87%);
+    border-color: transparent;
+  }
+
+  .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    border-color: rgb(255 255 255 / 30%);
+  }
+
+  // NG BOOTSTRAP CALENDAR
+  .ngb-dp-header,
+  .ngb-dp-weekdays {
+    background-color: var(--dark-body);
+  }
+
+  // mat input 
+  .iti__country-list {
+    background-color: var(--dark-body);
+    border-color: var(--dark-border) !important;
+  }
+
+  .iti__divider {
+    border-color: var(--dark-border) !important;
+  }
+
+  //  DATE RANGE PICKER
+  .md-drppicker {
+    background-color: var(--dark-body);
+  }
+
+  .md-drppicker .ranges>ul>li:hover {
+    background-color: var(--dark-theme);
+  }
+
+  .ranges>ul>li>button:not(.active) {
+    color: #fff;
+  }
+
+  .md-drppicker .calendar-table {
+    border: 1px solid var(--dark-border);
+    background-color: var(--dark-body);
+  }
+
+  .md-drppicker td.available.prev,
+  .md-drppicker th.available.prev,
+  .md-drppicker td.available.next,
+  .md-drppicker th.available.next {
+    filter: invert(1);
+  }
+
+  .md-drppicker td.available:hover,
+  .md-drppicker th.available:hover {
+    background-color: var(--dark-theme);
+  }
+
+  .md-drppicker td.off,
+  .md-drppicker td.off.end-date,
+  .md-drppicker td.off.in-range,
+  .md-drppicker td.off.start-date {
+    background-color: var(--dark-theme);
+    color: #eee;
+  }
+
+  .dateRangePicker-wrapper .dateRangePicker {
+    background: var(--dark-body) !important;
+  }
+
+  .dateRangePicker-wrapper .dateRangePicker.open-left:before {
+    left: initial;
+    right: 10px;
+  }
+
+  .form-inputs {
+    background-color: var(--dark-theme) !important;
+    color: #fff !important;
+  }
+
+  .calendar .table td,
+  .calendar .table th {
+    color: #aaa;
+  }
+
+  .md-drppicker .clear {
+    box-shadow: none;
+    background-color: var(--dark-theme) !important;
+    color: #fff !important;
+    margin-right: 0.5rem;
+  }
+
+  .rtl {
+    .md-drppicker .clear {
+      margin-right: inherit;
+      margin-left: 0.5rem;
+    }
+  }
+
+  ngx-dropzone {
+    background: var(--dark-body);
+    color: #fff;
+    border: 2px dashed var(--dark-border);
+  }
+
+  @supports (background-color:var(--body-background-color)) {
+    .timepicker__body {
+      background-color: var(--dark-body) !important;
+    }
+
+    .clock-face {
+      background-color: var(--dark-theme) !important;
+    }
+
+    .timepicker__actions {
+      background-color: var(--dark-body) !important;
+      justify-content: space-around !important;
+    }
+  }
+
+  ngx-material-timepicker-toggle svg,
+  .ngx-timepicker-control__arrow,
+  .period-control__arrow {
+    filter: invert(1);
+  }
+
+  .period-selector {
+    background-color: var(--dark-body);
+  }
+
+  .period-selector__button:focus {
+    background-color: var(--dark-theme) !important;
+  }
+
+  .period-selector__button:not(.period-selector__button--active) {
+    color: #fff;
+  }
+
+  ngx-timepicker-time-control input {
+    background-color: transparent;
+  }
+
+  // wizards
+  .mat-stepper-horizontal,
+  .mat-stepper-vertical {
+    background-color: var(--dark-theme);
+  }
+
+  .mat-step-header .mat-step-label.mat-step-label-active {
+    color: rgba(255, 255, 255, .87);
+  }
+
+  .mat-horizontal-stepper-header::before,
+  .mat-horizontal-stepper-header::after,
+  .mat-stepper-horizontal-line {
+    border-top-color: rgb(255 255 255 / 12%);
+  }
+
+  .mat-form-field-label {
+    color: rgba(255, 255, 255, .6);
+  }
+
+  .mat-step-header .mat-step-icon {
+    background-color: var(--dark-theme);
+    color: #fff;
+  }
+
+  .mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected {
+    background-color: var(--primary-bg-color) !important;
+  }
+
+  .mat-stepper-vertical-line::before {
+    border-left-color: rgb(255 255 255 / 12%) !important;
+  }
+
+  // editor
+  .ql-editor.ql-blank::before {
+    color: #eee;
+  }
+
+  .apexcharts-menu,
+  .apexcharts-tooltip.apexcharts-theme-light,
+  .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+    background: var(--dark-body) !important;
+    border: 1px solid var(--dark-border) !important;
+  }
+}
+
+.transparent-theme {
+  .ng-select-container {
+    border-color: var(--transparent-border) !important;
+    color: #fff !important;
+
+    input {
+      &::placeholder {
+        color: #eee !important;
+      }
+
+      color: #eee !important;
+    }
+  }
+
+  .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+    color: #fff !important;
+    background-color: var(--transparent-primary) !important;
+  }
+
+  .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon {
+    border-color: var(--transparent-border);
+  }
+
+  .ng-dropdown-panel {
+    background-color: var(--transparent-body);
+    border: 1px solid var(--transparent-border);
+  }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked {
+    color: #fff;
+    background-color: var(--transparent-body);
+  }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    background-color: var(--transparent-body);
+    color: #fff;
+  }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+    background-color: var(--transparent-body) !important;
+    color: #fff;
+  }
+
+  .ng-value-container {
+    input {
+      color: #fff;
+    }
+  }
+
+  .ng-optgroup {
+    color: #eee !important;
+    background-color: var(--transparent-body) !important;
+  }
+
+  .demo_changer .dropdown-menu>li>a:hover,
+  .dropdown-menu>li>a:focus {
+    background: var(--transparent-body) !important;
+  }
+
+  // range slider
+  .ngx-slider .ngx-slider-bar {
+    background: #a8b2e5 !important;
+  }
+
+  .ngx-slider .ngx-slider-pointer {
+    background-color: #4d65d9;
+  }
+
+  .ngx-slider-span {
+    outline: none;
+  }
+
+  //ANGULAR MATERIAL CALENDAR
+  mat-label {
+    color: #fff;
+  }
+
+  .mat-button-wrapper mat-icon {
+    color: #fff;
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-underline::-ms-ticks-before {
+    background-color: rgba(255, 255, 255, .42);
+  }
+
+  .mat-calendar-arrow {
+    fill: rgba(255, 255, 255, 0.54)
+  }
+
+  .mat-form-field-ripple {
+    background-color: rgba(255, 255, 255, .87);
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-underline::before {
+    background-color: rgba(255, 255, 255, .42);
+  }
+
+  .mat-datepicker-toggle,
+  .mat-datepicker-content .mat-calendar-next-button,
+  .mat-datepicker-content .mat-calendar-previous-button {
+    color: rgba(255, 255, 255, .54);
+  }
+
+  .mat-datepicker-content {
+    background-color: var(--transparent-body);
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .mat-calendar-table-header,
+  .mat-calendar-body-label {
+    color: rgb(255 255 255 / 80%);
+  }
+
+  .mat-calendar-body-cell-content,
+  .mat-date-range-input-separator {
+    color: rgb(255 255 255 / 87%);
+    border-color: transparent;
+  }
+
+  .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    border-color: rgb(255 255 255 / 30%);
+  }
+
+  // NG BOOTSTRAP CALENDAR
+  .ngb-dp-header,
+  .ngb-dp-weekdays {
+    background-color: var(--transparent-body);
+  }
+
+  .iti__country-list {
+    background-color: var(--transparent-body);
+    border-color: var(--transparent-border) !important;
+  }
+
+  .iti__divider {
+    border-color: var(--transparent-border) !important;
+  }
+
+  //  DATE RANGE PICKER
+  .md-drppicker {
+    background-color: var(--transparent-body);
+  }
+
+  .md-drppicker .ranges>ul>li:hover {
+    background-color: var(--transparent-theme);
+  }
+
+  .ranges>ul>li>button:not(.active) {
+    color: #fff;
+  }
+
+  .md-drppicker .calendar-table {
+    border: 1px solid var(--transparent-border);
+    background-color: var(--transparent-body);
+  }
+
+  .md-drppicker td.available.prev,
+  .md-drppicker th.available.prev,
+  .md-drppicker td.available.next,
+  .md-drppicker th.available.next {
+    filter: invert(1);
+  }
+
+  .md-drppicker td.available:hover,
+  .md-drppicker th.available:hover {
+    background-color: var(--transparent-theme);
+  }
+
+  .md-drppicker td.off,
+  .md-drppicker td.off.end-date,
+  .md-drppicker td.off.in-range,
+  .md-drppicker td.off.start-date {
+    background-color: var(--transparent-theme);
+    color: #eee;
+  }
+
+  .dateRangePicker-wrapper .dateRangePicker {
+    background: var(--transparent-body) !important;
+  }
+
+  .dateRangePicker-wrapper .dateRangePicker.open-left:before {
+    left: initial;
+    right: 10px;
+  }
+
+  .form-inputs {
+    background-color: var(--transparent-theme) !important;
+    color: #fff !important;
+  }
+
+  .calendar .table td,
+  .calendar .table th {
+    color: #aaa;
+  }
+
+  .md-drppicker .clear {
+    box-shadow: none;
+    background-color: var(--transparent-theme) !important;
+    color: #fff !important;
+    margin-right: 0.5rem;
+  }
+
+  .rtl {
+    .md-drppicker .clear {
+      margin-right: inherit;
+      margin-left: 0.5rem;
+    }
+  }
+
+  ngx-dropzone {
+    background: var(--transparent-body);
+    color: #fff;
+    border: 2px dashed var(--transparent-border);
+  }
+
+  // time picker
+  @supports (background-color:var(--body-background-color)) {
+    .timepicker__body {
+      background-color: var(--transparent-body) !important;
+    }
+
+    .clock-face {
+      background-color: var(--transparent-theme) !important;
+    }
+
+    .timepicker__actions {
+      background-color: var(--transparent-body) !important;
+      justify-content: space-around !important;
+    }
+  }
+
+  ngx-material-timepicker-toggle svg,
+  .ngx-timepicker-control__arrow,
+  .period-control__arrow {
+    filter: invert(1);
+  }
+
+  .period-selector {
+    background-color: var(--transparent-body) !important;
+  }
+
+  .period-selector__button:focus {
+    background-color: var(--transparent-theme) !important;
+  }
+
+  .period-selector__button:not(.period-selector__button--active) {
+    color: #fff;
+  }
+
+  ngx-timepicker-time-control input {
+    background-color: transparent;
+  }
+
+  // wizards
+  .mat-stepper-horizontal,
+  .mat-stepper-vertical {
+    background-color: var(--transparent-theme);
+  }
+
+  .mat-step-header .mat-step-label.mat-step-label-active {
+    color: rgba(255, 255, 255, .87);
+  }
+
+  .mat-step-header .mat-step-label,
+  .mat-step-header .mat-step-optional {
+    color: rgba(255, 255, 255, .54);
+  }
+
+  .mat-horizontal-stepper-header::before,
+  .mat-horizontal-stepper-header::after,
+  .mat-stepper-horizontal-line {
+    border-top-color: rgb(255 255 255 / 12%);
+  }
+
+  .mat-form-field-label {
+    color: rgba(255, 255, 255, .6);
+  }
+
+  .mat-step-header .mat-step-icon {
+    background-color: var(--transparent-theme);
+    color: #fff;
+  }
+
+  .mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected {
+    background-color: var(--primary-bg-color) !important;
+  }
+
+  .mat-stepper-vertical-line::before {
+    border-left-color: rgb(255 255 255 / 12%) !important;
+  }
+
+  // editor
+  .ql-editor.ql-blank::before {
+    color: #eee;
+  }
+
+  .apexcharts-menu,
+  .apexcharts-tooltip.apexcharts-theme-light,
+  .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+    background: var(--transparent-body) !important;
+    border: 1px solid var(--transparent-border) !important;
+  }
+}
+
+.rtl {
+  .dateRangePicker-wrapper .dateRangePicker.open-left:before {
+    left: inherit !important;
+    right: 10px;
+  }
+
+  .iti__country.iti__standard,
+  .iti__country.iti__preferred {
+    display: flex;
+  }
+
+  .dateRangePicker-wrapper .dateRangePicker.open-left {
+    left: initial !important;
+    right: 0;
+  }
+
+  .btn-next-month,
+  .btn-next-year,
+  .btn-previous-month,
+  .btn-previous-year {
+    transform: rotate(180deg);
+  }
+
+  .clock-face__container {
+    transform: translateX(50px);
+  }
+
+
+  .iti--allow-dropdown .iti__flag-container,
+  .iti--separate-dial-code .iti__flag-container {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  .iti--allow-dropdown input,
+  .iti--allow-dropdown input[type=text],
+  .iti--allow-dropdown input[type=tel],
+  .iti--separate-dial-code input,
+  .iti--separate-dial-code input[type=text],
+  .iti--separate-dial-code input[type=tel] {
+    padding-left: 6px !important;
+    padding-right: 52px !important;
+  }
+
+  .dateRangePicker-wrapper .dateRangePicker:not(.mobile) .form-inputs>div:nth-child(2),
+  .dateRangePicker-wrapper .dateRangePicker:not(.mobile) .row-calendars>div:nth-child(2) {
+    border-left-width: 0px !important;
+    border-right: 2px solid var(--primary-bg-color);
+  }
+
+  &.dark-theme .dateRangePicker-wrapper .dateRangePicker:not(.mobile) .form-inputs>div:nth-child(2),
+  &.dark-theme .dateRangePicker-wrapper .dateRangePicker:not(.mobile) .row-calendars>div:nth-child(2) {
+    border-right: 2px solid var(--dark-border) !important;
+    border-left-width: 0px !important;
+  }
+
+  &.transparent-theme .dateRangePicker-wrapper .dateRangePicker:not(.mobile) .form-inputs>div:nth-child(2),
+  &.transparent-theme .dateRangePicker-wrapper .dateRangePicker:not(.mobile) .row-calendars>div:nth-child(2) {
+    border-right: 2px solid var(--transparent-border) !important;
+    border-left-width: 0px !important;
+  }
+}
+
+.owl-nav .owl-prev {
+  right: initial !important;
+}
+
+.rtl .owl-nav .owl-prev {
+  right: -25px !important;
+  left: initial !important;
+}
+
+// angular material rtl arrow direction 
+[dir=rtl] .mat-calendar-previous-button,
+[dir=rtl] .mat-calendar-next-button {
+  transform: rotate(0deg) !important;
+}
+
+// ng bootstrap rtl arrow direction
+.ngb-dp-arrow.right .ngb-dp-navigation-chevron {
+  transform: rotate(226deg);
+}
+
+.ngb-dp-navigation-chevron {
+  transform: rotate(45deg);
+}
+
+[ngbDatepickerDayView] {
+  border-radius: 0 !important;
+}
+
+.main-header,
+.sidemenu-logo {
+  backdrop-filter: blur(30px);
+}
+
+@-moz-document url-prefix() {
+
+  body:not(.header-light, .header-dark, .color-header) .main-header,
+  body:not(.header-light, .header-dark, .color-header) .sidemenu-logo {
+    background: var(--primary08) !important;
+  }
+}
+
+.dark-theme,
+.transparent-theme {
+  .apexcharts-legend-text {
+    color: #eee !important;
+  }
+  .leaflet-control-zoom-out span,
+  .leaflet-control-zoom-in span{
+    color: #333;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #ccc !important;
+  }
+
+  .apexcharts-toolbar>div>svg {
+    fill: #ccc;
+  }
+
+  svg {
+    text {
+      fill: #ccc
+    }
+
+    line {
+      stroke: rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  .page-item.disabled a {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+  .apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+  .apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+  .apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+  .apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+  .apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+    fill: #ccc;
+  }
+
+  .swal2-popup {
+    background-color: var(--transparent-body) !important;
+    color: #fff !important;
+  }
+}
+
+.header-dark {
+  .input-group input {
+    color: #eee !important;
+  }
+
+  .input-group input::placeholder {
+    color: #eee !important;
+  }
+}
+
+.ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container {
+  box-shadow: none;
+}
+
+.pagination {
+  flex-wrap: wrap;
+}
+
+.leaflet-container {
+  z-index: 1 !important;
+}
+
+
+.md-drppicker .clear svg {
+  margin-top: -12px;
+}
+
+.dateRangePicker-wrapper .dateRangePicker:not(.mobile) .form-inputs>div:nth-child(2),
+.dateRangePicker-wrapper .dateRangePicker:not(.mobile) .row-calendars>div:nth-child(2) {
+  border-left: 2px solid var(--primary-bg-color);
+}
+
+.dateRangePicker {
+  .form-inputs {
+    background-color: var(--primary-bg-color) !important;
+  }
+}
+
+.dateRangePicker-wrapper .dateRangePicker:after,
+.dateRangePicker-wrapper .dateRangePicker:before {
+  border-bottom: 10px solid var(--primary-bg-color) !important;
+}

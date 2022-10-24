@@ -1,0 +1,199 @@
+ <!--Row-->
+ <div class="container">
+    <div class="row row-sm">
+        <div class="col-lg-6 m-auto">
+            <div class="card custom-card sidebar-right1 switcher-2">
+
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-3 tx-semibold">Light Theme Style</h6>
+                    </div>
+                    <div class="switch_section px-0">
+                        <div class="switch-toggle d-flex">
+                            <span class="me-auto">Light Theme</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch1" id="myonoffswitch1" class="onoffswitch2-checkbox" checked>
+                                <label for="myonoffswitch1" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                            <span class="me-auto my-auto">Light Primary</span>
+                            <input class="color-primary-light" id="lightPrimaryColorID" data-id="bg-color" data-id1="bg-hover" data-id2="bg-border" [style.background]="color1" [cpAlphaChannel]="'disabled'" [cpOutputFormat]="'hex'"  [(colorPicker)]="color1" (cpSliderDragEnd)="dynamicLightPrimary($event)" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-3 tx-semibold">Dark Theme Style</h6>
+                    </div>
+                    <div class="switch_section px-0">
+                        <div class="switch-toggle d-flex">
+                            <span class="me-auto">Dark Theme</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch1" id="myonoffswitch2" class="onoffswitch2-checkbox">
+                                <label for="myonoffswitch2" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                            <span class="me-auto my-auto">Dark Primary</span>
+                            <input class="color-primary-dark" id="darkPrimaryColorID" data-id="bg-color" data-id1="bg-hover" data-id2="bg-border" data-id3="primary"  data-id8="transparentcolor" [style.background]="color2" [cpAlphaChannel]="'disabled'" [cpOutputFormat]="'hex'"  [(colorPicker)]="color2" (cpSliderDragEnd)="dynamicDarkPrimary($event)" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-3 tx-semibold">Transparent Theme Style</h6>
+                    </div>
+                    <div class="switch_section px-0">
+                        <div class="switch-toggle d-flex">
+                            <span class="me-auto">Transparent Theme</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch1" id="myonoffswitchTransparent" class="onoffswitch2-checkbox">
+                                <label for="myonoffswitchTransparent" class="onoffswitch2-label mb-0"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                            <span class="me-auto my-auto">Transparent Primary</span>
+                            <input class="color-primary-transparent" id="transparentPrimaryColorID" data-id="bg-color" data-id1="bg-hover" data-id2="bg-border" data-id3="primary" data-id4="primary"  data-id9="transparentcolor" [style.background]="color3" [cpAlphaChannel]="'disabled'" [cpOutputFormat]="'hex'"  [(colorPicker)]="color3" (cpSliderDragEnd)="dynamicTranparentPrimary($event)" />
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                            <span class="me-auto my-auto">Transparent Background</span>
+                            <input class="color-bg-transparent" id="transparentBgColorID" data-id5="body" data-id6="theme"  data-id9="transparentcolor" [style.background]="color4" [cpAlphaChannel]="'disabled'" [cpOutputFormat]="'hex'"  [(colorPicker)]="color4" (cpSliderDragEnd)="dynamicTranparentBgPrimary($event)" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-3 tx-semibold">Transparent Bg-Image Styles</h6>
+                    </div>
+                    <div class="switch_section px-0">
+                        <div class="switch-toggle d-flex">
+                            <span class="me-auto">BG-Image Primary</span>
+                            <div class="">
+                                <input class="color-primary-transparent-img" id="transparentBgImgPrimaryColorID" data-id="bg-color" data-id1="bg-hover" data-id2="bg-border" data-id3="primary" data-id4="primary"  data-id9="transparentcolor" [style.background]="color5" [cpAlphaChannel]="'disabled'" [cpOutputFormat]="'hex'"  [(colorPicker)]="color5" (cpSliderDragEnd)="dynamicTranparentImgPrimary($event)" />
+                            </div>
+                        </div>
+                        <div class="switch-toggle mt-2">
+                            <a class="bg-img1 bg-img" (click)="bgImage($event.target)" href="javascript:void(0);"><img class="rounded-5 wd-50 ht-50 me-2 mt-1" src="./assets/img/media/bg-img1.jpg" id="bgimage1" alt="switch-img"></a>
+                            <a class="bg-img2 bg-img" (click)="bgImage($event.target)" href="javascript:void(0);"><img class="rounded-5 wd-50 ht-50 me-2 mt-1" src="./assets/img/media/bg-img2.jpg"  id="bgimage2" alt="switch-img"></a>
+                            <a class="bg-img3 bg-img" (click)="bgImage($event.target)" href="javascript:void(0);"><img class="rounded-5 wd-50 ht-50 me-2 mt-1" src="./assets/img/media/bg-img3.jpg"  id="bgimage3" alt="switch-img"></a>
+                            <a class="bg-img4 bg-img" (click)="bgImage($event.target)" href="javascript:void(0);"><img class="rounded-5 wd-50 ht-50 me-2 mt-1" src="./assets/img/media/bg-img4.jpg"  id="bgimage4" alt="switch-img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-3 tx-semibold">LTR and RTL Styles</h6>
+                    </div>
+                    <div class="switch_section px-0">
+                        <div class="switch-toggle d-flex">
+                            <span class="me-auto">LTR</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch7" id="myonoffswitch54" class="onoffswitch2-checkbox" checked="">
+                                <label for="myonoffswitch54" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                            <span class="me-auto">RTL</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch7" id="myonoffswitch55" class="onoffswitch2-checkbox">
+                                <label for="myonoffswitch55" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-3 tx-semibold">Menu Styles</h6>
+                    </div>
+                    <div class="switch_section px-0">
+                        <div class="switch-toggle lightMenu d-flex">
+                            <span class="me-auto">Light Menu</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch2" id="myonoffswitch3" class="onoffswitch2-checkbox" checked>
+                                <label for="myonoffswitch3" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle colorMenu d-flex mt-2">
+                            <span class="me-auto">Color Menu</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch2" id="myonoffswitch4" class="onoffswitch2-checkbox">
+                                <label for="myonoffswitch4" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle darkMenu d-flex mt-2">
+                            <span class="me-auto">Dark Menu</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch2" id="myonoffswitch5" class="onoffswitch2-checkbox">
+                                <label for="myonoffswitch5" class="onoffswitch2-label mb-0"></label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-3 tx-semibold">Header Styles</h6>
+                    </div>
+                    <div class="switch_section px-0">
+                        <div class="switch-toggle lightHeader d-flex">
+                            <span class="me-auto">Light Header</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch3" id="myonoffswitch6" class="onoffswitch2-checkbox" checked>
+                                <label for="myonoffswitch6" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle  colorHeader d-flex mt-2">
+                            <span class="me-auto">Color Header</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch3" id="myonoffswitch7" class="onoffswitch2-checkbox">
+                                <label for="myonoffswitch7" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle darkHeader d-flex mt-2">
+                            <span class="me-auto">Dark Header</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch3" id="myonoffswitch8" class="onoffswitch2-checkbox">
+                                <label for="myonoffswitch8" class="onoffswitch2-label mb-0"></label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body layout-width-style">
+                    <div>
+                        <h6 class="main-content-label mb-3 tx-semibold">Layout Width Styles</h6>
+                    </div>
+                    <div class="switch_section px-0">
+                        <div class="switch-toggle d-flex">
+                            <span class="me-auto">Full Width</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch4" id="myonoffswitch9" class="onoffswitch2-checkbox" checked="">
+                                <label for="myonoffswitch9" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                            <span class="me-auto">Boxed</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch4" id="myonoffswitch10" class="onoffswitch2-checkbox">
+                                <label for="myonoffswitch10" class="onoffswitch2-label mb-0"></label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h6 class="main-content-label mb-3 tx-semibold">Layout Positions</h6>
+                    </div>
+                    <div class="switch_section px-0">
+                        <div class="switch-toggle d-flex">
+                            <span class="me-auto">Fixed</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch5" id="myonoffswitch11" class="onoffswitch2-checkbox" checked="">
+                                <label for="myonoffswitch11" class="onoffswitch2-label"></label>
+                            </p>
+                        </div>
+                        <div class="switch-toggle d-flex mt-2">
+                            <span class="me-auto">Scrollable</span>
+                            <p class="onoffswitch2 my-0"><input type="radio" name="onoffswitch5" id="myonoffswitch12" class="onoffswitch2-checkbox">
+                                <label for="myonoffswitch12" class="onoffswitch2-label mb-0"></label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="switch_section text-center px-0">
+                        <div class="btn-list">
+                            <button class="btn btn-danger text-white w-lg" (click)="reset()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Row-->

@@ -1,0 +1,346 @@
+<app-page-header [title]="'Buy & Sell'" [items]="['Crypto currencies']" [active_item]="'Buy & Sell'"></app-page-header>
+
+<!-- Row-->
+<div class="row row-sm">
+    <div class="col-md-12">
+        <div class="card custom-card overflow-hidden">
+                <div class="card-header border-bottom">
+                    <h3 class="card-title tx-18"><label class="main-content-label tx-15">BUY AND SELL STATISTICS</label></h3>
+                </div>
+            <div class="card-body">
+                <div class="row row-sm m-0">
+                    <div class="col-lg-12 col-xl-9 col-md-12">
+                        <div class="chart-wrapper">
+                            <canvas height="400" baseChart [data]="lineChartData"  [options]="lineChartOptions1" [type]="'line'">
+                </canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-xl-3 col-md-12 mt-2">
+                        <div class="card bg-light custom-card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <span class="text-muted tx-13">BTC / USD</span>
+                                        <h5 class="my-1 tx-semibold">27.56312</h5>
+                                        <span class="text-danger">-0.06%</span>
+                                    </div>
+                                    <div class="col-5 mt-2">
+                                        <img src="./assets/img/svgs/crypto-currencies/btc.svg" class="wd-50 hd-50 float-end" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-light custom-card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <span class="text-muted tx-13">ETH / USD</span>
+                                        <h5 class="my-1 tx-semibold">29.32761</h5>
+                                        <span class="text-success">+0.045</span>
+                                    </div>
+                                    <div class="col-5 mt-2">
+                                        <img src="./assets/img/svgs/crypto-currencies/eth.svg" class="wd-50 hd-50 float-end" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-light custom-card mb-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <span class="text-muted tx-13">XRM / USD</span>
+                                        <h5 class="my-1 tx-semibold">25.56718</h5>
+                                        <span class="text-danger">-0.04%</span>
+                                    </div>
+                                    <div class="col-5 mt-2">
+                                        <img src="./assets/img/svgs/crypto-currencies/xmr.svg" class="wd-50 hd-50 float-end" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xl-4 col-md-12">
+        <div class="card custom-card crypto-buysell-card">
+            <div class="card-header border-bottom">
+                <h3 class="card-title tx-18"><label class="main-content-label tx-15">SELL CRYPTO</label></h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="tx-16 mb-2 tx-medium">Sell From</label>
+                    <div class="p-3 border d-flex rounded-10">
+                        <div class="d-flex">
+                            <span class="crypto-icon bg-primary-transparent rounded-6 me-3">
+                                <i class="cf cf-btc text-warning"></i>
+                            </span>
+                            <span class="my-auto tx-18 font-weight-normal">Bitcoin BTC</span>
+                        </div>
+                        <div class="d-flex ms-auto">
+                            <div class="card-item-stat d-none d-md-block">
+                                <h4 class="font-weight-normal mb-0 tx-15">0.374648545 BTC</h4>
+                                <small class="tx-13 float-end text-end text-muted">$5,634.65</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="tx-16 mt-3 mb-2 tx-medium">Deposit to</label>
+                    <div class="p-3 border d-flex rounded-10">
+                        <span class="crypto-icon bg-primary-transparent rounded-6">
+                            <i class="fa fa-bank text-success"></i>
+                        </span>
+                        <div class="my-auto ms-3">
+                            <div class="d-flex my-auto tx-16 font-weight-normal">Banking</div>
+                            <small class="tx-13 text-muted">Checking</small>
+                        </div>
+                    </div>
+                </div>
+                <label class="tx-16 mt-2 mb-1 mt-3 tx-medium">Amount</label>
+                <div class="d-flex mt-2 mb-3">
+                    <p class="tx-16 mb-0 text-muted">Weekly bank limit</p>
+                    <div class="ms-auto my-auto">
+                        <span class="tx-16 text-muted">$10,000.00 remaining</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xl-5 col-lg-12 col-md-12 mb-0">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-lg wd-80p border-end-0" placeholder="0.041323">
+                            <div class="input-group-btn wd-40p">
+                                <ng-select class="border-start-0 icons_select2 br-0" placeholder="Choose one">
+                                    <optgroup label="Coins">
+                                        <ng-option value="fas fa-dollar-sign">USD</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">AED</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">AUD</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">ARS</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">AZN</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">BGN</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">BRL</ng-option>
+                                    </optgroup>
+                                </ng-select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-xl-2 text-center col-lg-12 col-md-12 my-auto">
+                        <i class="fe fe-repeat text-muted my-3 mt-xl-0 mb-xl-0 tx-20"></i>
+                    </div>
+                    <div class="form-group col-xl-5 col-lg-12 col-md-12 mb-0">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-lg wd-80p border-end-0" placeholder="500">
+                            <div class="input-group-btn wd-40p">
+                                <ng-select class="border-start-0 icons_select2 br-0" placeholder="Choose one">
+                                    <optgroup label="Coins">
+                                        <ng-option value="cf cf-btc" data-icon="cf cf-btc cryptoicon bg-primary-transparent rounded-7 text-warning">BTC</ng-option>
+                                        <ng-option value="cf cf-eth" data-icon="cf cf-eth cryptoicon bg-primary-transparent rounded-7 text-primary">ETH</ng-option>
+                                        <ng-option value="cf cf-xrp" data-icon="cf cf-xrp cryptoicon bg-primary-transparent rounded-7 text-info">XRP</ng-option>
+                                        <ng-option value="cf cf-dash" data-icon="cf cf-dash cryptoicon bg-primary-transparent rounded-7 text-secondary">XMR</ng-option>
+                                        <ng-option value="cf cf-neos" data-icon="cf cf-neos cryptoicon bg-primary-transparent rounded-7 text-success">NEO</ng-option>
+                                        <ng-option value="cf cf-ltc" data-icon="cf cf-ltc cryptoicon bg-primary-transparent rounded-7 text-muted">LTC</ng-option>
+                                        <ng-option value="cf cf-bsd" data-icon="cf cf-bsd cryptoicon bg-primary-transparent rounded-7 text-primary">BSD</ng-option>
+                                    </optgroup>
+                                </ng-select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;" class="btn btn-outline-primary btn-lg btn-block rounded-6 mt-4">Sell Bitcoin</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xl-4  col-md-12">
+        <div class="card custom-card crypto-buysell-card">
+            <div class="card-header border-bottom">
+                <h3 class="card-title tx-18"><label class="main-content-label tx-15">BUY CRYPTO</label></h3>
+            </div>
+            <div class="card-body">
+                <div class="d-flex mb-3">
+                    <div class="">
+                        <p class="tx-16 text-muted mb-2">1 USDT</p>
+                        <h4 class="tx-normal">6.32<span class="text-success tx-15 ms-2">CNY</span></h4>
+                    </div>
+                    <div class="ms-auto my-auto">
+                        <span class="">Claim <span class="font-weight-bold text-white bg-success px-1">20</span> Free Bitcoin</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control input-lg wd-80p border-end-0" placeholder="Spend 32 - 6500">
+                        <div class="input-group-btn wd-30p">
+                            <ng-select class="border-start-0 icons_select2 br-0" placeholder="Choose one">
+                                <optgroup label="Coins">
+                                    <ng-option value="cf cf-btc" data-icon="cf cf-btc cryptoicon bg-primary-transparent rounded-7 text-warning">BTC</ng-option>
+                                    <ng-option value="cf cf-eth" data-icon="cf cf-eth cryptoicon bg-primary-transparent rounded-7 text-primary">ETH</ng-option>
+                                    <ng-option value="cf cf-xrp" data-icon="cf cf-xrp cryptoicon bg-primary-transparent rounded-7 text-info">XRP</ng-option>
+                                    <ng-option value="cf cf-dash" data-icon="cf cf-dash cryptoicon bg-primary-transparent rounded-7 text-secondary">DASH</ng-option>
+                                    <ng-option value="cf cf-neos" data-icon="cf cf-neos cryptoicon bg-primary-transparent rounded-7 text-success">NEO</ng-option>
+                                    <ng-option value="cf cf-ltc" data-icon="cf cf-ltc cryptoicon bg-primary-transparent rounded-7 text-muted">LTC</ng-option>
+                                    <ng-option value="cf cf-bsd" data-icon="cf cf-bsd cryptoicon bg-primary-transparent rounded-7 text-primary">BSD</ng-option>
+                                </optgroup>
+                            </ng-select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control input-lg wd-80p border-end-0" placeholder="Buy">
+                        <div class="input-group-btn wd-30p">
+                            <ng-select class=" border-start-0 icons_select2 br-0" placeholder="Choose one">
+                                <optgroup label="Coins">
+                                    <ng-option value="fas fa-dollar-sign">USD</ng-option>
+                                    <ng-option value="fas fa-dollar-sign">AED</ng-option>
+                                    <ng-option value="fas fa-dollar-sign">AUD</ng-option>
+                                    <ng-option value="fas fa-dollar-sign">ARS</ng-option>
+                                    <ng-option value="fas fa-dollar-sign">AZN</ng-option>
+                                    <ng-option value="fas fa-dollar-sign">BGN</ng-option>
+                                    <ng-option value="fas fa-dollar-sign">BRL</ng-option>
+                                </optgroup>
+                            </ng-select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group fs-14">
+                    <div class="input-group">
+                        <input class="form-control input-lg rounded-10" type="text" placeholder="498fd7c42932070ff3ec30">
+                    </div>
+                </div>
+                <label class="main-content-label mt-4 mb-4">Select payment method</label>
+                <form class="payment-form form">
+                    <div class="payment-type d-flex">
+                        <input type="radio" name="radio3" id="credit" value="credit" checked><label class="credit-label payment-cards overflow-hidden text-nowrap four ms-0 col" for="credit"><span class="d-none d-sm-block tx-14">New Card</span><img src="./assets/img/prepaidcard.png" alt="visa"></label>
+                        <input type="radio" name="radio3" id="debit" value="debit"><label class="debit-label payment-cards overflow-hidden text-nowrap four col" for="debit"><span class="d-none d-sm-block tx-14">Debit Card</span><img src="./assets/img/mastercard.png" alt="Debitcard"></label>
+                        <input type="radio" name="radio3" id="paypal" value="paypal"><label class="paypal-label payment-cards overflow-hidden text-nowrap four col" for="paypal"><span class="d-none d-sm-block tx-14">Paypal</span><img src="./assets/img/paypal.png" alt="paypal"></label>
+                    </div>
+                    <a href="javascript:;" class="btn btn-outline-primary btn-lg btn-block rounded-6 mt-4">Buy Now</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xl-4 col-md-12">
+        <div class="card custom-card crypto-buysell-card">
+            <div class="card-header border-bottom">
+                <h3 class="card-title tx-18"><label class="main-content-label tx-15">QUICK SECURE TRANSFER</label></h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="tx-16 mb-2 tx-medium">Crypto</label>
+                    <div class="p-3 border d-flex rounded-10">
+                        <div class="d-flex">
+                            <span class="crypto-icon bg-info-transparent rounded-6 me-3">
+                                <i class="cf cf-xrp text-info"></i>
+                            </span>
+                            <span class="my-auto tx-18 font-weight-normal">Ripple XRP</span>
+                        </div>
+                        <div class="d-flex ms-auto">
+                            <div class="card-item-stat d-none d-md-block">
+                                <h4 class="font-weight-normal mb-0 tx-15">0.00000434 XRP</h4>
+                                <small class="tx-13 float-end text-end text-muted">$3,789 USD</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="tx-16 mt-3 mb-2 tx-medium">Deposit to</label>
+                    <div class="p-3 border d-flex rounded-10">
+                        <span class="crypto-icon bg-primary-transparent rounded-6">
+                            <i class="fa fa-bank text-success"></i>
+                        </span>
+                        <div class="my-auto ms-3">
+                            <div class="d-flex my-auto tx-16 font-weight-normal">Banking</div>
+                            <small class="tx-13 text-muted">Checking</small>
+                        </div>
+                    </div>
+                </div>
+                <label class="tx-16 mt-2 mb-1 mt-3 tx-medium">Amount</label>
+                <div class="d-flex mt-2 mb-3">
+                    <p class="tx-16 mb-0 text-muted">Weekly bank limit</p>
+                    <div class="ms-auto my-auto">
+                        <span class="tx-16 text-muted">$10,000.00 remaining</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xl-12 col-lg-12 col-md-12 mb-0">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-lg wd-80p border-end-0" placeholder="0.041323">
+                            <div class="input-group-btn wd-40p">
+                                <ng-select class=" border-start-0 icons_select2 br-0" placeholder="Choose one">
+                                    <optgroup label="Coins">
+                                        <ng-option value="fas fa-dollar-sign">USD</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">AED</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">AUD</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">ARS</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">AZN</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">BGN</ng-option>
+                                        <ng-option value="fas fa-dollar-sign">BRL</ng-option>
+                                    </optgroup>
+                                </ng-select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;" class="btn btn-outline-primary btn-lg btn-block rounded-6 mt-4">Transfer</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Row End -->
+
+<!-- Row-->
+<div class="row row-sm">
+    <div class="col-xl-12">
+        <div class="card custom-card">
+            <div class="card-header border-bottom">
+                <h3 class="card-title tx-18"><label class="main-content-label tx-15">Recent Trading Activities History</label></h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <select class="form-select" style="width: auto" [(ngModel)]="pageSize"
+                        (ngModelChange)="refreshBuySell()">
+                        <option [ngValue]="10">10 items per page</option>
+                        <option [ngValue]="25">25 items per page</option>
+                        <option [ngValue]="50">50 items per page</option>
+                        <option [ngValue]="100">100 items per page</option>
+                    </select>
+                    <table class="table  text-nowrap table-bordered text-md-nowrap table-striped mg-b-0 my-2">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="bg-transparent">Type</th>
+                                <th scope="col" class="bg-transparent">ID</th>
+                                <th scope="col" class="bg-transparent">Date</th>
+                                <th scope="col" class="bg-transparent">Amount</th>
+                                <th scope="col" class="bg-transparent">Remaining</th>
+                                <th scope="col" class="bg-transparent">Price</th>
+                                <th scope="col" class="bg-transparent">USD</th>
+                                <th scope="col" class="bg-transparent">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of BuySellList">
+                                <td>
+                                    <span class="crypto-icon bg-{{data.arrowStatus}}-transparent me-3 my-auto rounded-6">
+                                        <i class="fe fe-arrow-{{data.arrow}}-right text-{{data.arrowStatus}}"></i>
+                                    </span>
+                                </td>
+                                <td>{{data.id}}</td>
+                                <td class="text-muted tx-13">{{data.date}}</td>
+                                <td><i class="cc BTC-alt text-warning"></i> {{data.amount}}</td>
+                                <td><i class="cc BTC-alt text-warning"></i> {{data.remaining}}</td>
+                                <td>{{data.price}}</td>
+                                <td>{{data.usd}}</td>
+                                <td><span class="badge bg-{{data.status}}-light rounded-pill px-2 py-1">{{data.statusText}}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-end">
+                        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+                          (pageChange)="refreshBuySell()">
+                        </ngb-pagination>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Row End -->

@@ -1,0 +1,18 @@
+<h1>{{'John'  | hello | uppercase}}</h1>
+<h1>{{30000.1234 | number:'1.0-2'}}</h1>
+<hr>
+<div class="text-center">
+    <button class="btn btn-primary" (click)="resetForm()">Reset Form</button>
+</div>
+<app-lesson-three
+    [cardTitle]="'Child Component'"
+    [isShowBtn]="true"
+    (onSubmitForm)="getValFromChildComp($event)"
+>
+</app-lesson-three>
+<hr>
+<app-lesson-three
+    #secondComp
+    [cardTitle]="'2nd Child Component'"
+>
+</app-lesson-three>

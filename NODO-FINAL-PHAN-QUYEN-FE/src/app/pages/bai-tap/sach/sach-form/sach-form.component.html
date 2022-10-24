@@ -1,0 +1,154 @@
+<div class="card-custom card">
+    <div class="card-header">
+        <p class="fw-bold">
+            {{title}}
+        </p>
+    </div>
+    <div class="card-body">
+
+        <form [formGroup]="formGroup">
+            <div class="row">
+                <div class="col-md-6">
+                    <!--                    <div class="mb-3">-->
+                    <!--                        <mat-form-field class="w-100" appearance="outline">-->
+                    <!--                            <mat-label>Mã</mat-label>-->
+                    <!--                            <input formControlName="ma" type="text"-->
+                    <!--                                   id="exampleInputMa1"-->
+                    <!--                                   aria-describedby="maHelp" required maxlength="10"-->
+                    <!--                                   matInput-->
+                    <!--                            >-->
+                    <!--                            <mat-error-->
+                    <!--                                *ngIf="formGroup.get('ma')?.hasError('required')-->
+                    <!--                                 && formGroup.get('ma')?.touched">Bạn phải nhập mã-->
+                    <!--                            </mat-error>-->
+                    <!--                        </mat-form-field>-->
+                    <!--                    </div>-->
+                    <div class="mb-3">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Tên</mat-label>
+                            <input formControlName="ten" type="text"
+                                   id="exampleInputTen1" required maxlength="54"
+                                   matInput>
+                            <mat-error
+                                *ngIf="formGroup.get('ten')?.hasError('required') &&
+                                  formGroup.get('ten')?.touched">Bạn phải nhập tên
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field appearance="outline" class="w-100" formGroupName="nhaXuatBan">
+                            <mat-label>Nhà xuất bản</mat-label>
+                            <mat-select formControlName="id" matNativeControl required>
+                                <mat-option *ngFor="let u of nhaXuatBans" [value]="u.id">
+                                    {{u.ten}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field appearance="outline" class="w-100" formGroupName="tacGia">
+                            <mat-label>Tác giả</mat-label>
+                            <mat-select formControlName="id" matNativeControl required>
+                                <mat-option *ngFor="let u of tacGias" [value]="u.id">
+                                    {{u.ten}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-3">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Chủ đề</mat-label>
+                            <input formControlName="chuDe" type="text"
+                                   id="exampleInputChuDe1" required maxlength="30"
+                                   matInput>
+                            <mat-error
+                                *ngIf="formGroup.get('chuDe')?.hasError('required') &&
+                                  formGroup.get('chuDe')?.touched">Bạn phải nhập chủ đề
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Năm sản xuất</mat-label>
+                            <input formControlName="namSanXuat" matInput [matDatepicker]="picker">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                            <mat-error
+                                *ngIf="formGroup.get('namSanXuat')?.hasError('required') &&
+                                formGroup.get('namSanXuat')?.touched">Bạn phải chọn năm sản xuất
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-3">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Tổng số sách</mat-label>
+                            <input formControlName="tongSoSach" type="number"
+                                   id="exampleInputTongSoSach1" required
+                                   matInput>
+                            <mat-error
+                                *ngIf="formGroup.get('tongSoSach')?.hasError('required') &&
+                                 formGroup.get('tongSoSach')?.touched">Bạn phải nhập tổng số sách
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <!--                    <div class="mb-3">-->
+                    <!--                        <mat-form-field class="w-100" appearance="outline">-->
+                    <!--                            <mat-label>Số lượng còn lại</mat-label>-->
+                    <!--                            <input formControlName="soLuongConLai" type="number"-->
+                    <!--                                   id="exampleInputSoLuongConLai1" required-->
+                    <!--                                   matInput>-->
+                    <!--                            <mat-error-->
+                    <!--                                *ngIf="formGroup.get('soLuongConLai')?.hasError('required') &&-->
+                    <!--                                  formGroup.get('soLuongConLai')?.touched">Bạn phải nhập số lượng còn lại-->
+                    <!--                            </mat-error>-->
+                    <!--                        </mat-form-field>-->
+                    <!--                    </div>-->
+
+                    <!--                    <div class="mb-3">-->
+                    <!--                        <mat-form-field class="w-100" appearance="outline">-->
+                    <!--                            <mat-label>Số lượng đang mượn</mat-label>-->
+                    <!--                            <input formControlName="soLuongDangMuon" type="number"-->
+                    <!--                                   id="exampleInputSoLuongDangMuon1" required-->
+                    <!--                                   matInput>-->
+                    <!--                            <mat-error-->
+                    <!--                                *ngIf="formGroup.get('soLuongDangMuon')?.hasError('required') &&-->
+                    <!--                                 formGroup.get('soLuongDangMuon')?.touched">Bạn phải nhập số lượng đang mượn-->
+                    <!--                            </mat-error>-->
+                    <!--                        </mat-form-field>-->
+                    <!--                    </div>-->
+
+                    <div class="mb-3">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Mô tả</mat-label>
+                            <textarea
+                                style="resize: none"
+                                rows="7"
+                                formControlName="moTa" type="text"
+                                id="exampleInputMota1"
+                                maxlength="255"
+                                matInput>
+                            </textarea>
+                            <mat-error
+                                *ngIf="formGroup.get('moTa')?.hasError('maxlength') &&
+                                 formGroup.get('moTa')?.touched">Mô tả tối đa 255 ký tự
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button mat-raised-button color="accent" (click)="saveTacGia()">Submit</button>
+                <button mat-raised-button color="warn" (click)="close()" class="mx-5">Close</button>
+            </div>
+        </form>
+
+    </div>
+</div>

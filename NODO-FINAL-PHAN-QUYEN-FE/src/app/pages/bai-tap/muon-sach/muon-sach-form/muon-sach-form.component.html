@@ -1,0 +1,120 @@
+<div class="card-custom card">
+    <div class="card-header">
+        <p class="fw-bold">
+            {{title}}
+        </p>
+    </div>
+    <div class="card-body">
+
+        <form [formGroup]="formGroup">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <mat-form-field appearance="outline" class="w-100" formGroupName="banDoc">
+                            <mat-label>Bạn đọc</mat-label>
+                            <mat-select formControlName="id">
+                                <mat-option *ngFor="let bd of banDocs" [value]="bd.id">
+                                    {{bd.ten}}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error
+                                *ngIf="formGroup.get('banDoc')?.hasError('required')
+                                 && formGroup.get('banDoc')?.touched">Bạn phải chọn bạn đọc
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field appearance="outline" class="w-100" formGroupName="sach">
+                            <mat-label>Sách</mat-label>
+                            <mat-select formControlName="id">
+                                <mat-option *ngFor="let s of sachs" [value]="s.id">
+                                    {{s.ten}}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error
+                                *ngIf="formGroup.get('sach')?.hasError('required')
+                                 && formGroup.get('sach')?.touched">Bạn phải chọn sách
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Số lượng</mat-label>
+                            <input formControlName="soLuong" type="number"
+                                   id="exampleInputSoLuong1" required min="1" max="9"
+                                   matInput>
+                            <mat-error
+                                *ngIf="formGroup.get('soLuong')?.hasError('required') &&
+                                  formGroup.get('soLuong')?.touched">Bạn phải nhập số lượng
+                            </mat-error>
+                            <mat-error
+                                *ngIf="formGroup.get('soLuong')?.hasError('max') &&
+                                  formGroup.get('soLuong')?.touched">Bạn chỉ được mượn 9 quyền trở xuống
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Trạng thái</mat-label>
+                            <mat-select formControlName="trangThai">
+                                <mat-option [value]="1">Đang mượn</mat-option>
+                                <mat-option [value]="0">Đã trả</mat-option>
+                            </mat-select>
+                            <mat-error
+                                *ngIf="formGroup.get('trangThai')?.hasError('required')
+                                 && formGroup.get('trangThai')?.touched">Bạn phải chọn trạng thái
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Ngày giờ mượn</mat-label>
+                            <input type="datetime-local" formControlName="ngayGioMuon" matInput required>
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-error
+                                *ngIf="formGroup.get('ngayGioMuon')?.hasError('required') &&
+                                formGroup.get('ngayGioMuon')?.touched">Bạn phải chọn ngày giờ mượn
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Ngày giờ trả</mat-label>
+                            <input type="datetime-local" formControlName="ngayGioTra" matInput required>
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-error
+                                *ngIf="formGroup.get('ngayGioTra')?.hasError('required') &&
+                                formGroup.get('ngayGioTra')?.touched">Bạn phải chọn ngày giờ trả
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-3">
+                        <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Ghi chú</mat-label>
+                            <textarea
+                                style="resize: none"
+                                rows="7"
+                                formControlName="ghiChu" type="text"
+                                id="exampleInputGhiChu1"
+                                maxlength="255"
+                                matInput>
+                            </textarea>
+                            <mat-error
+                                *ngIf="formGroup.get('ghiChu')?.hasError('maxlength') &&
+                                 formGroup.get('ghiChu')?.touched">Mô tả tối đa 255 ký tự
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button mat-raised-button color="accent" (click)="saveTacGia()">Submit</button>
+                <button mat-raised-button color="warn" (click)="close()" class="mx-5">Close</button>
+            </div>
+        </form>
+
+    </div>
+</div>

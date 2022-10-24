@@ -1,0 +1,184 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project        :   DASHPLEX - HTML5 Bootstrap Admin Template
+Copyright      :   Spruko Technologies Private Limited 
+Author         :   Spruko
+Author URL     :   https://themeforest.net/user/sprukosoft
+Support	       :   support@spruko.com
+License        :   Licensed under ThemeForest License
+
+-------------------------------------------------------------------*/
+
+/*
+1.	bootstrap-custom
+2.	Accordions
+3.	Alerts
+4.	Badges
+5.	Breadcrumbs
+6.	Buttons
+7.	Cards
+8.	Carousel
+9.	Dropdown
+10.	Forms
+11.	Grid
+12.	Input-group
+13.	Modals
+14.	Navigation
+15.	Pagination
+16.	Popover
+17.	Progress
+18.	Tables
+19.	Datatable
+20.	Toast
+21.	Tooltip
+23.	Main-content
+24.	Header
+25.	Footer
+27.	Right-sidebar
+28.	Profile
+29.	Iconbar
+30.	horizontalmenu
+31.	rtl
+32.	fullcalendar
+33.	closed
+34.	default-menu
+35.	icon-text
+36.	hover-submenu
+37.	hover-submenu1
+38.	Calendar
+39.	Chat
+40.	Contacts
+41.	Error
+42.	Invoice
+43.	Mail
+44.	Profile
+45.	cryptocurrency
+46.	ecommerce-pages
+47.	filemanager
+48.	background
+49.	display
+50.	flex
+51.	border
+52.	Height
+53.	Margin
+54.	Opacity
+55.	Padding
+56.	Position
+57.	Typography
+58.	Width
+59. Component-cols
+60.	Tags
+61.	Tabs
+62.	Navbar
+63.	Wizard
+64.	P-scroll
+65.	Radio
+66.	Rating
+68.	Timeline
+69.	Image
+70.	List
+71.	Checkbox
+72.	Toggle
+73.	Listgroup
+74.	Custom-control
+75.	Custom-styles
+*/
+
+@import "custom/fonts/_fonts.scss";
+@import "variables";
+
+/* ########## BOOTSTRAP OVERRIDES ########## */
+
+@import "bootstrap/bootstrap-custom";
+@import "bootstrap/accordions";
+@import "bootstrap/alerts";
+@import "bootstrap/badges";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/buttons";
+@import "bootstrap/cards";
+@import "bootstrap/carousel";
+@import "bootstrap/dropdown";
+@import "bootstrap/forms";
+@import "bootstrap/grid";
+@import "bootstrap/input-group";
+@import "bootstrap/modals";
+@import "bootstrap/navigation";
+@import "bootstrap/pagination";
+@import "bootstrap/popover";
+@import "bootstrap/progress";
+@import "bootstrap/tables";
+@import "bootstrap/datatable";
+@import "bootstrap/toast";
+@import "bootstrap/tooltip";
+
+
+/* ########## LAYOUTS  ########## */
+
+@import "layouts/main-content";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/right-sidebar";
+@import "layouts/profile";
+@import "layouts/iconbar";
+@import "layouts/horizontalmenu";
+@import "layouts/rtl";
+
+
+
+/* ############### Plugin STYLES ############### */
+@import "plugins/fullcalendar";
+@import "plugins/countdown";
+
+
+/* ############### SIDEMENU LAYOUT STYLES ############### */
+@import "sidemenu/closed";
+@import "sidemenu/default-menu";
+@import "sidemenu/icon-text";
+@import "sidemenu/hover-submenu";
+@import "sidemenu/hover-submenu1";
+
+/* ############### TEMPLATE STYLES ############### */
+@import "template/calendar";
+@import "template/chat";
+@import "template/contacts";
+@import "template/error";
+@import "template/invoice";
+@import "template/mail";
+@import "template/profile";
+@import "template/cryptocurrency";
+@import "template/ecommerce-pages";
+@import "template/filemanager";
+
+
+/* ############### UTILITIES/HELPER CLASSES ############### */
+@import "util/background";
+@import "util/display";
+@import "util/flex";
+@import "util/border";
+@import "util/height";
+@import "util/margin";
+@import "util/opacity";
+@import "util/padding";
+@import "util/position";
+@import "util/typography";
+@import "util/width";
+
+
+/* ############### CUSTOM ELEMENT STYLES ############### */
+@import "custom/component-cols";
+@import "custom/tags";
+@import "custom/tabs";
+@import "custom/navbar";
+@import "custom/wizard";
+@import "custom/p-scroll";
+@import "custom/radio";
+@import "custom/rating";
+@import "custom/timeline";
+@import "custom/image";
+@import "custom/list";
+@import "custom/checkbox";
+@import "custom/toggle";
+@import "custom/listgroup";
+@import "custom/custom-control";
+@import "custom/custom-styles";

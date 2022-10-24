@@ -1,0 +1,25 @@
+::ng-deep{
+    app-buy{
+        .ng-select-container {
+            height: 46px !important;
+            background-color: transparent !important;
+            border-color: #e8e8f7 !important;
+        }
+    }
+    .dark-theme{
+        app-buy{
+            .ng-select-container {
+                border-color: #3e4252 !important;
+                color: #fff !important;
+            }
+        }
+    }
+    .transparent-theme{
+        app-buy{
+            .ng-select-container {
+                border-color: #3e4a80 !important;
+                color: #fff !important;
+            }
+        }
+    }
+}

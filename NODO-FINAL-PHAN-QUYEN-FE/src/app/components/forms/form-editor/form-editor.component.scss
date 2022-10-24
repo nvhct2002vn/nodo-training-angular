@@ -1,0 +1,239 @@
+::ng-deep{
+    .ql-background,
+    .ql-color,
+    .ql-align,
+    .ql-list{
+        margin: 0 2px 0 0;
+    }
+    .dark-theme{
+        // angular editor
+        .ck.ck-toolbar, .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused){
+            border: 1px solid #32394e !important;
+        }
+        .angular-editor-toolbar {
+            background-color: var(--dark-body) !important;
+            border: 1px solid #32394e !important;
+        }
+        .angular-editor-toolbar .angular-editor-toolbar-set .angular-editor-button {
+            background-color: var(--dark-body) !important;
+            border: 1px solid #32394e !important;
+            color: #ccc;
+        }  
+        .ae-font .ae-picker-label {
+            background-color: var(--dark-body);
+            border: 1px solid #32394e;
+            color: #ccc;
+        }
+        .ae-font .ae-picker-label:before {
+            background: linear-gradient(90deg,var(--dark-body),var(--dark-body));
+            filter: contrast(0);
+        }
+        .ae-font .ae-picker-label:hover {
+            cursor: pointer;
+            background-color: var(--dark-body);
+            transition: .2s ease;
+        }
+        .ae-font .ae-picker-options .ae-picker-item {
+            background-color: var(--dark-body);
+            border: 0 solid #32394e;
+            color: #ccc;
+        }        
+        .ae-font.ae-expanded .ae-picker-options {
+            border-color: #32394e;
+        }    
+        .angular-editor .angular-editor-wrapper .angular-editor-textarea {
+            border: 1px solid #32394e !important;
+            outline: none;
+        }    
+        .angular-editor-button.active{
+            color: #654cc8 !important;
+        }
+        // ck editor
+        .ck.ck-editor__main>.ck-editor__editable {
+            background: var(--dark-body) !important;
+        }
+        .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+            border-color: #32394e !important;
+        }
+        .ck.ck-button, a.ck.ck-button {
+            background: var(--dark-body);
+            color: #ccc;
+        }
+        .ck.ck-toolbar {
+            background: var(--dark-body);
+            border: 1px solid #32394e;
+        }
+        .ck.ck-button:not(.ck-disabled):active, a.ck.ck-button:not(.ck-disabled):active {
+            background: var(--dark-body) !important;
+        }
+        .ck.ck-button:not(.ck-disabled):hover,
+        a.ck.ck-button:not(.ck-disabled):hover{
+            background: var(--dark-body) !important;
+        }
+        .ck.ck-button.ck-button_with-text:hover{
+            background:#212332 !important;
+        }
+        .ck.ck-dropdown__panel {
+            border: 1px solid #32394e;
+        }
+        .close{
+            color: #ccc;
+        }
+
+        // quill
+        .ql-toolbar.ql-snow {
+            border: 1px solid #32394e;
+            background: var(--dark-body);
+            color: #fff;
+        }
+        .ql-editor.ql-blank::before{
+            color: #ccc;
+        }
+        .ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover, .ql-snow.ql-toolbar button:focus, .ql-snow .ql-toolbar button:focus, .ql-snow.ql-toolbar button.ql-active, .ql-snow .ql-toolbar button.ql-active, .ql-snow.ql-toolbar .ql-picker-label:hover, .ql-snow .ql-toolbar .ql-picker-label:hover, .ql-snow.ql-toolbar .ql-picker-label.ql-active, .ql-snow .ql-toolbar .ql-picker-label.ql-active, .ql-snow.ql-toolbar .ql-picker-item:hover, .ql-snow .ql-toolbar .ql-picker-item:hover, .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+            color: #ffffff;
+            background: var(--dark-body);
+        }
+        .ql-snow .ql-picker {
+            color: #ccc;
+        }
+        .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+            border-color: #32394e;
+        }
+        .ql-snow .ql-stroke{
+            stroke: #ccc;
+        }
+        .ql-picker-item.ql-selected{
+            color: #fff;
+        }
+    }
+    .transparent-theme{
+        // angular editor
+        .ck.ck-toolbar, .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused){
+            border: 1px solid #32394e !important;
+        }
+        .angular-editor-toolbar {
+            background-color: var(--transparent-body) !important;
+            border: 1px solid #32394e !important;
+        }
+        .angular-editor-toolbar .angular-editor-toolbar-set .angular-editor-button {
+            background-color: var(--transparent-body) !important;
+            border: 1px solid #32394e !important;
+            color: #ccc;
+        }  
+        .ae-font .ae-picker-label {
+            background-color: var(--transparent-body);
+            border: 1px solid #32394e;
+            color: #ccc;
+        }
+        .ae-font .ae-picker-label:before {
+            background: linear-gradient(90deg,var(--transparent-body),var(--transparent-body));
+            filter: contrast(0);
+        }
+        .ae-font .ae-picker-label:hover {
+            cursor: pointer;
+            background-color: var(--transparent-body);
+            transition: .2s ease;
+        }
+        .ae-font .ae-picker-options .ae-picker-item {
+            background-color: var(--transparent-body);
+            border: 0 solid #32394e;
+            color: #ccc;
+        }        
+        .ae-font.ae-expanded .ae-picker-options {
+            border-color: #32394e;
+        }    
+        .angular-editor .angular-editor-wrapper .angular-editor-textarea {
+            border: 1px solid #32394e !important;
+            outline: none;
+        }    
+        .angular-editor-button.active{
+            color: #654cc8 !important;
+        }
+        // ck editor
+        .ck.ck-editor__main>.ck-editor__editable {
+            background: var(--transparent-body) !important;
+        }
+        .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+            border-color: #32394e !important;
+        }
+        .ck.ck-button, a.ck.ck-button {
+            background: var(--transparent-body);
+            color: #ccc;
+        }
+        .ck.ck-toolbar {
+            background: var(--transparent-body);
+            border: 1px solid #32394e;
+        }
+        .ck.ck-button:not(.ck-disabled):active, a.ck.ck-button:not(.ck-disabled):active {
+            background: var(--transparent-body) !important;
+        }
+        .ck.ck-button:not(.ck-disabled):hover,
+        a.ck.ck-button:not(.ck-disabled):hover{
+            background: var(--transparent-body) !important;
+        }
+        .ck.ck-button.ck-button_with-text:hover{
+            background:#212332 !important;
+        }
+        .ck.ck-dropdown__panel {
+            border: 1px solid #32394e;
+        }
+        .close{
+            color: #ccc;
+        }
+
+        // quill
+        .ql-toolbar.ql-snow {
+            border: 1px solid #32394e;
+            background: var(--transparent-body);
+            color: #fff;
+        }
+        .ql-editor.ql-blank::before{
+            color: #ccc;
+        }
+        .ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover, .ql-snow.ql-toolbar button:focus, .ql-snow .ql-toolbar button:focus, .ql-snow.ql-toolbar button.ql-active, .ql-snow .ql-toolbar button.ql-active, .ql-snow.ql-toolbar .ql-picker-label:hover, .ql-snow .ql-toolbar .ql-picker-label:hover, .ql-snow.ql-toolbar .ql-picker-label.ql-active, .ql-snow .ql-toolbar .ql-picker-label.ql-active, .ql-snow.ql-toolbar .ql-picker-item:hover, .ql-snow .ql-toolbar .ql-picker-item:hover, .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+            color: #ffffff;
+            background: var(--transparent-body);
+        }
+        .ql-snow .ql-picker {
+            color: #ccc;
+        }
+        .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+            border-color: #32394e;
+        }
+        .ql-snow .ql-stroke{
+            stroke: #ccc;
+        }
+        .ql-picker-item.ql-selected{
+            color: #fff;
+        }
+    }
+    .rtl{
+        .ck.ck-toolbar>.ck-toolbar__items {
+            flex-direction: row-reverse;
+        }
+        .ck.ck-editor__editable_inline[dir=ltr]{
+            text-align: right;
+        }
+        .angular-editor-toolbar .angular-editor-toolbar-set .foreground :after {
+            right: auto !important;
+            left: inherit !important;
+        }
+    }
+    .transparent-theme {
+        .ck.ck-button, a.ck.ck-button,
+        .angular-editor-toolbar .angular-editor-toolbar-set .angular-editor-button,
+        .angular-editor-toolbar{
+            background: var(--transparent-body) !important;
+        }
+        .ql-snow .ql-picker-options {
+            background-color: rgb(36, 130, 114) !important;
+        }
+    }
+    .ck.ck-toolbar,
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+        border: 1px solid #ededf5 !important;
+    }
+    .angular-editor .angular-editor-wrapper .angular-editor-textarea{
+        outline: none !important;
+    }
+}

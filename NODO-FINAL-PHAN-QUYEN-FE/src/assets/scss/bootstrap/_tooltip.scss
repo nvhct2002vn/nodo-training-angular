@@ -1,0 +1,283 @@
+/* ###### Tooltip  ###### */
+
+.tooltip {
+  position: absolute;
+  z-index: 99;
+  display: block;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: 0.76562rem;
+  word-wrap: break-word;
+  opacity: 0;
+
+  &.show {
+    opacity: 0.9;
+  }
+
+  .tooltip-arrow {
+    position: absolute;
+    display: block;
+    width: 0.8rem;
+    height: 0.4rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-color: transparent;
+      border-style: solid;
+    }
+  }
+
+  top: 0;
+}
+
+.tooltip-inner {
+  font-size: 12px;
+  border-radius: 2px;
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: $white;
+  text-align: center;
+  background-color: $black;
+  border-radius: 3px;
+}
+
+.tooltip-primary {
+  .tooltip-inner {
+    background-color: $primary;
+    color: $white;
+  }
+  &.bs-tooltip-top .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-top-color: $primary;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-bottom-color: $primary;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-left-color: $primary;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-right-color: $primary;
+  }
+}
+
+.tooltip-secondary {
+  .tooltip-inner {
+    background-color: $secondary;
+    color: $white;
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-top-color: $secondary;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-bottom-color: $secondary;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-left-color: $secondary;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-right-color: $secondary;
+  }
+}
+
+.tooltip-info {
+  .tooltip-inner {
+    background-color: $info;
+    color: $white;
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-top-color: $info;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-bottom-color: $info;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-left-color: $info;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-right-color: $info;
+  }
+}
+
+.tooltip-danger {
+  .tooltip-inner {
+    background-color: $danger;
+    color: $white;
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-top-color: $danger;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-bottom-color: $danger;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-left-color: $danger;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-right-color: $danger;
+  }
+}
+
+.tooltip-success {
+  .tooltip-inner {
+    background-color: $success;
+    color: $white;
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-top-color: $success;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-bottom-color: $success;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-left-color: $success;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-right-color: $success;
+  }
+}
+
+.tooltip-warning {
+  .tooltip-inner {
+    background-color: $warning;
+    color: #8f9cc0;
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-top-color: $warning;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-bottom-color: $warning;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-left-color: $warning;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before, &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-right-color: $warning;
+  }
+}
+
+.bs-tooltip-top, .bs-tooltip-auto[data-popper-placement^="top"] {
+  padding: 0.4rem 0;
+}
+
+.bs-tooltip-top .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow {
+  bottom: 0;
+}
+
+.bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+  top: -1px;
+  border-width: 0.4rem 0.4rem 0;
+  border-top-color: $black;
+}
+
+.bs-tooltip-end, .bs-tooltip-auto[data-popper-placement^="right"] {
+  padding: 0 0.4rem;
+}
+
+.bs-tooltip-end .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow {
+  left: 0;
+  width: 0.4rem;
+  height: 0.8rem;
+}
+
+.bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+  right: -1px;
+  border-width: 0.4rem 0.4rem 0.4rem 0;
+  border-right-color: $black;
+}
+
+.bs-tooltip-bottom, .bs-tooltip-auto[data-popper-placement^="bottom"] {
+  padding: 0.4rem 0;
+}
+
+.bs-tooltip-bottom .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow {
+  top: 0;
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+  bottom: -1px;
+  border-width: 0 0.4rem 0.4rem;
+  border-bottom-color: $black;
+}
+
+.bs-tooltip-start, .bs-tooltip-auto[data-popper-placement^="left"] {
+  padding: 0 0.4rem;
+}
+
+.bs-tooltip-start .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow {
+  right: 0;
+  width: 0.4rem;
+  height: 0.8rem;
+}
+
+.bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+  left: -1px;
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+  border-left-color: $black;
+}
+
+.tooltip-static-demo {
+  text-align: center;
+  background-color: $primary-transparent;
+  padding: 20px;
+
+  .tooltip {
+    z-index: 0;
+    opacity: 1;
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .bs-tooltip-top .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow, .bs-tooltip-bottom .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow {
+    left: 50%;
+    margin-left: -2px;
+  }
+
+  .bs-tooltip-start, .bs-tooltip-auto[data-popper-placement^="left"], .bs-tooltip-end, .bs-tooltip-auto[data-popper-placement^="right"] {
+    margin-top: 5px;
+  }
+
+  .bs-tooltip-start .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow, .bs-tooltip-end .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow {
+    top: 40%;
+    margin-top: -3px;
+  }
+}
+
+/* ###### Tooltip  ###### */

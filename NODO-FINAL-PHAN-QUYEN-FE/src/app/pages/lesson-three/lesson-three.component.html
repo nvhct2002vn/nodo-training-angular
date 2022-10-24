@@ -1,0 +1,56 @@
+<mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{cardTitle || ' Simple Reactive Form'}}
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="row form-group">
+        <div class="col-6">
+            <form class="row" [formGroup]="formGroup" (ngSubmit)="doSubmit()">
+                <div class="col-12">
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" type="text" class="w-100">
+                        <!--                        <app-inline-message [formName]="formGroup.get('name')" [message]="'Name'">-->
+                        <!--                        </app-inline-message>-->
+                        <span *ngIf="formGroup.get('name')?.hasError('required') && formGroup.get('name')?.touched">Bạn phải nhập Name</span>
+                    </mat-form-field>
+                </div>
+                <div class="col-12">
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Age</mat-label>
+                        <input matInput formControlName="age" type="number" min="1">
+                        <app-inline-message [formName]="formGroup.get('age')" [message]="'Age'">
+                        </app-inline-message>
+                    </mat-form-field>
+                </div>
+                <div class="col-12">
+                    <mat-form-field class="w-100" appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput formControlName="address" rows="3"></textarea>
+                        <app-inline-message [formName]="formGroup.get('address')" [message]="'Address'">
+                        </app-inline-message>
+                    </mat-form-field>
+                </div>
+                <div class="col-12">
+                    <div class="row" formArrayName="phones">
+                        <ng-container *ngFor="let control of phonesControls;index as i">
+                            <mat-form-field class="w-100" appearance="outline">
+                                <mat-label>Phone {{i + 1}}</mat-label>
+                                <input matInput [formControlName]="i" type="text"/>
+                            </mat-form-field>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary">Submit</button>
+                    <button *ngIf="isShowBtn" type="button" class="btn btn-success mg-l-3" (click)="addPhonesControl()">
+                        Add Phone
+                    </button>
+                    <button type="button" class="btn btn-danger mg-l-3" (click)="removePhoneControl()">Remove Phone
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-expansion-panel>

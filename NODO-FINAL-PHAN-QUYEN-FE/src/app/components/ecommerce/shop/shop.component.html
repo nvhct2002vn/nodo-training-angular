@@ -1,0 +1,203 @@
+<app-page-header [title]="'Shop'" [items]="['Ecommerce']" [active_item]="'Shop'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-md-12 col-lg-12 col-xl-3">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div class="row row-sm">
+          <div class="col-sm-12">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search ...">
+              <span class="input-group-btn">
+                <button class="btn ripple btn-primary" type="button">Search</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-header">
+        <h6 class="main-content-label">Categories & Filters</h6>
+      </div>
+      <div class="card-body">
+        <div class="custom-controls-stacked">
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked="">
+            <span class="custom-control-label">Men</span>
+          </label>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+            <span class="custom-control-label">Women</span>
+          </label>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+            <span class="custom-control-label">Kids</span>
+          </label>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2">
+            <span class="custom-control-label">Others</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-header">
+        <h6 class="main-content-label">Category</h6>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label class="form-label tx-medium">Occasion</label>
+          <select name="beast" id="select-beast" class="form-control select2-no-search">
+            <option label="Select"></option>
+            <option value="1">Party Wear</option>
+            <option value="2">Casual Wear</option>
+            <option value="3">Wedding</option>
+            <option value="4">Festive</option>
+          </select>
+        </div>
+        <div class="form-group mb-0">
+          <label class="form-label tx-medium">Type</label>
+          <select name="beast" id="select-beast1" class="form-control select2-no-search">
+            <option label="Select"></option>
+            <option value="1">Western wear</option>
+            <option value="2">Foot wear</option>
+            <option value="3">Top wear</option>
+            <option value="4">Bootom wear</option>
+            <option value="5">Beauty Groming</option>
+            <option value="6">Accessories</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-header">
+        <h6 class="main-content-label">Color</h6>
+      </div>
+      <div class="card-body">
+        <div class="d-flex">
+          <div class="">
+            <label class="colorinput">
+              <input name="color" type="checkbox" value="azure" class="colorinput-input" checked="">
+              <span class="colorinput-color bg-primary"></span>
+            </label>
+          </div>
+          <div class="">
+            <label class="colorinput">
+              <input name="color" type="checkbox" value="indigo" class="colorinput-input">
+              <span class="colorinput-color bg-indigo"></span>
+            </label>
+          </div>
+          <div class="">
+            <label class="colorinput">
+              <input name="color" type="checkbox" value="teal" class="colorinput-input">
+              <span class="colorinput-color bg-teal"></span>
+            </label>
+          </div>
+          <div class="">
+            <label class="colorinput">
+              <input name="color" type="checkbox" value="pink" class="colorinput-input">
+              <span class="colorinput-color bg-pink"></span>
+            </label>
+          </div>
+          <div class="">
+            <label class="colorinput">
+              <input name="color" type="checkbox" value="red" class="colorinput-input">
+              <span class="colorinput-color bg-danger"></span>
+            </label>
+          </div>
+          <div class="">
+            <label class="colorinput">
+              <input name="color" type="checkbox" value="orange" class="colorinput-input">
+              <span class="colorinput-color bg-orange"></span>
+            </label>
+          </div>
+          <div class="">
+            <label class="colorinput">
+              <input name="color" type="checkbox" value="yellow" class="colorinput-input">
+              <span class="colorinput-color bg-warning"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card custom-card">
+      <div class="card-header">
+        <h6 class="main-content-label">Price</h6>
+      </div>
+      <div class="card-body">
+        <div class="form-group mb-0">
+          <label class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" name="example-radios" value="option1" checked="">
+            <span class="custom-control-label">Under $25</span>
+          </label>
+          <label class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+            <span class="custom-control-label">$25 to $50</span>
+          </label>
+          <label class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+            <span class="custom-control-label">$50 to $100</span>
+          </label>
+          <label class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" name="example-radios" value="option2">
+            <span class="custom-control-label">Other (specify)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-12 col-xl-9">
+    <div class="row row-sm">
+      <div class="col-md-6 col-lg-6 col-xl-3 col-sm-6" *ngFor="let shop of shopList">
+        <div class="card custom-card">
+          <div class="p-0">
+            <div class="product-grid">
+              <div class="product-image">
+                <div *ngIf="shop.badgeStatus;else else_content" class="products-badge">
+                    <span class="badge bg-{{shop.badge}} text-white">{{shop.badgeText}}</span>
+                </div>
+                <ng-template #else_content>
+                  <span class="product-discount-label bg-{{shop.badge}}">{{shop.badgeText}}</span>
+                </ng-template>
+                <a routerLink="/eCommerce/product-details" class="image">
+                  <img class="pic-1" alt="product-image-1" src={{shop.img}}>
+                </a>
+                <a routerLink="/eCommerce/wishlist" class="product-like-icon" href="javascript:;"><i class="far fa-heart"></i></a>
+                <div class="product-link">
+                  <a routerLink="/eCommerce/cart">
+                    <i class="fe fe-shopping-cart"></i>
+                    <span>Add to Cart</span>
+                  </a>
+                </div>
+              </div>
+              <div class="product-content">
+                <div class="d-flex">
+                  <div>
+                    <h3 class="title"><a href="javascript:;">{{shop.title}}</a></h3>
+                  </div>
+                  <div class="price text-end ms-auto">
+                    <span class="old-price ms-2">{{shop.oldValue}}</span>
+                    <span class="fs-18">{{shop.newValue}}</span>
+                  </div>
+                </div>
+
+                <p class="fs-13 text-muted mb-1">{{shop.description}}</p>
+                <div>
+                    <ngb-rating class="text-warning" [(rate)]='shop.rating' [readonly]="true" [max]="5"></ngb-rating>
+                  <a href="javascript:void(0);" class="me-4 text-muted"> ({{shop.ratingValue}})</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="d-flex justify-content-end">
+        <ngb-pagination [collectionSize]="50" [page]="1"></ngb-pagination>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- End Row -->

@@ -1,0 +1,64 @@
+/* ###### Datatables ###### */
+
+table.dataTable {
+  border: 1px solid $border;
+
+  &.no-footer {
+    border-bottom-color: $background;
+  }
+
+  thead {
+    th, td {
+      border-top-width: 0;
+      border-bottom-width: 0;
+      padding: 8px 10px;
+      font-weight: 600;
+      font-size: 12px;
+      color: $color;
+    }
+  }
+}
+
+.dataTables_wrapper {
+  .dataTables_filter input {
+    margin-left: 0;
+    border: 1px solid $border;
+  }
+
+  .dataTables_paginate .paginate_button.current {
+    border: 0;
+    background-image: none;
+    color: $white !important;
+
+    &:hover, &:focus {
+      border: 0;
+      background-image: none;
+      color: $white !important;
+    }
+  }
+}
+
+.table.dataTable tr {
+  border: 1px solid $border;
+  white-space: nowrap;
+}
+
+.dataTables_info {
+  margin-bottom: 1rem;
+}
+
+.table.dataTable {
+  th, td {
+    border-left: 1px solid $border;
+    outline: none;
+  }
+}
+div.dataTables_wrapper div.dataTables_length select {
+    margin-right: 10px;
+}
+
+table.table-bordered.dataTable thead tr:first-child th, table.table-bordered.dataTable thead tr:first-child td {
+  border-top-width: 0 !important;
+}
+
+/* ######  Datatables ###### */

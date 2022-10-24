@@ -1,0 +1,47 @@
+<form class="pos-relative">
+    <div class="form-group form-inline">
+        Full text search: <input class="form-control ms-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
+        <span class="ml-3" *ngIf="service.loading$ | async">Loading...</span>
+    </div>
+  
+    <table class="table table-striped border">
+      <thead>
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col" sortable="name" (sort)="onSort($event)">Country</th>
+        <th scope="col" sortable="area" (sort)="onSort($event)">Area</th>
+        <th scope="col" sortable="population" (sort)="onSort($event)">Population</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let country of countries$ | async">
+        <th scope="row">{{ country.id }}</th>
+        <td>
+          <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2" style="width: 20px">
+          <ngb-highlight [result]="country.name" [term]="service.searchTerm"></ngb-highlight>
+        </td>
+        <td><ngb-highlight [result]="country.area | number" [term]="service.searchTerm"></ngb-highlight></td>
+        <td><ngb-highlight [result]="country.population | number" [term]="service.searchTerm"></ngb-highlight></td>
+      </tr>
+      </tbody>
+    </table>
+  
+    <div class="d-flex justify-content-between p-2">
+      <ngb-pagination
+        [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize">
+      </ngb-pagination>
+  
+      <!-- <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+        <option [ngValue]="2">2 items</option>
+        <option [ngValue]="4">4 items</option>
+        <option [ngValue]="6">6 items</option>
+      </select> -->
+      <ng-select class="" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+        <ng-option ng-option-selected value="0">--Select--</ng-option>
+        <ng-option value="2">2 items</ng-option>
+        <ng-option value="4">4 items</ng-option>
+        <ng-option value="6">6 items</ng-option>
+      </ng-select>
+    </div>
+  
+  </form>

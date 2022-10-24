@@ -1,0 +1,116 @@
+<app-page-header [title]="'Quản lý sản phẩm'" [items]="['Trang chủ']"
+                 [active_item]="'Quản lý sản phẩm'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Thông tin tìm kiếm</h6>
+                    <p class="text-muted card-sub-title"></p>
+                </div>
+                <form [formGroup]="formSearch">
+                    <div class="row row-sm">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p class="mg-b-10 tx-semibold">Tên sản phẩm</p>
+                                <input type="text" class="form-control" placeholder="Tên danh mục" formControlName="name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p class="mg-b-10 tx-semibold">Danh mục</p>
+                                <ng-select appendTo="body"
+                                           [clearable]="false"
+                                           formControlName="idCategory">
+                                    <ng-option [value]="-1">--Tất cả--</ng-option>
+                                    <ng-option *ngFor="let cate of categoryLst" [value]="cate.id">{{cate.name}}</ng-option>
+                                </ng-select>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button class="btn btn-8 ripple btn-primary mg-r-2" type="button"
+                                    (click)="search()">
+                                <span><span class="fe fe-search mg-r-2"></span>Tìm kiếm</span>
+                            </button>
+                            <button class="btn btn-8 ripple btn-primary mg-l-2" type="button"
+                                    (click)="onOpenFormDialog(TYPE_DIALOG.NEW)">
+                                <span><span class="fe fe-plus mg-r-2"></span>Thêm mới</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Danh sách sản phẩm</h6>
+                    <p class="text-muted card-sub-title"></p>
+                </div>
+                <div class="table-responsive">
+                    <ngx-datatable ngClass="{{ THEME_STYLE }}"
+                                   [columnMode]="'flex'"
+                                   [columns]="columns"
+                                   rowHeight="auto"
+                                   [count]="page.totalElements"
+                                   [offset]="page.pageNumber"
+                                   [limit]="page.size"
+                                   [headerHeight]="50"
+                                   [footerHeight]="50"
+                                   [rows]="dataTable"
+                                   [externalPaging]="true"
+                                   [messages]="{emptyMessage: 'Không có dữ liệu', totalMessage: 'bản ghi'}"
+                                   (page)='setPage($event)'>
+                        <ng-container *ngFor="let col of columns">
+                            <ngx-datatable-column prop="{{ col.prop }}" name="{{ col.name }}" [flexGrow]="col.flexGrow">
+                                <ng-template let-column="column" ngx-datatable-header-template>
+                                    {{ column.name }}
+                                </ng-template>
+                                <ng-template let-value="value" let-rowIndex="rowIndex" ngx-datatable-cell-template
+                                             let-row="row">
+                                    <ng-container [ngSwitch]="col.prop">
+                                        <ng-container *ngSwitchCase="'index'">
+                                            {{ rowIndex + 1 + page.pageNumber * page.size }}
+                                        </ng-container>
+
+                                        <ng-container *ngSwitchCase="'enabled'">
+                                            {{ value ? 'Hoạt động' : 'Không hoạt động' }}
+                                        </ng-container>
+
+                                        <ng-container *ngSwitchCase="'createdDate'">
+                                            {{ value | date: 'dd/MM/yyyy HH:mm:ss' }}
+                                        </ng-container>
+
+                                        <ng-container *ngSwitchCase="'actions'" class="text-center">
+                                            <button class="btn btn-sm btn-outline-primary mg-r-2" type="button"
+                                                    title="Sửa" (click)="onOpenFormDialog(TYPE_DIALOG.UPDATE, row)">
+                                                <span class="fe fe-edit-2"></span>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger mg-l-2" type="button"
+                                                    title="Xóa" (click)="onOpenDeleteDialog(row)">
+                                                <span class="fe fe-trash-2"></span>
+                                            </button>
+                                        </ng-container>
+
+                                        <ng-container *ngSwitchDefault>
+                                            <span title="{{ value }}">{{ value }}</span>
+                                        </ng-container>
+                                    </ng-container>
+                                </ng-template>
+                            </ngx-datatable-column>
+                        </ng-container>
+                    </ngx-datatable>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

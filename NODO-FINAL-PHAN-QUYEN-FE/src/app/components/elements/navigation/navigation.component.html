@@ -1,0 +1,513 @@
+<app-page-header [title]="'Navigation'" [items]="['Elements']" [active_item]="'Navigation'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card" id="basic">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Basic Navigation</h6>
+                    <p class="text-muted card-sub-title">Below is an example of a basic navigation</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-3">
+                            <nav ngbNav #nav="ngbNav" class="main-nav flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card" id="pill">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Pills Navigation</h6>
+                    <p class="text-muted card-sub-title">Below is an example of a pill navigation</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-3">
+                            <nav ngbNav #nav1="ngbNav" class="nav-pills flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card" id="vertical">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Vertical Navigation</h6>
+                    <p class="text-muted card-sub-title">Below is an example of a basic navigation in a vertical mode</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-2">
+                            <nav ngbNav #nav2="ngbNav" class="main-nav-column">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card" id="verticallpill">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Vertical Pills Navigation</h6>
+                    <p class="text-muted card-sub-title">Below is an example of a pill navigation in vertical mode</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-2">
+                            <nav ngbNav #nav2="ngbNav" class="nav-pills flex-column">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card" id="hori">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Center Nav Alignment</h6>
+                    <p class="text-muted card-sub-title">A navigation with center and right in which left is the default.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-3 border rounded-6">
+                            <nav ngbNav #nav3="ngbNav" class="main-nav flex-column flex-md-row justify-content-center">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Right Nav Alignment</h6>
+                    <p class="text-muted card-sub-title">A navigation with center and right in which left is the default.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-3 border rounded-6">
+                            <nav ngbNav #nav4="ngbNav" class="main-nav flex-column flex-md-row justify-content-end">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Colored background Nav Variations</h6>
+                    <p class="text-muted card-sub-title">A navigation with colored nav that wrapped the navigation.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-3 bg-primary mb-3 rounded-6">
+                            <nav ngbNav #nav5="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav5"></div>
+                        </div>
+                        <div class="p-3 bg-success mb-3 rounded-6">
+                            <nav ngbNav #nav6="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav6"></div>
+                        </div>
+                        <div class="p-3 bg-secondary rounded-6">
+                            <nav ngbNav #nav7="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav7"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card" id="colored">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Transparent Background Nav Variations</h6>
+                    <p class="text-muted card-sub-title">A navigation with Transparent Background nav that wrapped the navigation.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-3 bg-primary-light mb-3 rounded-6">
+                            <nav ngbNav #nav8="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav8"></div>
+                        </div>
+                        <div class="p-3 bg-success-light mb-3 rounded-6">
+                            <nav ngbNav #nav9="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav9"></div>
+                        </div>
+                        <div class="p-3 bg-secondary-light rounded-6">
+                            <nav ngbNav #nav10="ngbNav" class="main-nav main-nav-colored-bg main-nav-dark flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Icon with Text Navigation</h6>
+                    <p class="text-muted card-sub-title">A navigation with Icon and Text.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ul ngbNav #nav11="ngbNav" [activeId]="1" class="nav-pills">
+                            <li [ngbNavItem]="1">
+                              <a class="border py-2 px-3 m-2" ngbNavLink><span class="nav-link-icon d-block"><i class="fe fe-home"></i> Home</span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                              <a class="border py-2 px-3 m-2" ngbNavLink><span class="nav-link-icon d-block"><i class="fe fe-unlock"></i> Lock </span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                            <li [ngbNavItem]="3">
+                              <a class="border py-2 px-3 m-2" ngbNavLink><span class="nav-link-icon d-block"><i class="fe fe-play"></i> Videos</span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                            <li [ngbNavItem]="4">
+                              <a class="border py-2 px-3 m-2" ngbNavLink><span class="nav-link-icon d-block"><i class="fe fe-layers"></i> Severs</span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                            <li [ngbNavItem]="5">
+                              <a class="border py-2 px-3 m-2" ngbNavLink><span class="nav-link-icon d-block"><i class="fe fe-image"></i> Gallery </span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                          </ul>
+                          
+                          <div [ngbNavOutlet]="nav11"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Icon Navigation</h6>
+                    <p class="text-muted card-sub-title">A navigation with Icons.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <ul ngbNav #nav12="ngbNav" [activeId]="1" class="nav-pills">
+                            <li class="m-2" [ngbNavItem]="1">
+                              <a class="text-primary bg-light" ngbNavLink><span class="nav-link-icon d-block text-center mx-auto"><i class="fe fe-home fs-13"></i></span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                            <li class="m-2" [ngbNavItem]="2">
+                              <a class="text-primary bg-light" ngbNavLink> <span class="nav-link-icon d-block text-center mx-auto"><i class="fe fe-unlock fs-13"></i></span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                            <li class="m-2" [ngbNavItem]="3">
+                              <a class="text-primary bg-light" ngbNavLink><span class="nav-link-icon d-block text-center mx-auto"><i class="fe fe-play fs-13"></i></span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                            <li class="m-2" [ngbNavItem]="4">
+                              <a class="text-primary bg-light" ngbNavLink><span class="nav-link-icon d-block text-center mx-auto"><i class="fe fe-layers fs-13"></i></span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                            <li class="m-2" [ngbNavItem]="5">
+                              <a class="text-primary bg-light" ngbNavLink><span class="nav-link-icon d-block text-center mx-auto"><i class="fe fe-image fs-13"></i> </span></a>
+                              <ng-template ngbNavContent></ng-template>
+                            </li>
+                          </ul>
+                          
+                          <div [ngbNavOutlet]="nav12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card" id="underline">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Underline Navigation</h6>
+                    <p class="text-muted card-sub-title">Below is a type of navigation that have a line at the bottom of active link.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="p-1">
+                            <nav ngbNav #nav13="ngbNav" class="main-nav-line flex-column flex-md-row">
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Home</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>About</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Pages</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                                <ng-container ngbNavItem>
+                                  <a ngbNavLink>Custom</a>
+                                  <ng-template ngbNavContent></ng-template>
+                                </ng-container>
+                              </nav>                              
+                              <div [ngbNavOutlet]="nav13"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-12 col-xl-6">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Justified Navigation</h6>
+                    <p class="text-muted card-sub-title">Below is a type of navigation that will automatically justify the navs.</p>
+                </div>
+                <div class="text-wrap">
+                    <div class="example">
+                        <nav ngbNav #nav14="ngbNav" class="nav-justified">
+                            <ng-container ngbNavItem>
+                              <a ngbNavLink>Home</a>
+                              <ng-template ngbNavContent></ng-template>
+                            </ng-container>
+                            <ng-container ngbNavItem>
+                              <a ngbNavLink>About</a>
+                              <ng-template ngbNavContent></ng-template>
+                            </ng-container>
+                            <ng-container ngbNavItem>
+                              <a ngbNavLink>Pages</a>
+                              <ng-template ngbNavContent></ng-template>
+                            </ng-container>
+                            <ng-container ngbNavItem>
+                              <a disabled ngbNavLink>Custom</a>
+                              <ng-template ngbNavContent></ng-template>
+                            </ng-container>
+                          </nav>                              
+                          <div [ngbNavOutlet]="nav14"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

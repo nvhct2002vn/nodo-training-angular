@@ -1,0 +1,127 @@
+<app-page-header [title]="'Calendar'" [items]="['Advanced Ui']" [active_item]="'Calendar'"></app-page-header>
+
+<!-- Row -->
+<div class="row	">
+    <div class="col-xl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center">
+                <button class="btn btn-primary btn-block"><i class="fe fe-plus me-2"></i> Add New Event</button>
+            </div>
+            <div class="card-body">
+                <div mwlDroppable (drop)="externalDrop($event.dropData.event)" dragOverClass="drag-over">
+                    <div>
+                        <p *ngIf="events.length === 0"><em>No events added</em></p>
+                        <ul class="">
+                            <li *ngFor="let event of events" mwlDraggable [dropData]="{event: event}"
+                                [touchStartLongPress]="{ delay: 300, delta: 30 }" dragActiveClass="drag-active" class='{{event.cssClass}} fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event sample-event'>
+                                <a href="javascript:;" class="text-white" >
+                                    {{ event.title }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="calendar-image mt-5 d-none d-xl-block">
+                    <img src="./assets/img/pngs/calendar.png" alt="img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-9">
+        <div class="row text-center d-flex flex-wrap flex-column flex-md-row">
+            <div class="col-md-3 text-start mb-2">
+                <div class="btn-group">
+                    <div class="btn btn-primary" mwlCalendarPreviousView [view]="view"
+                        [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="btn btn-primary" mwlCalendarNextView [view]="view"
+                        [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="btn btn-primary" mwlCalendarToday [(viewDate)]="viewDate">
+                        Today
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-2">
+                <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+            </div>
+            <div class="col-md-5 text-end mb-2">
+                <div class="btn-group">
+                    <div class="btn btn-primary mb-1" (click)="setView(CalendarView.Month)"
+                        [class.active]="view === CalendarView.Month">
+                        Month
+                    </div>
+                    <div class="btn btn-primary mb-1" (click)="setView(CalendarView.Week)"
+                        [class.active]="view === CalendarView.Week">
+                        Week
+                    </div>
+                    <div class="btn btn-primary mb-1" (click)="setView(CalendarView.Day)"
+                        [class.active]="view === CalendarView.Day">
+                        Day
+                    </div>
+                    <button class="btn btn-raised btn-primary float-end mb-1" (click)="addEvent()">
+                        Add Event
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12">
+
+            </div>
+        </div>
+        <br />
+
+        <div [ngSwitch]="view">
+            <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate"
+                [events]="events" [activeDayIsOpen]="activeDayIsOpen" [refresh]="refresh"
+                (dayClicked)="dayClicked($event.day)"
+                (eventClicked)="handleEvent('Clicked', $event.event)"
+                (eventTimesChanged)="eventTimesChanged($event)">
+            </mwl-calendar-month-view>
+            <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate"
+                [events]="events" [refresh]="refresh" [snapDraggedEvents]="false"
+                (eventClicked)="handleEvent('Clicked', $event.event)"
+                (eventTimesChanged)="eventDropped($event)">
+            </mwl-calendar-week-view>
+            <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate"
+                [events]="events" [refresh]="refresh" [snapDraggedEvents]="false"
+                (eventClicked)="handleEvent('Clicked', $event.event)"
+                (eventTimesChanged)="eventDropped($event)">
+            </mwl-calendar-day-view>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
+<ng-template #modalContent let-close="close">
+    <div class="modal-header">
+        <h5 class="modal-title">{{ modalData?.action }}</h5>
+        <button type="button" class="btn-close" (click)="close()"></button>
+    </div>
+    <div class="modal-body">
+        <form action="#" class="form form-horizontal">
+            <div class="form-body">
+                <div class="form-group">
+                    <label>Event Title:</label>
+                    <input type="text" name="event-title" class="form-control" [(ngModel)]="modalData?.event.title"
+                        (keyup)="refresh.next(refresh)" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Starts At:</label>
+                    <input class="form-control text-dark" type="text" name="flatpicker" mwlFlatpickr
+                        [(ngModel)]="modalData?.event.start"
+                        dateFormat="Y-m-dTH:i" altFormat="F j, Y H:i" placeholder="Select Date" />
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="close()">OK</button>
+    </div>
+</ng-template>

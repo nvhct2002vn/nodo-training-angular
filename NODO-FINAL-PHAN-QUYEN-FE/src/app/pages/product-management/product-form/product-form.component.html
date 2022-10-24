@@ -1,0 +1,61 @@
+<div class="card custom-card mb-0">
+    <div class="card-header">
+        <div>
+            <h6 class="main-content-label">{{ title }}</h6>
+            <span class="fe fe-x icon-close" (click)="onDismiss()"></span>
+        </div>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formGroup">
+            <div class="row row-sm">
+                <div class="col-md-12 col-lg-12 col-xl-12">
+                    <div class="form-group">
+                        <label class="tx-semibold">Tên sản phẩm <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" formControlName="name" placeholder="Tên sản phẩm"
+                               [ngClass]="{'is-invalid': isFieldInValid('name'), 'is-valid': isFieldValid('name')}">
+                        <span class="text-error"
+                              *ngIf="formGroup.controls['name'].hasError('required') && formGroup.controls['name'].touched">
+                            Vui lòng nhập Tên danh mục
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="tx-semibold">Giá <span class="text-danger">*</span></label>
+                        <input onlyNumber class="form-control" type="text" formControlName="price" placeholder="Giá"
+                               [ngClass]="{'is-invalid': isFieldInValid('price'), 'is-valid': isFieldValid('price')}">
+                        <span class="text-error"
+                              *ngIf="formGroup.controls['price'].hasError('required') && formGroup.controls['price'].touched">
+                            Vui lòng nhập Giá sản phẩm
+                        </span>
+                        <span class="text-error"
+                                     *ngIf="(formGroup.controls['price'].hasError('max') || formGroup.controls['price'].hasError('min')) && formGroup.controls['price'].touched">
+                            Vui lòng nhập Giá sản phẩm trong khoảng 1.000-99.000.000
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="tx-semibold">Danh mục <span class="text-danger">*</span></label>
+                        <ng-select [ngClass]="{'err': isFieldInValid('categoriesId')}"
+                                   appendTo="body"
+                                   [clearable]="false"
+                                   formControlName="categoriesId">
+                            <ng-option [value]="-1">--Chọn--</ng-option>
+                            <ng-option *ngFor="let cate of categoryLst" [value]="cate.id">{{cate.name}}</ng-option>
+                        </ng-select>
+                        <span class="text-error"
+                              *ngIf="formGroup.controls['categoriesId'].hasError('requiredCb') && formGroup.controls['categoriesId'].touched">
+                            Vui lòng chọn Danh mục
+                        </span>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-7 ripple btn-danger mg-r-2" (click)="onDismiss()">
+                            <span><span class="fe fe-x mg-r-2"></span>Đóng</span>
+                        </button>
+                        <button class="btn btn-7 ripple btn-primary mg-l-2" (click)="onSubmit()">
+                            <span><span class="fe fe-save mg-r-2"></span>Lưu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

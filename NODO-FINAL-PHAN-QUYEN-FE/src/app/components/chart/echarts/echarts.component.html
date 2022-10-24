@@ -1,0 +1,94 @@
+<app-page-header [title]="'Echarts'" [items]="['charts']" [active_item]="'Echarts'"></app-page-header>
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-6 col-md-12">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Line Chart</h6>
+                    <p class="text-muted  card-sub-title">Below is the basic line chart example.</p>
+                </div>
+                <div>
+                    <div echarts class="echart-height" [options]="echartLineOption"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Combination line & Bar Chart</h6>
+                    <p class="text-muted  card-sub-title">Below is the basic combination line & bar chart example.</p>
+                </div>
+                <div>
+                    <div echarts class="echart-height" [options]="echartLineBarOption"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-6 col-md-12">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Horizonatal Line Chart</h6>
+                    <p class="text-muted  card-sub-title">Below is the basic horizontal line chart example.</p>
+                </div>
+                <div>
+                    <div echarts class="echart-height" [options]="echartHorizontalLineChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Horizonatal Combination line & Bar Chart</h6>
+                    <p class="text-muted  card-sub-title">Below is the basic horizontal combination line & bar chart example.</p>
+                </div>
+                <div>
+                    <div echarts class="echart-height" [options]="echartHorizontalLineBarChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-6 col-md-12">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Stacked Bar Chart</h6>
+                    <p class="text-muted  card-sub-title">Below is the basic Stacked Bar chart example.</p>
+                </div>
+                <div>
+                    <div echarts class="echart-height" [options]="echartStackedBarChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Horizonatal Stacked Bar Chart</h6>
+                    <p class="text-muted  card-sub-title">Below is the basic horizontal stacked bar chart example.</p>
+                </div>
+                <div>
+                    <div echarts class="echart-height" [options]="echartHoriStackedBarChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

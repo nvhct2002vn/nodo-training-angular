@@ -1,0 +1,301 @@
+<app-page-header [title]="'Settings'" [items]="['Pages']" [active_item]="'Settings'"></app-page-header>
+	<!-- Row -->
+	<div class="row row-sm">
+	  <div class="col-lg-4 col-xl-3">
+	    <div class="card custom-card">
+	      <div class="card-header">
+	        <div>
+	          <h3 class="card-title tx-18"><label class="main-content-label tx-15">Settings</label></h3>
+	        </div>
+	      </div>
+	      <div class="card-body">
+	        <div class="main-content-left main-content-left-mail">
+	          <div class="main-mail-menu">
+				<nav ngbNav #nav="ngbNav" class="main-nav-column mg-b-20">
+					<ng-container ngbNavItem>
+					  <a class="thumb" ngbNavLink><i class="bi bi-person"></i> Account</a>
+					  <ng-template ngbNavContent></ng-template>
+					</ng-container>
+					<ng-container ngbNavItem>
+					  <a class="thumb" ngbNavLink><i class="bi bi-lock"></i> Privacy & Security</a>
+					  <ng-template ngbNavContent></ng-template>
+					</ng-container>
+					<ng-container ngbNavItem>
+					  <a class="thumb" ngbNavLink><i class="bi bi-pencil"></i> General</a>
+					  <ng-template ngbNavContent></ng-template>
+					</ng-container>
+					<ng-container ngbNavItem>
+					  <a class="thumb" ngbNavLink><i class="bi bi-info-circle"></i> Help & Support</a>
+					  <ng-template ngbNavContent></ng-template>
+					</ng-container>
+					<ng-container ngbNavItem>
+					  <a class="thumb" ngbNavLink><i class="bi bi-envelope"></i> Emails</a>
+					  <ng-template ngbNavContent></ng-template>
+					</ng-container>
+					<ng-container ngbNavItem>
+					  <a class="thumb" ngbNavLink><i class="bi bi-flag"></i> Language & Region</a>
+					  <ng-template ngbNavContent></ng-template>
+					</ng-container>
+					<ng-container ngbNavItem>
+					  <a class="thumb" ngbNavLink><i class="bi bi-bell"></i> Notifications</a>
+					  <ng-template ngbNavContent></ng-template>
+					</ng-container>
+					<ng-container ngbNavItem>
+					  <a class="thumb" ngbNavLink><i class="bi bi-gear"></i> Blog</a>
+					  <ng-template ngbNavContent></ng-template>
+					</ng-container>
+				  </nav>
+				  
+				<div [ngbNavOutlet]="nav"></div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="card-footer px-4">
+	        <button class="btn btn-primary w-lg">Save Changes</button>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-lg-8 col-xl-9">
+	    <div class="row row-sm">
+	      <div class="col-xl-6">
+	        <div class="card custom-card">
+	          <div class="card-body">
+	            <div class="row">
+	              <div class="col-lg-12">
+	                <div class="d-flex">
+	                  <div class="settings-main-icon me-4 mt-1">
+	                    <div class="avatar avatar-md bg-primary-transparent text-primary">
+	                      <i class="bi bi-house fs-18"></i>
+	                    </div>
+	                  </div>
+	                  <div>
+	                    <h5 class="tx-14 d-flex text-dark tx-uppercase">Dashboard</h5>
+	                    <p class="tx-13 text-muted mb-0">Dashboard Settings such as sidemenu,header and main page can be
+	                      Controlled.</p>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="card-footer">
+	            <a href="javascript:;" class="tx-14 mb-0">Go to Settings</a>
+	            <label class="custom-switch float-end mb-0">
+	              <a href="javascript:;" class="tx-14 mb-0 me-2 text-dark">Restore default</a>
+	              <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+	              <span class="custom-switch-indicator"></span>
+	            </label>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xl-6">
+	        <div class="card custom-card">
+	          <div class="card-body">
+	            <div class="row">
+	              <div class="col-lg-12">
+	                <div class="d-flex">
+	                  <div class="settings-main-icon me-4 mt-1">
+	                    <div class="avatar avatar-md bg-primary-transparent text-primary">
+	                      <i class="bi bi-grid fs-18"></i>
+	                    </div>
+	                  </div>
+	                  <div>
+	                    <h5 class="tx-14 d-flex text-dark tx-uppercase">Web Apps</h5>
+	                    <p class="tx-13 text-muted mb-0">Web apps settings such as Apps,Elements,Advanced Ui & Mail can be
+	                      Controlled.</p>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="card-footer">
+	            <a href="javascript:;" class="tx-14 mb-0">Go to Settings</a>
+	            <label class="custom-switch float-end mb-0">
+	              <a href="javascript:;" class="tx-14 mb-0 me-2 text-dark">Restore default</a>
+	              <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" checked>
+	              <span class="custom-switch-indicator"></span>
+	            </label>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xl-6">
+	        <div class="card custom-card">
+	          <div class="card-body">
+	            <div class="row">
+	              <div class="col-lg-12">
+	                <div class="d-flex">
+	                  <div class="settings-main-icon me-4 mt-1">
+	                    <div class="avatar avatar-md bg-primary-transparent text-primary">
+	                      <i class="bi bi-pencil fs-18"></i>
+	                    </div>
+	                  </div>
+	                  <div>
+	                    <h5 class="tx-14 d-flex text-dark tx-uppercase">General</h5>
+	                    <p class="tx-13 text-muted mb-0">General settings such as Icons,Charts,Ecommerce can be Controlled.
+	                    </p>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="card-footer">
+	            <a href="javascript:;" class="tx-14 mb-0">Go to Settings</a>
+	            <label class="custom-switch float-end mb-0">
+	              <a href="javascript:;" class="tx-14 mb-0 me-2 text-dark">Restore default</a>
+	              <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" checked>
+	              <span class="custom-switch-indicator"></span>
+	            </label>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xl-6">
+	        <div class="card custom-card">
+	          <div class="card-body">
+	            <div class="row">
+	              <div class="col-lg-12">
+	                <div class="d-flex">
+	                  <div class="settings-main-icon me-4 mt-1">
+	                    <div class="avatar avatar-md bg-primary-transparent text-primary">
+	                      <i class="bi bi-flag fs-18"></i>
+	                    </div>
+	                  </div>
+	                  <div>
+	                    <h5 class="tx-14 d-flex text-dark tx-uppercase">Language & Region</h5>
+	                    <p class="tx-13 text-muted mb-0">In this settings we can change the region and language manually.
+	                    </p>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="card-footer">
+	            <a href="javascript:;" class="tx-14 mb-0">Go to Settings</a>
+	            <label class="custom-switch float-end mb-0">
+	              <a href="javascript:;" class="tx-14 mb-0 me-2 text-dark">Restore default</a>
+	              <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+	              <span class="custom-switch-indicator"></span>
+	            </label>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xl-6">
+	        <div class="card custom-card">
+	          <div class="card-body">
+	            <div class="row">
+	              <div class="col-lg-12">
+	                <div class="d-flex">
+	                  <div class="settings-main-icon me-4 mt-1">
+	                    <div class="avatar avatar-md bg-primary-transparent text-primary">
+	                      <i class="bi bi-bell fs-18"></i>
+	                    </div>
+	                  </div>
+	                  <div>
+	                    <h5 class="tx-14 d-flex text-dark tx-uppercase">Notification</h5>
+	                    <p class="tx-13 text-muted mb-0">Notification settings we can control the notification privacy and
+	                      security.</p>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="card-footer">
+	            <a href="javascript:;" class="tx-14 mb-0">Go to Settings</a>
+	            <label class="custom-switch float-end mb-0">
+	              <a href="javascript:;" class="tx-14 mb-0 me-2 text-dark">Restore default</a>
+	              <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" checked>
+	              <span class="custom-switch-indicator"></span>
+	            </label>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xl-6">
+	        <div class="card custom-card">
+	          <div class="card-body">
+	            <div class="row">
+	              <div class="col-lg-12">
+	                <div class="d-flex">
+	                  <div class="settings-main-icon me-4 mt-1">
+	                    <div class="avatar avatar-md bg-primary-transparent text-primary">
+	                      <i class="bi bi-gear fs-18"></i>
+	                    </div>
+	                  </div>
+	                  <div>
+	                    <h5 class="tx-14 d-flex text-dark tx-uppercase">Blog</h5>
+	                    <p class="tx-13 text-muted mb-0">In this settings we can modify all Blog related settings in this
+	                      template.</p>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="card-footer">
+	            <a href="javascript:;" class="tx-14 mb-0">Go to Settings</a>
+	            <label class="custom-switch float-end mb-0">
+	              <a href="javascript:;" class="tx-14 mb-0 me-2 text-dark">Restore default</a>
+	              <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+	              <span class="custom-switch-indicator"></span>
+	            </label>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xl-6">
+	        <div class="card custom-card">
+	          <div class="card-body">
+	            <div class="row">
+	              <div class="col-lg-12">
+	                <div class="d-flex">
+	                  <div class="settings-main-icon me-4 mt-1">
+	                    <div class="avatar avatar-md bg-primary-transparent text-primary">
+	                      <i class="bi bi-lock fs-18"></i>
+	                    </div>
+	                  </div>
+	                  <div>
+	                    <h5 class="tx-14 d-flex text-dark tx-uppercase">Privacy & Security</h5>
+	                    <p class="tx-13 text-muted mb-0">In this we can control the privacy related settings.</p>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="card-footer">
+	            <a href="javascript:;" class="tx-14 mb-0">Go to Settings</a>
+	            <label class="custom-switch float-end mb-0">
+	              <a href="javascript:;" class="tx-14 mb-0 me-2 text-dark">Restore default</a>
+	              <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+	              <span class="custom-switch-indicator"></span>
+	            </label>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xl-6">
+	        <div class="card custom-card">
+	          <div class="card-body">
+	            <div class="row">
+	              <div class="col-lg-12">
+	                <div class="d-flex">
+	                  <div class="settings-main-icon me-4 mt-1">
+	                    <div class="avatar avatar-md bg-primary-transparent text-primary">
+	                      <i class="bi bi-info-circle fs-18"></i>
+	                    </div>
+	                  </div>
+	                  <div>
+	                    <h5 class="tx-14 d-flex text-dark tx-uppercase">Help & Support</h5>
+	                    <p class="tx-13 text-muted mb-0">In this we can know about how to change settings.</p>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="card-footer">
+	            <a href="javascript:;" class="tx-14 mb-0">Go to Settings</a>
+	            <label class="custom-switch float-end mb-0">
+	              <a href="javascript:;" class="tx-14 mb-0 me-2 text-dark">Restore default</a>
+	              <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" checked>
+	              <span class="custom-switch-indicator"></span>
+	            </label>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- End Row -->

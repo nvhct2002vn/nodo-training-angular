@@ -1,0 +1,62 @@
+.loader--text {
+    top: 200%;
+    left: 0;
+    right: 0;
+    position: relative;
+    margin: auto;
+  }
+  .loader--text:after {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: "Loading";
+    font-weight: bold;
+    animation-name: loading-text;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    background-color: var(--primary-bg-color);
+  }
+  
+  @keyframes loader {
+    15% {
+      transform: translateX(0);
+    }
+    45% {
+      transform: translateX(230px);
+    }
+    65% {
+      transform: translateX(230px);
+    }
+    95% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes loading-text {
+    0% {
+      content: "Loading";
+    }
+    25% {
+      content: "Loading.";
+    }
+    50% {
+      content: "Loading..";
+    }
+    75% {
+      content: "Loading...";
+    }
+  }
+  .bxl-google {
+    color: var(--primary-bg-color);
+    font-size: 22px;
+    line-height: 35px !important;
+    outline: none;
+    height: 37px;
+    width: 37px;
+    background: #fff;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #f1ecf7;
+    box-shadow: none;
+    border-radius: 35px;
+  }

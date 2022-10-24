@@ -1,0 +1,709 @@
+<app-page-header [title]="'Userlist'" [items]="['Advanced Ui']" [active_item]="'Userlist'"></app-page-header>
+
+<!--Row-->
+<div class="row row-sm">
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/5.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Dennis Trexy</a>
+
+                <p class="text-muted text-center mt-2">Web Designer</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>California, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">16K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">6,452</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">6,452</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/2.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Dana Lott</a>
+
+                <p class="text-muted text-center mt-2">PHP Developer</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>Newyork, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">23K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">5,264</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">4,135</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/3.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Benedict Vallone</a>
+
+                <p class="text-muted text-center mt-2">Manager</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>California, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">145K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">32,490</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">27,132</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/4.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Robbie Ruder</a>
+
+                <p class="text-muted text-center mt-2">HR Manager</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>California, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">41K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">8,903</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">3,456</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/1.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Harvey Mattos</a>
+
+                <p class="text-muted text-center mt-2">IT Manager</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>Newyork, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">54K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">3,123</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">2,769</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/6.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Elida Distefano</a>
+
+                <p class="text-muted text-center mt-2">HR Recriuter</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>Newyork, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">52K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">9,032</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">2,456</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/7.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Jacquelynn Sapienza</a>
+
+                <p class="text-muted text-center mt-2">CEO</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>California, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">15K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">7,564</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">4,781</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/8.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Catrice Doshier</a>
+
+                <p class="text-muted text-center mt-2">Web Designer</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>Newyork, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">76K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">2,412</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">7,890</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/9.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Mark Jhon</a>
+
+                <p class="text-muted text-center mt-2">Developer</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>California, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">34K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">1,457</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">7,432</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/10.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Alexander Pierce</a>
+
+                <p class="text-muted text-center mt-2">Project Manager</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>California, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">56K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">1,922</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">4,567</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/2.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Mercy Ritia</a>
+
+                <p class="text-muted text-center mt-2">Team Manager</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>California, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">38K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">9,710</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">2,578</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3">
+        <div class="card custom-card">
+            <div class="card-body text-center userdetails">
+                <div class="user-lock text-center">
+                    <div ngbDropdown placement="bottom-end" class="text-end">
+                        <a href="javascript:;" class="option-dots text-muted" ngbDropdownToggle aria-haspopup="true" aria-expanded="true"> <i class="fe fe-more-vertical fs-16"></i> </a>
+                        <div ngbDropdownMenu class=" dropdown-menu-end">
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-message-square me-2 fmt-5"></i> Message
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-edit-2 me-2 fmt-5"></i> Edit
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-eye me-2 fmt-5"></i> View
+                            </a>
+                            <a ngbDropdownItem href="javascript:;">
+                                <i class="fe fe-trash-2 me-2 fmt-5"></i> Delete
+                            </a>
+                        </div>
+                    </div>
+                    <a routerLink="/pages/profile"><img alt="avatar" class="rounded-circle" src="./assets/img/users/5.jpg"></a>
+                </div>
+                <a routerLink="/pages/profile" class="tx-16 tx-semibold d-block my-2">Paul Johny</a>
+
+                <p class="text-muted text-center mt-2">HR Manager</p>
+                <span class="text-muted mx-3"><i class="fe fe-map-pin mx-2 text-secondary "></i>Newyork, USA</span>
+                <span class="text-muted user-contact"><i class="fe fe-phone mx-2 text-success "></i>+1 135792468</span>
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-facebook"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle me-1"><i class="mdi mdi-google"></i></button>
+                    <button class="btn btn-sm ripple bg-primary-transparent text-primary rounded-circle"><i class="mdi mdi-twitter"></i></button>
+                </div>
+            </div>
+            <div class="card-footer p-0">
+                <div class="row row-sm">
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block p-3">
+                            <h5 class="description-header mb-1 fs-16">40K</h5>
+                            <span class="text-muted tx-11">TOTAL POSTS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-end text-center">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">2,378</h5>
+                            <span class="text-muted tx-11">FOLLOWERS</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block text-center p-3">
+                            <h5 class="description-header mb-1 fs-16">8,509</h5>
+                            <span class="text-muted tx-11">FOLLOWING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-end mb-2">
+        <div class="row row-sm">
+            <nav>
+                <ngb-pagination [collectionSize]="70" [page]="1" class="justify-content-end" aria-label="Default pagination"></ngb-pagination>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Row -->

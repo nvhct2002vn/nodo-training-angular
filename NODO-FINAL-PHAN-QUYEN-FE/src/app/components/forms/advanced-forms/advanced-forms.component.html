@@ -1,0 +1,275 @@
+<app-page-header [title]="'Advanced-forms'" [items]="['Forms']" [active_item]="'Advanced-forms'"></app-page-header>
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">ng-Select</h6>
+          <p class="text-muted card-sub-title">ng-Select gives you a customizable select box with support for searching,
+            tagging, infinite scrolling, and many other highly used options.</p>
+        </div>
+        <div class="row row-sm mg-b-20">
+          <div class="col-lg-4">
+            <p class="mg-b-10 tx-semibold">Single Select</p>
+            <ng-select>
+              <ng-option value="Firefox">Firefox</ng-option>
+              <ng-option value="Chrome">Chrome</ng-option>
+              <ng-option value="Safari">Safari</ng-option>
+              <ng-option value="Opera">Opera</ng-option>
+              <ng-option value="Internet Explorer">Internet Explorer</ng-option>
+            </ng-select>
+          </div><!-- col-4 -->
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <p class="mg-b-10 tx-semibold">Single Select with Search</p>
+            <ng-select #select [items]="cities" [searchable]="false" [(ngModel)]="selectedCity" bindLabel="name"
+              bindValue="name" value="name">
+              <ng-template ng-header-tmp>
+                <input style="width: 100%; line-height: 24px" type="text"
+                  (input)="select.filter($any($event.target).value)" />
+              </ng-template>
+            </ng-select>
+          </div><!-- col-4 -->
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <p class="mg-b-10 tx-semibold">Single Select (Group)</p>
+            <ng-select [items]="accounts" bindLabel="name" bindValue="name" groupBy="country"
+              [(ngModel)]="selectedAccount" name="name">
+              <ng-template ng-optgroup-tmp let-item="item">
+                {{item.country || 'Unnamed group'}}
+              </ng-template>
+            </ng-select>
+          </div><!-- col-4 -->
+        </div>
+        <div class="row row-sm">
+          <div class="col-lg-4">
+            <p class="mg-b-10 tx-semibold">Multiple Select</p>
+            <ng-select [items]="month$ | async" [multiple]="true" [closeOnSelect]="false" [searchable]="false"
+              bindLabel="month" placeholder="Select month" [(ngModel)]="selectedMonth">
+            </ng-select>
+          </div>
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <p class="mg-b-10 tx-semibold">Multiple Select(Group)</p>
+            <ng-select [items]="people" [multiple]="true" bindLabel="name" groupBy="gender" [selectableGroup]="true"
+              [selectableGroupAsModel]="false" [closeOnSelect]="false" bindValue="id" [(ngModel)]="selectedPeople">
+              <ng-template ng-optgroup-tmp let-item="item" let-item$="item$" let-index="index">
+                <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected" /> {{item.gender | uppercase}}
+              </ng-template>
+              <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+                <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected" /> {{item.name}}
+              </ng-template>
+            </ng-select>
+          </div>
+          <div class="col-lg-4 mg-t-20 mg-lg-t-0">
+            <p class="mg-b-10 tx-semibold">Multiple Select (Disabled)</p>
+            <form [formGroup]="heroForm" novalidate>
+              <div class="form-group row">
+                <div class="col-lg-8">
+                  <ng-select [items]="month" [selectOnTab]="true" bindValue="month" labelForId="month" [multiple]="true"
+                    placeholder="Select month" formControlName="month">
+                  </ng-select>
+                </div>
+                <div class="col-lg-4 mt-lg-0 mt-2">
+                  <button class="btn btn-secondary btn-sm" (click)="toggleAgeDisable()">Toggle disabled</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Telephone Input</h6>
+          <p class="text-muted card-sub-title">A JavaScript plugin for entering and validating international telephone
+            numbers. It adds a flag dropdown to any input, detects the user's country, displays a relevant placeholder
+            and provides formatting/validation methods.</p>
+        </div>
+        <div class="input-group telephone-input">
+          <!-- <input type="tel" id="mobile-number" placeholder="e.g. +1 702 123 4567"> -->
+          <input type="text" class="form-control" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'in'}"
+            (hasError)="hasError($event)" (ng2TelOutput)="getNumber($event)"
+            (intlTelInputObject)="telInputObject($event)" (countryChange)="onCountryChange($event)" />
+          <span class="input-group-btn">
+            <button class="btn ripple btn-primary" type="button">Submit</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">Date Range Picker</h6>
+          <p class="text-muted card-sub-title">Date Range Picker</p>
+        </div>
+        <div class="row row-sm">
+          <div class="col-lg-12">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="fe fe-calendar  lh--9 op-6"></i>
+              </div>
+              <input type="text" class="form-control" ngxDaterangepickerMd [(ngModel)]="selected"
+                [showCustomRangeLabel]="true" [alwaysShowCalendars]="true" [ranges]="ranges" [linkedCalendars]="true"
+                [isInvalidDate]="isInvalidDate" [showClearButton]="true" placeholder="Select Date" />
+            </div>
+          </div>
+          <div class="col-lg-12 mt-2">
+            <div class="input-group">
+
+              <form enctype="application/x-www-form-urlencoded" role="form">
+                <fieldset>
+                  <date-range-picker #dateRangePicker [options]="firstFieldOptions" [parentFormGroup]="form"
+                    [controlName]="'firstDateRange'" (rangeSelected)="onRangeSelected($event)"></date-range-picker>
+                  <p style="color: red;"
+                    *ngIf="form.controls.firstDateRange.touched && form.controls.firstDateRange.hasError('required')">
+                    This field is required</p>
+                </fieldset>
+                <button class="btn btn-primary btn-sm" (click)="onReset($event)">Call Reset on this Date Picker to clear
+                  it</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-header">
+        <h3 class="card-title">Time Picker</h3>
+      </div>
+      <div class=" card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <label>Default Time Picker:</label>
+            <div class="wd-150 mg-b-30">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <div class="">
+                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18">
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path
+                        d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm4.25 12.15L11 13V7h1.5v5.25l4.5 2.67-.75 1.23z"
+                        opacity=".3" />
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                    </svg>
+                  </div>
+                </div>
+                <input class="form-control" placeholder="12hr format (default settings)" aria-label="12hr format"
+                  [ngxTimepicker]="default" readonly>
+                <ngx-material-timepicker #default></ngx-material-timepicker>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label>Default Time Picker 24hours :</label>
+            <div class="wd-150 mg-b-30">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <div class="">
+                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18">
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path
+                        d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm4.25 12.15L11 13V7h1.5v5.25l4.5 2.67-.75 1.23z"
+                        opacity=".3" />
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                    </svg>
+                  </div>
+                </div>
+                <input class="form-control" placeholder="24hr format" aria-label="24hr format"
+                  [ngxTimepicker]="fullTime" [format]="24" readonly>
+                <ngx-material-timepicker #fullTime></ngx-material-timepicker>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label>ngx-timepicker-field:</label>
+            <div class="d-flex">
+              <div class="input-group wd-150">
+                <div class="ngx-timepicker-field-example">
+                  <ngx-timepicker-field [defaultTime]="'11:11 am'"></ngx-timepicker-field>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
+
+<!-- Row -->
+<div class="row row-sm">
+  <div class="col-lg-12 col-md-12">
+    <div class="card custom-card">
+      <div class="card-body">
+        <div>
+          <h6 class="main-content-label mb-1">File Upload</h6>
+          <p class="text-muted card-sub-title">Dropify is a jQuery plugin to create a beautiful file uploader that
+            converts a standard <code>input type="file"</code> into a nice drag & drop zone with previews and custom
+            styles.</p>
+        </div>
+        <div class="row mb-4">
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 mb-2">
+              <!-- <input type="file" class="dropify" data-height="180" /> -->
+              <ngx-dropzone (change)="onSelect($event)">
+                <ngx-dropzone-label>Drop it!</ngx-dropzone-label>
+                <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                  <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                </ngx-dropzone-preview>
+              </ngx-dropzone>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-2">
+              <!-- <input type="file" class="dropify" data-default-file=".././assets/images/photos/media1.jpg" data-height="180"  /> -->
+              <ngx-dropzone (change)="onSelect($event)" [disabled]="true" [expandable]="true">
+                <ngx-dropzone-label>Disabled</ngx-dropzone-label>
+                <ngx-dropzone-preview *ngFor="let f of filesDisabled">
+                  <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                </ngx-dropzone-preview>
+              </ngx-dropzone>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-2">
+              <!-- <input type="file" class="dropify" disabled="disabled"  /> -->
+              <ngx-dropzone (change)="onPreviewFileSelect($event)">
+                <ngx-dropzone-label>
+                  <div>
+                    <h2>preview file</h2>
+                  </div>
+                </ngx-dropzone-label>
+                <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of filesPreview" [file]="f"
+                  [removable]="true" (removed)="onPreviewFileRemove(f)">
+                  <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                </ngx-dropzone-image-preview>
+              </ngx-dropzone>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Row -->
